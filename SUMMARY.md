@@ -4,10 +4,13 @@
 
 ## Game Creator 2
 
+* [☢️ Fusion Module](game-creator-2/fusion-module.md)
+* [🎮 Coop](game-creator-2/coop.md)
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)
   * [Factions](game-creator-2/factions/factions.md)
-  * [Member](game-creator-2/factions/member.md)
+  * [Member](game-creator-2/factions/member/README.md)
+    * [Memory](game-creator-2/factions/member/memory.md)
   * [Visual Scripting](game-creator-2/factions/visual-scripting/README.md)
     * [Conditions](game-creator-2/factions/visual-scripting/conditions.md)
     * [Events](game-creator-2/factions/visual-scripting/events.md)
@@ -44,7 +47,6 @@
   * [Variables](game-creator-2/state-machine-2/variables.md)
   * [Shortcuts](game-creator-2/state-machine-2/shortcuts.md)
   * [Releases](game-creator-2/state-machine-2/changelog.md)
-* [☢️ Fusion Module](game-creator-2/fusion-module.md)
 * [🌐 Photon Module 2](game-creator-2/photon-module-2/README.md)
   * [Overview](game-creator-2/photon-module-2/overview.md)
   * [Releases](game-creator-2/photon-module-2/changelog.md)

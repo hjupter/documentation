@@ -1,15 +1,32 @@
+---
+cover: ../../.gitbook/assets/Itchio_960x400 (1).png
+coverY: -5.8682877406281655
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # 🤝 Factions
 
 ## Overview
 
 The **Factions** module for **Game Creator 2** offers a comprehensive system for managing factions, reputation, and dynamic relationships within your game.&#x20;
 
-
-
-{% embed url="https://youtu.be/xgJqFDh_ias" %}
+{% embed url="https://youtu.be/xgJqFDh_ias" fullWidth="false" %}
 
 {% hint style="success" %}
-Try the [**Demo**](https://hjupter.itch.io/factions) now!
+Play the [**Demo**](https://hjupter.itch.io/factions) now!
 {% endhint %}
 
 ## Key features <a href="#key-features" id="key-features"></a>
