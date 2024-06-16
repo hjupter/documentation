@@ -14,7 +14,7 @@ The Google platform needs to be enabled and configured in the Web Console before
 
 Open up Game Creator install window, select Google Sign In and install it
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Loot Locker Dashboard Configuration
 
