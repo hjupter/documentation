@@ -6,7 +6,7 @@
 
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)
-  * [Factions](game-creator-2/factions/factions/README.md)
+  * [Factions](game-creator-2/factions/factions.md)
     * [Settings Editor](game-creator-2/factions/factions/settings-editor.md)
   * [Member](game-creator-2/factions/member/README.md)
     * [Memory](game-creator-2/factions/member/memory.md)
