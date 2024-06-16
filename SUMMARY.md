@@ -4,11 +4,10 @@
 
 ## Game Creator 2
 
-* [☢️ Fusion Module](game-creator-2/fusion-module.md)
-* [🎮 Coop](game-creator-2/coop.md)
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)
-  * [Factions](game-creator-2/factions/factions.md)
+  * [Factions](game-creator-2/factions/factions/README.md)
+    * [Settings Editor](game-creator-2/factions/factions/settings-editor.md)
   * [Member](game-creator-2/factions/member/README.md)
     * [Memory](game-creator-2/factions/member/memory.md)
   * [Visual Scripting](game-creator-2/factions/visual-scripting/README.md)
@@ -18,6 +17,8 @@
     * [Properties](game-creator-2/factions/visual-scripting/properties.md)
   * [User Interface](game-creator-2/factions/user-interface.md)
   * [Releases](game-creator-2/factions/releases.md)
+* [☢️ Fusion Module](game-creator-2/fusion-module.md)
+* [🎮 Coop](game-creator-2/coop.md)
 * [👑 Loot Locker](game-creator-2/loot-locker/README.md)
   * [Getting Started](game-creator-2/loot-locker/getting-started.md)
   * [Authentication](game-creator-2/loot-locker/authentication/README.md)

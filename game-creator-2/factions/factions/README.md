@@ -12,7 +12,7 @@ To create a new **Faction** asset, right-click on the Project Panel and select C
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-15 at 10.35.51 PM.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-15 at 10.35.51 PM.png" alt="" width="375"><figcaption></figcaption></figure>
 
 </div>
 
@@ -20,11 +20,11 @@ To create a new **Faction** asset, right-click on the Project Panel and select C
 
 The **Faction** asset has several distinct sections, each allowing you to configure different aspects of the faction.
 
-The top section includes general information about the _**Faction**_ such as its **Name** or a **Description** (if any). It also optionally allows to determine a **Color** and a **Sprite** image used in [UI](user-interface.md).
+The top section includes general information about the _**Faction**_ such as its **Name** or a **Description** (if any). It also optionally allows to determine a **Color** and a **Sprite** image used in [UI](../user-interface.md).
 
 The **Type** field determines whether the _**Faction**_ is a _hidden_ quest, or a _normal_ one.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-16 at 12.18.35 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-16 at 12.18.35 AM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Hidden factions can be hidden from UI elements and are useful for setting up factions that should not be displayed to the user. For example, a player or secret faction.
@@ -48,13 +48,13 @@ Reputation points can be disabled in a Faction by disabling "Use Reputation"
 
 Each stance is defined by a color and a point threshold, making it easy to visualize the current reputation level in the game.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-16 at 12.19.33 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-16 at 12.19.33 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Faction Relationships
 
 This section allows you to define the default relationships this faction has with other factions.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-16 at 12.20.00 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-16 at 12.20.00 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Faction Variables
 
@@ -62,7 +62,7 @@ Custom variables can be defined on factions. These variables can be used in game
 
 Faction Variables allow you to define custom data specific to each faction. These variables work similarly to Global Name Variables, but with a **key distinction**: all factions have the same set of variables, but each faction can hold different values for these variables.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-16 at 12.20.19 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-16 at 12.20.19 AM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 For example, if you define a variable called resourceLevel, every faction will have this variable, but the resourceLevel value can be different for each faction. This allows you to track and manage faction-specific data dynamically.
