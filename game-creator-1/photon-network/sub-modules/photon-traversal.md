@@ -47,7 +47,7 @@ Use the **Convert to Network** to replace all regular single player components t
 
 Use **Convert to Normal** to roll them back to the original Traversal components
 
-![](<../../../.gitbook/assets/image (6).png>)
+![](<../../../.gitbook/assets/image (6) (1).png>)
 
 ### 3. Traversable Character Network
 

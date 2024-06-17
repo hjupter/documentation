@@ -10,7 +10,7 @@ All examples that come with the module have been created with them and are flexi
 
 This is one of the most important components and allows to display a list of **Factions** in a list fashion.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 The **Member** field determines which component the factions are taken from.
 

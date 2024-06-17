@@ -6,7 +6,7 @@ Here is where most of the magic happens!
 
 Here you can create nodes, sticky notes, make groups, drag and drop content.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## The Node Inspector
 
