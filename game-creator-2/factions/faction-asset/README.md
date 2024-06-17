@@ -58,6 +58,10 @@ Each stance is defined by a color and a point threshold, making it easy to visua
 
 </div>
 
+{% hint style="success" %}
+Negative values can also be utilized for reputation thresholds.
+{% endhint %}
+
 ## Faction Relationships
 
 This section allows you to define the default relationships this faction has with other factions.
