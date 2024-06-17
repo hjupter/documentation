@@ -89,3 +89,13 @@ For example, if you define a variable called resourceLevel, every faction will h
 {% endhint %}
 
 By using Faction Variables, you can create a rich, dynamic environment where each faction’s unique state can influence the overall gameplay experience.
+
+
+
+
+
+## Save & Load
+
+**Variables** and **Relationships** can be saved between play sessions to later be restored when loading a game. Disabling the _save_ option will make all variables keep the initial value as their starting value, even after loading a previously saved game.
+
+<figure><img src="../../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
