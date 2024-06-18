@@ -1,7 +1,21 @@
 ---
 description: This is 'official' docs page for Ninjutsu Games modules for Game Creator!
-cover: .gitbook/assets/Docs_Hero (3).png
+cover: .gitbook/assets/Docs_Hero (4).png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 🖐️ Welcome!
