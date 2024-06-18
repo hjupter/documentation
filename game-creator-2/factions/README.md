@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/Itchio_960x400 (1).png
+cover: ../../.gitbook/assets/Itchio_960x400 (1) (1).png
 coverY: -5.8682877406281655
 layout:
   cover:
