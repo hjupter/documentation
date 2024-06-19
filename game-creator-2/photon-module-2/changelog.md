@@ -4,6 +4,16 @@ description: Photon Module 2 Releases
 
 # Releases
 
+## v1.3.6 (Jun 19th 2024)
+
+* New Set Offline Mode instruction
+* Photon Instantiate event will pass the proper target object
+* Added new Color Ping property
+* Added new number properties Player Number, Ping and Score
+* Added new Player Spawned and Despawned events
+* Floating text will now pass the proper target object
+* Changed room chat component colors to GC properties
+
 ## v1.3.5 (Dec 23th 2023)
 
 * Updated demos
