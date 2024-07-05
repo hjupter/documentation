@@ -17,6 +17,7 @@
     * [Properties](game-creator-2/factions/visual-scripting/properties.md)
   * [User Interface](game-creator-2/factions/user-interface.md)
   * [Releases](game-creator-2/factions/releases.md)
+  * [🌐 Photon Factions](game-creator-2/factions/photon-factions.md)
 * [☢️ Fusion Module](game-creator-2/fusion-module.md)
 * [🎮 Coop](game-creator-2/coop.md)
 * [👑 Loot Locker](game-creator-2/loot-locker/README.md)
