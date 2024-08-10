@@ -1,5 +1,10 @@
 # Releases
 
+## 1.0.4 (10th August 2024)
+
+* Fixed issues with Save & Load using LootLocker storage
+* Game Creator 2.16.50 compatibility
+
 ## 1.0.3 (13th March 2024)
 
 * Game Creator 2.15.49 compatibility
