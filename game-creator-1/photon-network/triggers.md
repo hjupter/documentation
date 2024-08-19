@@ -20,7 +20,7 @@ This event handle pretty much all Photon Events. Some of them like:
 
 This event it's called when the Photon Network connection state changes and also store the current state in a local or global variable.
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 ## On Photon Matchmaking
 

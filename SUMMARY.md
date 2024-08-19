@@ -4,6 +4,14 @@
 
 ## Game Creator 2
 
+* [☢️ Fusion Module](game-creator-2/fusion-module/README.md)
+  * [Setup](game-creator-2/fusion-module/setup.md)
+  * [Sessions](game-creator-2/fusion-module/sessions.md)
+  * [Characters](game-creator-2/fusion-module/characters.md)
+  * [Remote Procedure Calls](game-creator-2/fusion-module/remote-procedure-calls.md)
+  * [Settings](game-creator-2/fusion-module/settings.md)
+  * [User Interface](game-creator-2/fusion-module/user-interface.md)
+  * [Releases](game-creator-2/fusion-module/releases.md)
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)
   * [Faction Asset](game-creator-2/factions/faction-asset/README.md)
@@ -18,7 +26,6 @@
   * [User Interface](game-creator-2/factions/user-interface.md)
   * [Releases](game-creator-2/factions/releases.md)
   * [🌐 Photon Factions](game-creator-2/factions/photon-factions.md)
-* [☢️ Fusion Module](game-creator-2/fusion-module.md)
 * [🎮 Coop](game-creator-2/coop.md)
 * [👑 Loot Locker](game-creator-2/loot-locker/README.md)
   * [Getting Started](game-creator-2/loot-locker/getting-started.md)

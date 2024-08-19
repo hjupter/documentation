@@ -8,7 +8,7 @@ description: The fastest and easiest way to create and identify a user account
 
 To enable **Guest** accounts you have to enable it in [**LootLocker's**](https://console.lootlocker.com/settings/platforms/guest) platforms dashboard
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 Head to the guest login section, enable it and click save.
 

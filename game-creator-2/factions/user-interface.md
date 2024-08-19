@@ -10,7 +10,7 @@ All examples that come with the module have been created with them and are flexi
 
 This is one of the most important components and allows to display a list of **Factions** in a list fashion.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 The **Member** field determines which component the factions are taken from.
 
@@ -40,7 +40,7 @@ The Faction List UI Tab component is typically used to filter and present factio
 
 ## Faction UI
 
-This component is used in tandem with the **Factions List UI** to display a list of quests based on a set of rules and filters.
+This component is used in tandem with the **Factions List UI** to display a faction based on a set of rules and filters.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-06-16 at 9.58.12 PM.png" alt=""><figcaption></figcaption></figure>
 
