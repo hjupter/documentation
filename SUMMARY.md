@@ -11,6 +11,8 @@
   * [Remote Procedure Calls](game-creator-2/fusion-module/remote-procedure-calls.md)
   * [Settings](game-creator-2/fusion-module/settings.md)
   * [User Interface](game-creator-2/fusion-module/user-interface.md)
+  * [References](game-creator-2/fusion-module/references/README.md)
+    * [Shutdown Reasons](game-creator-2/fusion-module/references/shutdown-reasons.md)
   * [Releases](game-creator-2/fusion-module/releases.md)
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)
