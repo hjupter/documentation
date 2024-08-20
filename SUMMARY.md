@@ -13,6 +13,8 @@
   * [User Interface](game-creator-2/fusion-module/user-interface.md)
   * [References](game-creator-2/fusion-module/references/README.md)
     * [Shutdown Reasons](game-creator-2/fusion-module/references/shutdown-reasons.md)
+  * [Guides](game-creator-2/fusion-module/guides/README.md)
+    * [How to test my game](game-creator-2/fusion-module/guides/how-to-test-my-game.md)
   * [Releases](game-creator-2/fusion-module/releases.md)
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)
