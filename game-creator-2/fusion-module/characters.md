@@ -4,7 +4,9 @@
 
 The **Network Character** is the component resposible for synchronizing player's movement, rotation, jump, attachments, ragdoll state, model change, look tracking and more.
 
-
+{% hint style="success" %}
+This works with any type of controller like Navmesh, Tank, Rigidbody etc.
+{% endhint %}
 
 ***
 
