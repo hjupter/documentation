@@ -22,7 +22,7 @@ The **Faction** asset has several distinct sections, each allowing you to config
 
 The top section includes general information about the _**Faction**_ such as its **Name** or a **Description** (if any). It also optionally allows to determine a **Color** and a **Sprite** image used in [UI](../user-interface.md).
 
-The **Type** field determines whether the _**Faction**_ is a _hidden_ quest, or a _normal_ one.
+The **Type** field determines whether the _**Faction**_ is a _hidden_ faction, or a _normal_ one.
 
 <div align="left">
 
