@@ -1,5 +1,15 @@
 # Releases
 
+## 1.0.2 (23th August 2024)
+
+* Support for latest Fusion 2.0.2
+* Improved attachment synchronization to work with different rigs
+* Added setters for Network Prefab Ref
+* Added new Set Network Prefab Ref instruction
+* Added new is scene authority condition
+* Added new load and unload scenes instructions for fusion
+* Fixed some minor issues on demo scenes
+
 ## 1.0.1 (19th August 2024)
 
 * **Breaking Change:** Fusion Character Controller Directional is no longer required to synchronize characters; only attaching the Network Character component is required.

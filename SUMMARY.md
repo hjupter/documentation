@@ -8,6 +8,7 @@
   * [Setup](game-creator-2/fusion-module/setup.md)
   * [Sessions](game-creator-2/fusion-module/sessions.md)
   * [Characters](game-creator-2/fusion-module/characters.md)
+  * [Variables](game-creator-2/fusion-module/variables.md)
   * [Remote Procedure Calls](game-creator-2/fusion-module/remote-procedure-calls.md)
   * [Settings](game-creator-2/fusion-module/settings.md)
   * [User Interface](game-creator-2/fusion-module/user-interface.md)
