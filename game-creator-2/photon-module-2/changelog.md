@@ -4,6 +4,11 @@ description: Photon Module 2 Releases
 
 # Releases
 
+## v1.3.8 (August 25th 2024)
+
+* Added new camera synchronzation option in Character Network
+* Added new get game object property to get Player's Camera
+
 ## v1.3.6 (Jun 19th 2024)
 
 * New Set Offline Mode instruction
