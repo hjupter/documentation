@@ -9,7 +9,7 @@ To learn more about [Photon Unity Networking](https://doc.photonengine.com/en-us
 {% endhint %}
 
 {% hint style="success" %}
-Try the [**Demo**](https://hjupter.itch.io/photon-stats-game-creator-2) now!
+Try the [**Demo**](https://hjupter.itch.io/photon-shooter-2) now!
 {% endhint %}
 
 ## Key features <a href="#key-features" id="key-features"></a>
