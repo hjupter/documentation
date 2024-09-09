@@ -4,7 +4,7 @@
 
 To enable **White Label** accounts you have to enable it in [**LootLocker's**](https://console.lootlocker.com/settings/platforms/guest) platforms dashboard
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 Head to the white label login section, enable it and click save.
 

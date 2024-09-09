@@ -16,6 +16,8 @@
     * [Shutdown Reasons](game-creator-2/fusion-module/references/shutdown-reasons.md)
   * [Guides](game-creator-2/fusion-module/guides/README.md)
     * [How to test my game](game-creator-2/fusion-module/guides/how-to-test-my-game.md)
+    * [How to toggle Debug mode](game-creator-2/fusion-module/guides/how-to-toggle-debug-mode.md)
+    * [How to Update Fusion SDK](game-creator-2/fusion-module/guides/how-to-update-fusion-sdk.md)
   * [Releases](game-creator-2/fusion-module/releases.md)
 * [🤝 Factions](game-creator-2/factions/README.md)
   * [Setup](game-creator-2/factions/setup.md)

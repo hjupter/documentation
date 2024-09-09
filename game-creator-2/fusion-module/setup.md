@@ -34,7 +34,7 @@ The **Installer** window will appear and you'll be able to manage all examples a
 * **Examples**: A collection of scenes with different use-case scenarios
 * **UI**: A bundle of common user interface elements
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 Clicking on the **Examples** install button will install all dependencies automatically.
@@ -42,7 +42,7 @@ Clicking on the **Examples** install button will install all dependencies automa
 
 Once you have the examples installed, click on the _Select_ button or navigate to `Plugins/GameCreator/Installs/Fusion.Examples/`.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

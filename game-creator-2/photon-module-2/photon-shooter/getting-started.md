@@ -12,10 +12,10 @@ When using Aims that requies Camera instead of using Main Camera alway choose Ph
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 </div>
 
 In some cases in ShooterWeapon you will have to use Self or Target instead of Player, like in projectile section the Character Target needs to be picked from who is executing the action in this case Self if you pick player remote players who fire to the local player target instead.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>

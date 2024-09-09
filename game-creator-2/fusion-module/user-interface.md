@@ -79,7 +79,7 @@ You can use fields to display **session properties** as well.
 
 It is possibe to display availabe regions by attaching a **RegionDropdownUI** component in a DropDown menu. This will display enabled regions in [**Fusion Module Settings**](settings.md).
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 The **selected** region by this drop menu will be stored in player prefs. The selected region is accessibe through a Game Creator 2 string property.
@@ -89,7 +89,7 @@ The **selected** region by this drop menu will be stored in player prefs. The se
 
 The Room Chat component is designed to facilitate real-time communication between players within a game session. It offers various customizable options to enhance the chat experience, ensuring smooth interaction and a polished user interface.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Prefab:** a game object that requirs to have a Text or TextMeshPro UI component
 
