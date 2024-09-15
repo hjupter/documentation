@@ -58,6 +58,7 @@
   * [Releases](game-creator-2/loot-locker/releases.md)
 * [🤖 State Machine 2](game-creator-2/state-machine-2/README.md)
   * [Graph Editor](game-creator-2/state-machine-2/graph-editor.md)
+  * [State Machine Runner](game-creator-2/state-machine-2/state-machine-runner.md)
   * [Nodes](game-creator-2/state-machine-2/nodes/README.md)
     * [Node Features](game-creator-2/state-machine-2/nodes/node-features.md)
   * [Variables](game-creator-2/state-machine-2/variables.md)

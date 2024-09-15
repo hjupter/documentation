@@ -4,6 +4,29 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 1.3.0 (Cooming soon)
+
+* **New** _Embedded graphs_ in State Machine Runners which allows to use scene references directly
+* New collapsable controls in nodes allowing to edit nodes without leaving the graph
+* Added new Exit node
+* Added new Relay node for organization purposes only
+* State Machine node has output port which works with the exit node within the Sub State Machine
+* Added new auto rename nodes feauter (Nodes will be auto renamed to their current trigger event name, or first action if they don't have custom name)
+* Moved triggers documentation to an info button in the header of the inspector
+* Refreshed inspector visuals
+* Changed colors of Trigger, Condition and Start nodes
+* Increased minimum window size of State Machine graph
+* Compatibility with latest Game Creator 2.16.50
+* **Fixed** an issue where `Self` and `Target` wasn't being passed correctly through nodes
+* **Fixed** issues when synching variables from the runner and the State Machine Asset
+* **Fixed** a race condition where some times triggers would register and trigger more than once
+* **Fixed** issues with Photon Module integrations and uptated the demo package
+* **Fixed** an issue where it wasn't possible to rename nodes in Unity 6
+* **Fixed** some issues with live debugging
+* **Fixed** issues with misaligned lables in State Machine instructions and properties
+* **Fixed** right click error on node connections
+* A lot of code cleanups and improvements
+
 ## 1.2.4 (21st Nov 2023)
 
 {% hint style="warning" %}
