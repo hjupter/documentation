@@ -7,7 +7,8 @@ description: State Machine 2 Releases
 ## 1.3.0 (Cooming soon)
 
 * **New** _Embedded graphs_ in State Machine Runners which allows to use scene references directly
-* New collapsable controls in nodes allowing to edit nodes without leaving the graph
+* **New** options to open multiple State Machine windows at the same time
+* **New** collapsable controls in nodes allowing to edit nodes without leaving the graph
 * Added new Exit node
 * Added new Relay node for organization purposes only
 * State Machine node has output port which works with the exit node within the Sub State Machine
