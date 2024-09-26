@@ -4,20 +4,31 @@ description: State Machine 2 Releases
 
 # Releases
 
-## 1.3.0 (Cooming soon)
+## 1.3.0 (26th September 2024)
 
+{% hint style="warning" %}
+In order to upgrade, be sure to backup your project(s) first and uninstall any previous version.
+{% endhint %}
+
+* **State Machine core is no longer an GC install package**
 * **New** _Embedded graphs_ in State Machine Runners which allows to use scene references directly
 * **New** options to open multiple State Machine windows at the same time
 * **New** collapsable controls in nodes allowing to edit nodes without leaving the graph
 * Added new Exit node
 * Added new Relay node for organization purposes only
 * State Machine node has output port which works with the exit node within the Sub State Machine
-* Added new auto rename nodes feauter (Nodes will be auto renamed to their current trigger event name, or first action if they don't have custom name)
+* Added new auto rename nodes feature (Nodes will be auto renamed to their current trigger event name, or first action if they don't have custom name)
 * Moved triggers documentation to an info button in the header of the inspector
 * Refreshed inspector visuals
 * Changed colors of Trigger, Condition and Start nodes
 * Increased minimum window size of State Machine graph
 * Compatibility with latest Game Creator 2.16.50
+* Added State Machine uninstaller
+* Added help url to State Machine Runner component
+* Added empty view when State Machine graph is empty
+* Auto update active SM graph when selecting new asset in runner
+* Cached input and output nodes for improved performance
+* Updated lock and disabled icon views
 * **Fixed** an issue where `Self` and `Target` wasn't being passed correctly through nodes
 * **Fixed** issues when synching variables from the runner and the State Machine Asset
 * **Fixed** a race condition where some times triggers would register and trigger more than once
