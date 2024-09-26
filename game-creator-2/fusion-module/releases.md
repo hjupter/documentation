@@ -1,5 +1,19 @@
 # Releases
 
+## 1.0.3 (26th September 2024)
+
+* Support for latest Fusion 2.0.3
+* New Name Variables demo scene
+* Reduced arrays and dictionaries limit capacity to reduce pre-allocated heap
+* Added help urls to components
+* Fixed an error when using attach props without adding them to fusion
+* Fix for variables not replicating boolean states
+* Fixed an issue in TickTimer scene
+* Name Variables can now sync NetworkPrefabRef type
+* List Variables now support vector 3 and NetworkPrefabRef
+* Renamed Despawn instruction title
+* Fixed an issue where fusion was deactivating non instantiated network objects instead of destroying them
+
 ## 1.0.2 (23th August 2024)
 
 * Support for latest Fusion 2.0.2
