@@ -10,7 +10,10 @@ description: State Machine 2 Releases
 In order to upgrade, be sure to backup your project(s) first and uninstall any previous version.
 {% endhint %}
 
-* **State Machine core is no longer an GC install package**
+{% hint style="info" %}
+**State Machine core is no longer a GC install package, so make sure to uninstall the previous version before installing this one.**
+{% endhint %}
+
 * **New** _Embedded graphs_ in State Machine Runners which allows to use scene references directly
 * **New** options to open multiple State Machine windows at the same time
 * **New** collapsable controls in nodes allowing to edit nodes without leaving the graph
