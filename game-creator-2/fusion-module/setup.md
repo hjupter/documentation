@@ -42,7 +42,7 @@ Clicking on the **Examples** install button will install all dependencies automa
 
 Once you have the examples installed, click on the _Select_ button or navigate to `Plugins/GameCreator/Installs/Fusion.Examples/`.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
