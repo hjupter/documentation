@@ -1,5 +1,12 @@
 # Releases
 
+## 1.0.4 (1st October 2024)
+
+* Fixed an issue with Single player mode
+* Added single player demo
+* Reverted a change that caused an order of events issue with cached RPCs
+* Improved bone finding for network attachment props
+
 ## 1.0.3 (26th September 2024)
 
 * Support for latest Fusion 2.0.3
