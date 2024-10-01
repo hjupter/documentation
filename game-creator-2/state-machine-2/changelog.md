@@ -4,6 +4,15 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 1.3.1 (1st October 2024)
+
+* Addressed performance issues
+* Refactored toolbar
+* Added an option in toolbar to expand or collapse all nodes
+* Added an option in State Machine settings to disable node inspector
+* Disabled auto selection
+* Fixed a null reference error in Run State Node instructions (Thank you Sinyiik)
+
 ## 1.3.0 (26th September 2024)
 
 {% hint style="warning" %}
