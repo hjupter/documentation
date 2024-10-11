@@ -4,6 +4,18 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 1.3.2 (11th October 2024)
+
+* Persist single expanded nodes state
+* Allow duplicate runners with embedded graphs within the scene
+* Prevent errors when converting state machine runners to prefabs
+* Added info message for embedded graphs indicating prefabs are still not supported
+* Updated button states when runners are prefabs or have empty State Machines
+* Expand icon not showing after reload or restart
+* Reload open nodes when exit play mode to fix icon disapearing
+* Fixed an issue where nodes won’t stay expanded when reloading the project
+* Fixed null errors in State Machine Runner
+
 ## 1.3.1 (1st October 2024)
 
 * Addressed performance issues
