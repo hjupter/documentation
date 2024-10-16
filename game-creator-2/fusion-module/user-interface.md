@@ -10,7 +10,7 @@ All examples that come with the module have been created with them and are flexi
 
 This is one of the most important components and allows to display a list of avalable sessions to join.
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
 
 The **Content** field defines the `Rect Transform` where each prefab instance will be instantiated, for every visible session.
 
@@ -26,7 +26,7 @@ The **Sort Direction** field determines the order in which members are displayed
 
 The **Sort Index** specify the index of the session property to sort by. This allows for flexibility in sorting by different criteria, such as sessio name, player count, sessio properties and more.
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 The Fusion UI package provides a ready-to-use prefab for the session list.
@@ -40,7 +40,7 @@ Sessions marked as not visible are not displayed here.
 
 The Session Item UI component is designed to represent individual entries within the session list, displaying various properties of a session.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
 
 The **alternate background** option allows you to set an alternate background image for the scoreboard item, which can help distinguish between different rows for better readability.
 
@@ -79,7 +79,7 @@ You can use fields to display **session properties** as well.
 
 It is possibe to display availabe regions by attaching a **RegionDropdownUI** component in a DropDown menu. This will display enabled regions in [**Fusion Module Settings**](settings.md).
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 The **selected** region by this drop menu will be stored in player prefs. The selected region is accessibe through a Game Creator 2 string property.
@@ -89,7 +89,7 @@ The **selected** region by this drop menu will be stored in player prefs. The se
 
 The Room Chat component is designed to facilitate real-time communication between players within a game session. It offers various customizable options to enhance the chat experience, ensuring smooth interaction and a polished user interface.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 **Prefab:** a game object that requirs to have a Text or TextMeshPro UI component
 
@@ -129,7 +129,7 @@ The Room Chat component is designed to facilitate real-time communication betwee
 
 Floating text serves as an instruction to generate user interface text above a specific target. This feature is commonly utilized for displaying character nameplates, chat bubbles, and other similar elements.
 
-<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
 
 **Target**: the target where the floating text is going to be displayed
 

@@ -16,25 +16,25 @@ These components, besides synchronizing their current state to remote players, w
 
 To synchronize Local Name Variables simply attach a Local Name Variables Netwok component.
 
-<figure><img src="../../.gitbook/assets/image (104).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
 
 ## Global Name Variables
 
 To synchronize Global Name Variables create a new game object, attach a **`Global Name Variables Netwok`** then select the Global Name Variables you need
 
-<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption></figcaption></figure>
 
 ## Local List Variables
 
 To synchronize Local List Variables simply attach a Local List Variables Netwok component and select **Sync Mode** to **Sync Data**
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
 
 ## Global List Variables
 
 To synchronize Global List Variables create a new game object, attach a **`Global List Variables Netwok`** then select the Global List Variables you need and select **Sync Mode** to **Sync Data**
 
-<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
 
 ## List Sync Modes
 

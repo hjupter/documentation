@@ -102,4 +102,4 @@ By using Faction Variables, you can create a rich, dynamic environment where eac
 
 **Variables** and **Relationships** can be saved between play sessions to later be restored when loading a game. Disabling the _save_ option will make all variables keep the initial value as their starting value, even after loading a previously saved game.
 
-<figure><img src="../../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (120).png" alt=""><figcaption></figcaption></figure>

@@ -29,7 +29,7 @@ Setting up the **Photon Shooter** sub module is a fairly straight forward proces
 
 The first thing you need is to setup a **Weapon Registry** component and add all the ammo and weapons as needed.
 
-![This component needs to be present on the scene before joining a room.](<../../../../.gitbook/assets/image (12).png>)
+![This component needs to be present on the scene before joining a room.](<../../../../.gitbook/assets/image (45).png>)
 
 ### Step 2
 

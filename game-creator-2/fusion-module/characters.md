@@ -24,11 +24,11 @@ Setting up a Game Creator character for Fusion is simple. Just attach a **`Netwo
 
 To synchronize attachments the objecs needs to be registered first, you can do this by using **Local List Variables Network** or **Gloal List Variables Network** and select the Attachments sync mode.
 
-<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption></figcaption></figure>
 
 Once attachmets are registered you can use regular GC2 instructions to attach or remove objects
 
-<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -36,11 +36,11 @@ Once attachmets are registered you can use regular GC2 instructions to attach or
 
 Models work the same way attachment does using **Local List Variables Network** or **Gloal List Variables Network** and select the **Models** sync mode
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
 
 Once models are registered you can use regular Change Model instructio from GC2.
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
 
 ### Model Config
 
@@ -50,7 +50,7 @@ Models comes with a special variable type to use.
 Values like **Name, Prefab** and **Sprite** can be used to display a list of characters&#x20;
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption></figcaption></figure>
 
 ### Properties
 

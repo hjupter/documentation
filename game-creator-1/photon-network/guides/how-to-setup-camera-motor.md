@@ -14,16 +14,16 @@ For all the possible solutions you can have 2 separate Camera Motors one that wi
 
 Inside the Photo Instantiate action there is a **Assign To Variable** field which you can use to store your player instance.&#x20;
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (50).png>)
 
 Once your player is instantiated this variable will change therefore you could use a \
 **On Variable Change**
 
 Once your player becomes active you can turn on your player camera and call the change Camera action.
 
-![](<../../../.gitbook/assets/image (81).png>)
+![](<../../../.gitbook/assets/image (114).png>)
 
 In this example we choose to set Player Camera target to be the same variable we use to store our player Instance. If you choose to use Player instead of a variable as target you must have this game object turned off at the beginning.
 
-![](<../../../.gitbook/assets/image (44).png>)
+![](<../../../.gitbook/assets/image (77).png>)
 

@@ -14,13 +14,13 @@ This event handle pretty much all Photon Events. Some of them like:
 * **OnConnectedToMaster**: Called when the client is connected to the Master Server and ready for matchmaking and other tasks.
 * **OnDisconnected**: Called after disconnecting from the Photon server. It could be a failure or an explicit disconnect call
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (46).png>)
 
 ## On Connection State
 
 This event it's called when the Photon Network connection state changes and also store the current state in a local or global variable.
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (44).png>)
 
 ## On Photon Matchmaking
 
@@ -34,7 +34,7 @@ This trigger contains all Photon Matchmaking related events
 * **OnJoinRandomFailed:** Called when a previous OpJoinRandom call failed on the server.
 * **OnFriendListUpdate:** Called when the server sent the response to a FindFriends request.
 
-![](<../../.gitbook/assets/image (69).png>)
+![](<../../.gitbook/assets/image (102).png>)
 
 ## On Room Events
 
@@ -44,4 +44,4 @@ This trigger contains all Photon Room related events:
 * **OnPlayerLeftRoom:** Called when a remote player left the room or became inactive. Check otherPlayer.IsInactive.
 * **OnMasterClientSwitched:** Called after switching to a new MasterClient when the current one leaves.
 
-![](<../../.gitbook/assets/image (26).png>)
+![](<../../.gitbook/assets/image (59).png>)

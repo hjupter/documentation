@@ -8,7 +8,7 @@ To make your **State Machines** as much as re-usable as possible on some case yo
 
 Whitin a **Start Node** target type **invoker** can be used.
 
-![](<../../../.gitbook/assets/image (41).png>)
+![](<../../../.gitbook/assets/image (74).png>)
 
 {% hint style="info" %}
 If **Start Node** has transitions to other nodes they will also be able to use the **Invoker** target.
@@ -18,8 +18,8 @@ If **Start Node** has transitions to other nodes they will also be able to use t
 
 On some triggers like **On Tag Enter** the invoker would be whatever the object which triggered this.
 
-![](<../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (65).png>)
 
 When using triggers like **On Key Down** these type of triggers doesn't have an **Invoker**, so in this case you would need to use the **Invoker** variable from the **State Machine** or use any other **Variable** created with the **Blackboard.**
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (56).png>)

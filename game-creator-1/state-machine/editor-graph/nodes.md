@@ -20,7 +20,7 @@ The **Invoker** target is always available in Start Node.
 
 This type of node works the same way as a GC **Actions List** it can have as many actions as you like.
 
-![](<../../../.gitbook/assets/image (71).png>)
+![](<../../../.gitbook/assets/image (104).png>)
 
 {% hint style="info" %}
 Once execution is completed it will move to the next **Transition** and **Action Node** if there is any.

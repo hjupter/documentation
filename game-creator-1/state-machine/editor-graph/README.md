@@ -2,7 +2,7 @@
 
 The editor graph works and look pretty much like the Animator graph, this is the editor for the **State Machines** they are composed of nodes with **Actions**, **Triggers** and **Transitions** where you can add **Conditions.**
 
-![Example of a Connection Manager which takes care of room creation and player instantiation](<../../../.gitbook/assets/image (78).png>)
+![Example of a Connection Manager which takes care of room creation and player instantiation](<../../../.gitbook/assets/image (111).png>)
 
 ## The State Machine asset
 
@@ -26,13 +26,13 @@ In order to **run** a **State Machine** you have to use a **State Machine Contro
 
 To bring up the StateMachine Graph window simply go to the top toolbar and select **`Window → State Machine`**. Alternatively, when you double click on a **State Machine** asset it will automatically open the window.
 
-![(A state machine with a transition selected)](<../../../.gitbook/assets/image (49).png>)
+![(A state machine with a transition selected)](<../../../.gitbook/assets/image (82).png>)
 
 ## Live debugging
 
 When playing Unity you can preview where the State Machine is currently running.
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (47).png>)
 
 ## Context Menus
 

@@ -14,7 +14,7 @@ This includes:
 
 Once you have the package downloaded in your project just open **Game Creator Install** window and select Photon > Factions sub module and install it.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 This package will add 2 new network components, **MemberNetwork** and **FactionNetwork**
@@ -26,7 +26,7 @@ Synchronizes member faction points and current joined factions across the networ
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (121).png" alt="" width="375"><figcaption></figcaption></figure>
 
 </div>
 
@@ -38,6 +38,6 @@ Synchronizes faction relationships and variables through the network.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
 
 </div>

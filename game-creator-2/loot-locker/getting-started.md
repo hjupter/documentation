@@ -37,4 +37,4 @@ After importing LootLocker module head to the Game Creator Install window and in
 This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>

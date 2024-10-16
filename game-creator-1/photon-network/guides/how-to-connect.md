@@ -7,7 +7,7 @@ Connect to photon is really simple, here is a quick guide of how to connect, cre
 First create a trigger with **On Start** igniter, after you create the trigger go ahead create actions. \
 Add a **Photon Connect** action, you can leave parameters as they are.
 
-![You must be connected to the Photon Service before trying to call any action except Offline Mode.](<../../../.gitbook/assets/image (21).png>)
+![You must be connected to the Photon Service before trying to call any action except Offline Mode.](<../../../.gitbook/assets/image (54).png>)
 
 ### 2. Create or Join a Room
 
@@ -15,7 +15,7 @@ Create another trigger with **On Connection Events** set the event type to **On 
 
 When photon is connected this event is going to be called. Let's add Join Or Create Action this will join a room o create if it doesn't exists.
 
-![You are only allowed to call any join or create room action when you are connected to the Master Server.](<../../../.gitbook/assets/image (19).png>)
+![You are only allowed to call any join or create room action when you are connected to the Master Server.](<../../../.gitbook/assets/image (52).png>)
 
 ### 3. On Joined Room
 
@@ -26,7 +26,7 @@ Within the On Joined Room event now add Photon Instantiate action and select or 
 Don't know which method to use? You can see more in [**Instantiation Options**](instantiation-options.md)
 {% endhint %}
 
-![(On this example we use a Player prefab that was previously added to Prefabs list in Photon Preferences)](<../../../.gitbook/assets/image (59).png>)
+![(On this example we use a Player prefab that was previously added to Prefabs list in Photon Preferences)](<../../../.gitbook/assets/image (92).png>)
 
 {% hint style="warning" %}
 Player prefab can't be present on the scene they need to be Instantiated with the Photon Instantiate action
@@ -45,7 +45,7 @@ We can store the status/state in a local or global variable to later use this.
 
 Finally add the text action and to show what we saved in a local variable.
 
-![](<../../../.gitbook/assets/image (48).png>)
+![](<../../../.gitbook/assets/image (81).png>)
 
 ### 5. Voila. This is how it should look.
 

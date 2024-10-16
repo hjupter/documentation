@@ -14,13 +14,13 @@ They are shared but can hold different values.
 
 These are the variables that are created for each State Machine but the values stored in the asset itself, think of this as a regular Global Variable Name.
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 ## State Machine Runner Variables
 
 These are the variables the same variables from the State Machine Asset but here they can hold different values for each Runner instance.
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
 
 
 

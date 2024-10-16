@@ -47,7 +47,7 @@ Use the **Convert to Network** to replace all regular single player components t
 
 Use **Convert to Normal** to roll them back to the original Traversal components
 
-![](<../../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39).png>)
 
 ### 3. Traversable Character Network
 
@@ -58,7 +58,7 @@ This component has 2 toggle options:
 * **Disable With Chat:** when this is on and if room chat is open it will disable traversable control inputs.
 * **Debug:** this will throw info messages into the console log just for debugging.
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (98).png>)
 
 {% hint style="info" %}
 Please keep in mind this module is in **BETA**, if you see any bugs just report it to [**support@ninjutsugames.com**](mailto:support@ninjutsugames.com) or at the [**Discord Server**](https://discordapp.com/invite/u2K64A7)&#x20;

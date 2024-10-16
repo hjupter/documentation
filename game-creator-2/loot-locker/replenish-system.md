@@ -10,7 +10,7 @@ description: >-
 
 To use this system simply call the **Initialize Replenish Value** instruction.
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 #### Replenish Key
 
@@ -36,11 +36,11 @@ If enabled offline earnings will be auto collected, otherwise an event will be t
 
 Offline earnings can be received manually by using a trigger.
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
 Once this trigger is execute the instruction **Collect Offline Earnings** can be used
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 To see this in action you can play the demo scene **9\_ReplenishSystem**

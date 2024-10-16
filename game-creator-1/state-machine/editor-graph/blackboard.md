@@ -14,7 +14,7 @@ As you may have noticed in the image above, to access the value of a **Blackboar
 
 Once the **Blackboard** is filled with some entries, the **State Machine** component is automatically updated, adding new entries and removing those that no longer exist in the **Blackboard**.
 
-![](<../../../.gitbook/assets/image (36).png>)
+![](<../../../.gitbook/assets/image (69).png>)
 
 For example, let's say our game has a _Guard_ that can attack anything when it has a **`target`** defined. We could create a **`target`** entry in the **State Machine** and ask if it's different than _null_. If so, follow it and attack when it's within in range.
 

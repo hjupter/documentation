@@ -14,13 +14,13 @@ The Google platform needs to be enabled and configured in the Web Console before
 
 Open up Game Creator install window, select Google Sign In and install it
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 ## Loot Locker Dashboard Configuration
 
 To start using Sign in with Google we first need to configure LootLocker integration in the [platform settings](https://console.lootlocker.com/settings/platforms/google\_sign\_in).
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
 
 **Client ID**
 
@@ -32,4 +32,4 @@ Client ID can be retrieved from the [Google Dev Console](https://console.cloud.g
 
 Fill in **Client Id** and **Client Secret** depending on the platform you need.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>

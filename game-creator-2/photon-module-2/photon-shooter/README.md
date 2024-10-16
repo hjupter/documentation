@@ -37,7 +37,7 @@ The process is simple:
 
 Finally bring up the _**Game Creator Install Window**_ select the **Photon Shooter 2** package and install it.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Photon Unity Network 2**](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.

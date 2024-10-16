@@ -2,7 +2,7 @@
 
 In the Fusion settings, you can configure various aspects of this module:
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 ## Default Player Name
 

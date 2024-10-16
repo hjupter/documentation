@@ -10,7 +10,7 @@ All examples that come with the module have been created with them and are flexi
 
 This is one of the most important components and allows to display a list of **Factions** in a list fashion.
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 The **Member** field determines which component the factions are taken from.
 
@@ -34,7 +34,7 @@ The **Prefab** is the prefab instantiated inside the _Content_. It must contain 
 
 The Faction List UI Tab component is typically used to filter and present factions dynamically within the Faction List UI.
 
-<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (118).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -64,7 +64,7 @@ Upon selecting a faction, any Faction UI component with the _Selection_ keyword 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (115).png" alt="" width="375"><figcaption></figcaption></figure>
 
 </div>
 
@@ -76,7 +76,7 @@ The Scoreboard UI component is used to display the members of a faction, sorted 
 The Scoreboard UI component provides a structured interface to display a list of faction members, sorted and formatted according to the specified settings. This is useful for creating leaderboards, rankings, or any other type of member listing within a faction.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (116).png" alt=""><figcaption></figcaption></figure>
 
 The **Faction** field determines which faction’s members to display. If set to “Any”, it will display members from all factions. If set to “Specific”, you can choose a particular faction.
 
@@ -123,7 +123,7 @@ Use `{0:N}` to convert 1000 to 1,000.
 
 **Use Color** enables the option to apply color to the field using properties
 
-<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption><p>This component can be customized to show different fields such as player names, scores, and other relevant data.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption><p>This component can be customized to show different fields such as player names, scores, and other relevant data.</p></figcaption></figure>
 
 
 
@@ -131,7 +131,7 @@ Use `{0:N}` to convert 1000 to 1,000.
 
 The Scoreboard UI Tab component handles the sorting functionality for the scoreboard. It includes options for sorting direction and the index of the field to sort by.
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
 
 **Scoreboard UI:** The UI component that displays the scoreboard.
 

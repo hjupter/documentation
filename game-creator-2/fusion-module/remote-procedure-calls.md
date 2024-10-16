@@ -10,17 +10,17 @@ The Fusion module has 3 types of RPCs:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
 #### Condition RPC
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 #### Trigger RPC
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 All of them work the same as the original Run instructions from Game Creator 2 except that they run through the Fusion network, and the target object requires a NetworkObject.
 
@@ -45,4 +45,4 @@ If enabled, the state of the trigger will be cached and sent to newly connected 
 
 If you need to remove the cached state of any of the RPCs you can use the appropriate instructio for each type of RPC.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
