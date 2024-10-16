@@ -1,6 +1,6 @@
-{"list": [{"id": "fusion", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/releases.md"}, {"id": "fusion-factions", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/factions/releases.md"},
-{"id": "fusion-stats", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/stats/releases.md"},
-{"id": "fusion-inventory", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/inventory/releases.md"},
-{"id": "fusion-melee", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/melee/releases.md"},
-{"id": "fusion-shooter", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/shooter/releases.md"},
-{"id": "fusion-abilities", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/abilities/releases.md"}]}
+{"list": [{"id": "fusion", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/releases.md"}, {"id": "fusion-factions", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/fusion-factions/releases.md"},
+{"id": "fusion-stats", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/fusion-stats/releases.md"},
+{"id": "fusion-inventory", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/fusion-inventory/releases.md"},
+{"id": "fusion-melee", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/fusion-melee/releases.md"},
+{"id": "fusion-shooter", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/fusion-shooter/releases.md"},
+{"id": "fusion-abilities", "path": "https://raw.githubusercontent.com/hjupter/documentation/main/game-creator-2/fusion-module/fusion-abilities/releases.md"}]}
