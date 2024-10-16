@@ -1,3 +1,3 @@
 # 💫 Fusion Stats
 
-Coming soon
+Coming soon.

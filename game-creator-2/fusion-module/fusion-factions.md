@@ -1,3 +1,3 @@
 # 🤝 Fusion Factions
 
-Coming soon
+Coming soon.
