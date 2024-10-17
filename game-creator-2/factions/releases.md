@@ -1,9 +1,11 @@
 # Releases
 
-<details>
+## 1.0.1 (Coming Soon)
 
-<summary>1.0.0 (17th June 2024)</summary>
+* Support for latest Game Creator 2.16.50
+* Fixed an issue with Collect Faction Members instructions where wasn’t possible to use Self or Target
+* Updated demos
+
+## 1.0.0 (17th June 2024)
 
 First release.
-
-</details>
