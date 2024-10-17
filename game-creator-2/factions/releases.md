@@ -8,4 +8,4 @@
 
 ## 1.0.0 (17th June 2024)
 
-First release.
+* First release.
