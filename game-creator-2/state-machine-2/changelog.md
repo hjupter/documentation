@@ -4,7 +4,15 @@ description: State Machine 2 Releases
 
 # Releases
 
-## 1.3.2 (11th October 2024)
+## 1.4.14 (18th October 2024)
+
+* Unity 6 support
+* Game Creator 2.17.51 support
+* Added version manager in settings
+* Prevent errors when SM graph window is open while a build is being made
+* Added null check to prevent nodes running when runner is destroyed
+
+## 1.3.13 (11th October 2024)
 
 * Persist single expanded nodes state
 * Allow duplicate runners with embedded graphs within the scene
@@ -16,7 +24,9 @@ description: State Machine 2 Releases
 * Fixed an issue where nodes won’t stay expanded when reloading the project
 * Fixed null errors in State Machine Runner
 
-## 1.3.1 (1st October 2024)
+
+
+## 1.3.12 (1st October 2024)
 
 * Addressed performance issues
 * Refactored toolbar
@@ -25,7 +35,7 @@ description: State Machine 2 Releases
 * Disabled auto selection
 * Fixed a null reference error in Run State Node instructions (Thank you Sinyiik)
 
-## 1.3.0 (26th September 2024)
+## 1.3.11 (26th September 2024)
 
 {% hint style="warning" %}
 In order to upgrade, be sure to backup your project(s) first and uninstall any previous version.
@@ -63,7 +73,7 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * **Fixed** right click error on node connections
 * A lot of code cleanups and improvements
 
-## 1.2.4 (21st Nov 2023)
+## 1.2.10 (21st Nov 2023)
 
 {% hint style="warning" %}
 Due to latest GC updates this version breaks compatibility with the previous versions.
@@ -74,14 +84,14 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * Compatibility with latest Game Creator 2 version 2.13.45
 * Fixed an issue where after state machine selection it wouldn’t refresh list of available variables&#x20;
 
-## 1.2.3 (13th June 2023)
+## 1.2.9 (13th June 2023)
 
 * Upgraded to Unity 2022.3 LTS
 * Fixed issues with latest GC 2 update
 * Updated State Machine variables system to match GC2's update
 * Disabled game object or runner component will now prevent state machines to keep running
 
-## **1.2.2 (19th May 2023)**
+## **1.2.8 (19th May 2023)**
 
 * Nodes will no longer lose their icon
 * Fixed enable / disable nodes in graph
@@ -90,11 +100,11 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * Fixed title formatting on StateMachine Asset instructions
 * Add new State Machine settings tab
 
-## **1.2.1 (27th April 2023)**
+## **1.2.7 (27th April 2023)**
 
 * Fixed an issue with the Photon extension
 
-## 1.2.0 (11st April 2023)
+## 1.2.6 (11st April 2023)
 
 #### New
 
