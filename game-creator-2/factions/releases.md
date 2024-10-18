@@ -4,7 +4,9 @@
 
 * Unity 6 support
 * Support for latest Game Creator 2.17.51
+* Added version manager in settings
 * Fixed an issue with Collect Faction Members instructions where wasn’t possible to use Self or Target
+* Fixed a bug in settings inspector
 
 ## 1.0.1 (Coming Soon)
 
