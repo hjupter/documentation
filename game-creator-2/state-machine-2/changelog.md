@@ -4,7 +4,7 @@ description: State Machine 2 Releases
 
 # Releases
 
-## 1.4.14 (18th October 2024)
+## 2.4.14 (18th October 2024)
 
 * Unity 6 support
 * Game Creator 2.17.51 support
@@ -12,7 +12,11 @@ description: State Machine 2 Releases
 * Prevent errors when SM graph window is open while a build is being made
 * Added null check to prevent nodes running when runner is destroyed
 
-## 1.3.13 (11th October 2024)
+{% hint style="info" %}
+Updated the version convention to what it should have been from the start, as this is the second version.
+{% endhint %}
+
+## 2.3.13 (11th October 2024)
 
 * Persist single expanded nodes state
 * Allow duplicate runners with embedded graphs within the scene
@@ -26,7 +30,7 @@ description: State Machine 2 Releases
 
 
 
-## 1.3.12 (1st October 2024)
+## 2.3.12 (1st October 2024)
 
 * Addressed performance issues
 * Refactored toolbar
@@ -35,7 +39,7 @@ description: State Machine 2 Releases
 * Disabled auto selection
 * Fixed a null reference error in Run State Node instructions (Thank you Sinyiik)
 
-## 1.3.11 (26th September 2024)
+## 2.3.11 (26th September 2024)
 
 {% hint style="warning" %}
 In order to upgrade, be sure to backup your project(s) first and uninstall any previous version.
@@ -73,7 +77,7 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * **Fixed** right click error on node connections
 * A lot of code cleanups and improvements
 
-## 1.2.10 (21st Nov 2023)
+## 2.2.10 (21st Nov 2023)
 
 {% hint style="warning" %}
 Due to latest GC updates this version breaks compatibility with the previous versions.
@@ -84,14 +88,14 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * Compatibility with latest Game Creator 2 version 2.13.45
 * Fixed an issue where after state machine selection it wouldn’t refresh list of available variables&#x20;
 
-## 1.2.9 (13th June 2023)
+## 2.2.9 (13th June 2023)
 
 * Upgraded to Unity 2022.3 LTS
 * Fixed issues with latest GC 2 update
 * Updated State Machine variables system to match GC2's update
 * Disabled game object or runner component will now prevent state machines to keep running
 
-## **1.2.8 (19th May 2023)**
+## **2.2.8 (19th May 2023)**
 
 * Nodes will no longer lose their icon
 * Fixed enable / disable nodes in graph
@@ -100,11 +104,11 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * Fixed title formatting on StateMachine Asset instructions
 * Add new State Machine settings tab
 
-## **1.2.7 (27th April 2023)**
+## **2.2.7 (27th April 2023)**
 
 * Fixed an issue with the Photon extension
 
-## 1.2.6 (11st April 2023)
+## 2.2.6 (11st April 2023)
 
 #### New
 
@@ -125,11 +129,11 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * Disabled re-order variables in Blackboard window to prevent UI issues.
 * Fixed an issue making difficult to rename a trigger node
 
-## **1.1.5** (26th March 2023)
+## **2.1.5** (26th March 2023)
 
 * Fix for setters not allowing to change State Machine asset target
 
-## 1.1.4 (26th March 2023)
+## 2.1.4 (26th March 2023)
 
 * New: Added new demos to show how to use State Machine and State Machine Runner variables
 * New: Tweaked the title of the StateMachine and added label with the path to make it easier to see what StateMachine asset is being edited
@@ -137,21 +141,21 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * Fix: Fixed bug with Groups and undo
 * Fix: Fixed an issue where state machine fields where resetting after selecting the node preventing it from setting a different state machine asset
 
-## 1.1.3
+## 2.1.3
 
 * FIX: Last GameCreator 2 version had some breaking changes, make sure to grab this update.
 
-## 1.1.2
+## 2.1.2
 
 * New: Add documentation description for Trigger nodes that will show up in the node inspector
 * New: Select All short cut. CTRL + A / CMD + A
 * Fix: Some minor code cleanups and improvements
 
-## 1.1.1
+## 2.1.1
 
 * FIX: Addressed few installation warnings and errors
 
-## 1.1.0 (22th March 2023)
+## 2.1.0 (22th March 2023)
 
 * NEW: Photon 2 integration
 * NEW: Added new photon demo example package (Requires Photon Module 2)
@@ -162,17 +166,17 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * FIX: Some set properties had wrong icons
 * Some other minor internal improvements and tweaks
 
-## 1**.0.2 (20th March 2023)**
+## 2**.0.2 (20th March 2023)**
 
 * Fixed an issue preventing new State Machines from being opened outside the examples folder
 * Fixed an error trying to access a non existent Method
 * Re-organized packages folder structure
 
-## **1.0.1 (20th March 2023)**
+## **2.0.1 (20th March 2023)**
 
 * Compile error fix
 
-## 1.0.0 (19th March 2023)
+## 2.0.0 (19th March 2023)
 
 * First release.
 * Keep in mind this is a beta version, if there is any issues or missing feature please don't hesitate to contact me through my email or discord server.
