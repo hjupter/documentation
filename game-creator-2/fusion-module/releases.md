@@ -1,5 +1,18 @@
 # Releases
 
+## 1.1.5 (21th October 2024)
+
+* Unity 6 support
+* Game Creator 2.51.17 support
+* Added new NPC demo scene
+* Added core and sub modules version in manager in settings to easily keep track of latest versions
+* Deactivate nested network objects instead of destroying them
+* Internal changes to prepare for upcoming sub-modules
+* Bug fixes in NetworkCharacter to make NPCs work properly
+* Added is master client bool and string properties
+* Player ping is now exposed over the network
+* It is now possible to visualize ping and username in Network Character inspector when connected to a session
+
 ## 1.0.4 (1st October 2024)
 
 * Fixed an issue with Single player mode
