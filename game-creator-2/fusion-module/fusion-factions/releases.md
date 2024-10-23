@@ -1,5 +1,5 @@
 # Releases
 
-## 1.0.0
+## 1.0.0 (23th October 2024)
 
-* Coming soon
+* First release
