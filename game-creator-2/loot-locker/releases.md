@@ -3,6 +3,7 @@
 ## 1.1.5 (30th October 2024)
 
 * Unity 6 support
+* Moved LootLocker module to a package folder structure
 * Game Creator 2.17.51 support
 * LootLocker 3.2.2 SDK support
 * Added version manager in settings
