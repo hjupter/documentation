@@ -1,5 +1,12 @@
 # Releases
 
+## 1.1.6 (30th October 2024)
+
+* Fixed cached rpcs issue being interrupted by model change calls
+* Fixed an error in NetworkCharacterEditor
+* Fixed an issue in sub modules version manager
+* Updated Fusion Uninstall to prevent removing sub modules
+
 ## 1.1.5 (21th October 2024)
 
 * Unity 6 support
