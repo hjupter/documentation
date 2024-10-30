@@ -1,5 +1,13 @@
 # Releases
 
+## 1.1.5 (30th October 2024)
+
+* Unity 6 support
+* Game Creator 2.17.51 support
+* LootLocker 3.2.2 SDK support
+* Added version manager in settings
+* Updated all examples and extensions packages
+
 ## 1.0.4 (10th August 2024)
 
 * Fixed issues with Save & Load using LootLocker storage
