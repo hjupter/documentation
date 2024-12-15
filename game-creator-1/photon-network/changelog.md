@@ -120,7 +120,7 @@
 * **Added** an option in OnPhotonInstantiate trigger to store the Owner(GameObject).
 * **Added** new options on CharacterNetwork component that lets you specify what you need to synchronize on each character.
 * **Added** new Is Connected and Ready condition.\
-  _A refined version of connected which is true only if your connection to the server is ready to accept operations like join, leave, etc._
+  &#xNAN;_&#x41; refined version of connected which is true only if your connection to the server is ready to accept operations like join, leave, etc._
 * **Improved** how Characters move, rotate, dash and jump.
 * **Improved** how Character and Stats are synchronized.
 * **Improved** how Target types are cached for performance. \

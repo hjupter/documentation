@@ -2,11 +2,11 @@
 
 The State Machine Runner is the component in charge of executing your state machine asset or embedded.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### The Buttons
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 **`Edit`** this button will open or reload the current existing graph view window with the selected State machine
 

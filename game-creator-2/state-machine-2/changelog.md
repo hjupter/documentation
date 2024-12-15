@@ -166,7 +166,7 @@ In order to upgrade, be sure to backup your project(s) first and uninstall any p
 * FIX: Some set properties had wrong icons
 * Some other minor internal improvements and tweaks
 
-## 2**.0.2 (20th March 2023)**
+## &#x32;**.0.2 (20th March 2023)**
 
 * Fixed an issue preventing new State Machines from being opened outside the examples folder
 * Fixed an error trying to access a non existent Method
