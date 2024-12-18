@@ -4,6 +4,13 @@ description: Photon Module 2 Releases
 
 # Releases
 
+## v1.4.9 (December 18th 2024)
+
+* Unity 6 support
+* Game Creator 2.17.51 support
+* Updated state sync demo
+* Fixed InvalidCastException when Player becomes ragdoll
+
 ## v1.3.8 (August 25th 2024)
 
 * Added new camera synchronzation option in Character Network
