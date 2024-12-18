@@ -4,6 +4,12 @@ description: Photon Melee 2 Releases
 
 # Releases
 
+## 1.1.6 (18th December 2024)
+
+* Unity 6 support
+* Game Creator v2.17.51 support
+* Melee v2.2.11 support
+
 ## 1.0.5 (5th August  2024)
 
 * Support for latest Game Creator v2.16.50

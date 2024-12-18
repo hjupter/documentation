@@ -4,6 +4,12 @@ description: Photon Stats Releases
 
 # Releases
 
+## 1.1.4 (18th December 2024)
+
+* Unity 6 support
+* Game Creator v2.17.51 support
+* Stats v2.6.18 support
+
 ## 1.0.3 (8th May 2024)
 
 * Update examples
