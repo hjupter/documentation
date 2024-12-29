@@ -1,5 +1,24 @@
 # Releases
 
+## 1.2.7 (29th December 2024)
+
+* Support for latest Photon Fusion SDK 2.0.4
+* Restructured the Start Game instruction to support loading scenes by string, enabling the use of scenes from Addressable bundles.
+* The master client will now automatically take network authority over objects (with “Allow State Authority Override” enabled) when players leave the session.
+* RPCs no longer require a player to be instantiated in order to call them
+* **Added** an option in Fusion settings to specify a custom runner prefab. This is useful for cases where customization is needed, such as integrating the Fusion Physics addon.
+* **Added** an option in Fusion settings to customize the default pool size for network-spawned objects.
+* **Added** a new property to retrieve the network-synchronized input direction value from a character.
+* **Added** new numeric properties to return the network simulation time, local render time, and the last server tick.
+* **Fixed** an issue with Spawned and Despawned network object events
+* **Fixed** an issue where the Local Player property did not return the correct object.
+* **Fixed** an issue where the Player Username property did not return the correct value.
+* **Fixed** an issue where RoomChat failed to initialize properly in certain cases.
+* **Fixed** an issue where the NavMeshAgent failed to initialize correctly after being spawned in certain cases.
+* **Fixed** multiple issues affecting NPC characters.
+* Username is no longer stored in PlayerPrefs
+* Updated demos
+
 ## 1.1.6 (30th October 2024)
 
 * Fixed cached rpcs issue being interrupted by model change calls
