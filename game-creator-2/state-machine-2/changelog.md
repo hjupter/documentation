@@ -4,6 +4,22 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 2.5.15 (29th December 2024)
+
+* Reduced editor cache memory allocations
+* Improved editor load graph performance
+* Added support for sub state machine variables
+* Added new instruction to loop lists using a state machine node
+* Added an option to disable the State Machine database. This is useful when using Addressables and you want to prevent all State Machine assets from being included in the build.
+* Fixed an issue where Target and Self were not returning the appropriate objects
+* Fixed issues with network settings not showing up
+* Fixed an issue where certain nodes were incorrectly marked as deactivated
+* Fixed issues where variables were duplicated or removed in certain cases
+* Prevent mouse events from propagating when interacting with nodes or blackboard
+* Added “State Machine Runner” option to the Create menu
+* Overall performance improvements
+* Updated examples
+
 ## 2.4.14 (18th October 2024)
 
 * Unity 6 support
