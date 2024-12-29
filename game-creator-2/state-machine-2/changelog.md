@@ -10,6 +10,7 @@ description: State Machine 2 Releases
 * Improved editor load graph performance
 * Added support for sub state machine variables
 * Added new instruction to loop lists using a state machine node
+* Added Melee state machine values
 * Added an option to disable the State Machine database. This is useful when using Addressables and you want to prevent all State Machine assets from being included in the build.
 * Improved fields alignment on expanded nodes inspector
 * Fixed an issue where the node selection context menu did not appear for expanded nodes
