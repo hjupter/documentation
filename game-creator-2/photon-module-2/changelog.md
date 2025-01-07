@@ -4,6 +4,10 @@ description: Photon Module 2 Releases
 
 # Releases
 
+## v1.4.10 (January 7th 2025)
+
+* Fixed an issue where RPCs were sent incorrectly to newly joined players.
+
 ## v1.4.9 (December 18th 2024)
 
 * Unity 6 support
