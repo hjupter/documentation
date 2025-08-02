@@ -10,38 +10,25 @@ description: State Machine 2 Releases
 
 * Play Button in Node Inspector - Test individual nodes directly from the editor during play mode
 * Run State Machine Node Instruction - New Visual Scripting instruction to execute specific nodes with parameters
+* Loop List with Nodes Instruction - New Visual Scripting instruction to loop a list with an specific state machine node
 * State Machine Runner Instances System - Centralized tracking and access to active state machine runners
-* Auto-Instantiate Feature - Configure state machines to automatically start at game startup in Repository Settings
-* Node Search Functionality - New search system with filtering and performance optimizations
+* Auto-Instantiate Feature - Configure state machines to automatically start at game startup in Settings
+* Node Search Functionality - New search system with filtering
 * Global Search Node - Find and navigate to specific nodes across graphs
-* Sub State Machine Variables Support - Full variable synchronization between runners and assets
 * Dynamic Transition Lists - Node inspector lists that update when edges are added/removed
-* Open State Machine Asset Button - Direct access button from runners to assets
+* Open State Machine Asset Button - Direct access to all existing state machine assets
 * Stats Module Properties - Property support for state machine variables integration
 * Melee Module Properties - Property support for state machine variables integration
 * Shooter Module Properties - Property support for state machine variables integration
 * Inventory Module Properties - Property support for state machine variables integration
 * Quest Module Properties - Property support for state machine variables integration
 
-#### Enhanced <a href="#enhances" id="enhances"></a>
+#### Enhanced <a href="#enhanced" id="enhanced"></a>
 
-* Performance Optimization Framework - Adaptive update frequency, viewport culling, and memory allocation reduction
-* Enhanced Graph Performance - Throttled updates based on node count and visibility-based node updating
-* Improved Embedded Graph System - Complete overhaul with automatic prefab support and scene linking
-* Better Variable Synchronization - Bidirectional sync between runners and assets with type safety
-* Enhanced Prefab Support - Embedded graphs work seamlessly with Unity prefabs using sub-asset storage
-* Optimized Runtime Performance - Improved state machine execution with reduced overhead
-* Improved Minimap - Persistent minimap state with optimized rendering
+* Improved Minimap - Persistent minimap state
 
-#### Changed <a href="#changes" id="changes"></a>
+#### Fixed <a href="#fixed" id="fixed"></a>
 
-* Embedded Graph Storage - Now uses sub-asset storage for better prefab compatibility
-* Variable Synchronization - Changed to bidirectional sync between runners and assets
-* Graph Update System - Updates are now throttled based on node count and visibility
-
-#### Fixed <a href="#fixes" id="fixes"></a>
-
-* Prefab Conversion Issues - Embedded graphs now properly convert when GameObjects become prefabs
 * Variable Duplication and Conflicts - Prevented duplicate variables and conflicts during operations
 * Node Runner Self Reference - Corrected self reference handling in run runner node instructions
 * Duplicate Connections - Resolved duplicate edge connection creation issues
