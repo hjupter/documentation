@@ -4,7 +4,7 @@ description: State Machine 2 Releases
 
 # Releases
 
-## 2.6.16 (In Development)
+## 2.6.16 (2nd August 2025)
 
 #### New <a href="#new" id="new"></a>
 
