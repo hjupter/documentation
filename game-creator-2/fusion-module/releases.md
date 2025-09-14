@@ -1,5 +1,45 @@
 # Releases
 
+## 1.3.8 (14th September 2025)
+
+**New**
+
+* Region selection tools — Select Best Region instruction and ping shown in dropdowns
+* Tick timers — Stop TickTimer instruction
+* NetworkCharacter — Addressable model support for character models
+* Register Character Models instruction — Quickly register model prefabs for replication
+* Network status & helpers — Conditions for session/internet status plus simple disconnect/shutdown checks
+* Session & player data — Last player left, visibility/open checks, user ID and last joined player info
+* Chat & authentication — Optional profanity filter and custom authentication; centralized auth settings
+* Fail‑Safe system — Configurable protections against common runtime issues
+* Error messages library — Curated, editable network message texts
+* WebGL — Clipboard copy support
+* Addressables
+
+**Enhanced**
+
+* Scene loading — Smoother transitions with clearer Start/Done events and fewer allocations
+* Region selection — Auto‑best option, cleaned lists, improved ping detection and display
+* Networking stability — Safer authority guards
+* Pooling options — Can disable pooling per module; increased capacities where needed
+* UI/UX — More reliable room chat, lobby control activations, clearer shutdown reasons and error messages
+* NetworkSceneManager — Better orchestration for multi‑scene management
+
+**Changed**
+
+* Authority handling — Automatic ownership transfer when overriding authority; request authority for orphaned objects
+* Spawning — Aligned Spawn and SpawnAsync behavior
+
+**Fixed**
+
+* Stability — Many null‑reference protections and safer error paths
+* Scene, spawn & lifecycle — Reliable Spawned/Despawned events and player spawn/despawn; regressions addressed in NetworkSceneManager
+* Chat & lobby — Robust initialization even if prefabs or addressables aren’t loaded; authentication method support
+* Regions & ping — Edge‑case handling and invalid values; dropdowns show accurate ping
+* WebGL & platform — Loading and Network Object Provider behavior; clipboard follow‑ups; compile/build fixes
+* Authority & state — Correct dead‑state sync and facing on authority change; guard checks
+* Addressables & errors — Better shutdown reason retrieval; auto‑release of handles; safer StartGameAsync and related flows
+
 ## 1.2.7 (29th December 2024)
 
 * Support for latest Photon Fusion SDK 2.0.4
