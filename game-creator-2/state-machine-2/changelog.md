@@ -4,6 +4,10 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 2.6.17 (5th October 2025)
+
+* Support for Unity 6000.0.58+ (Added Pointer events)
+
 ## 2.6.16 (2nd August 2025)
 
 #### New <a href="#new" id="new"></a>
