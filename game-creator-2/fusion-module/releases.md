@@ -1,5 +1,12 @@
 # Releases
 
+## 1.3.9 (25th October 2025) <a href="#id-139-25th-october-2025" id="id-139-25th-october-2025"></a>
+
+**Fixed**
+
+* Fixed network prop attachment synchronization bug (Thanks Tosh)
+* Support for latest Game Creator version 2.18.58
+
 ## 1.3.8 (14th September 2025)
 
 **New**
