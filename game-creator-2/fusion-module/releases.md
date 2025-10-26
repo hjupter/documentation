@@ -5,7 +5,12 @@
 **Fixed**
 
 * Fixed network prop attachment synchronization bug (Thanks Tosh)
+* Fixed cached rpc initial invocation bug
 * Support for latest Game Creator version 2.18.58
+
+New
+
+* Added default Profanity Filter asset
 
 ## 1.3.8 (14th September 2025)
 
