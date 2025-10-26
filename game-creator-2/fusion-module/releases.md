@@ -1,6 +1,6 @@
 # Releases
 
-## 1.3.9 (25th October 2025) <a href="#id-139-25th-october-2025" id="id-139-25th-october-2025"></a>
+## 1.3.9 (26th October 2025) <a href="#id-139-25th-october-2025" id="id-139-25th-october-2025"></a>
 
 **Fixed**
 
