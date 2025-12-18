@@ -1,150 +1,461 @@
+---
+description: Complete guide to Fusion module UI components for multiplayer interfaces
+---
+
 # User Interface
 
-The **Fusion** module comes with a collection of components designed to streamline the creation of UI windows and elements.
+## Overview
 
-All examples that come with the module have been created with them and are flexible to accommodate any type of window.
+The Fusion module includes a comprehensive collection of UI components designed to streamline the creation of multiplayer interfaces. These components integrate with Unity's UI system and Game Creator 2's visual scripting.
 
-***
+### Available Components
+
+| Component | Purpose |
+|-----------|---------|
+| [Session List UI](#session-list-ui) | Browse and display available sessions |
+| [Session Item UI](#session-item-ui) | Individual session entry in list |
+| [Region Dropdown UI](#region-dropdown-ui) | Region selection dropdown |
+| [Room Chat](#room-chat) | Real-time player communication |
+| [Floating Text](#floating-text) | Dynamic UI above game objects |
+| [Scoreboard UI](#scoreboard-ui) | Player scores and stats display |
+| [Player List UI](#player-list-ui) | Connected players display |
+
+{% hint style="success" %}
+The **Fusion.UI** install package provides ready-to-use prefabs for all components. Install via **Game Creator → Install**.
+{% endhint %}
+
+---
 
 ## Session List UI
 
-This is one of the most important components and allows to display a list of avalable sessions to join.
+Display a list of available sessions for players to browse and join.
 
-<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption><p>Session List UI component</p></figcaption></figure>
 
-The **Content** field defines the `Rect Transform` where each prefab instance will be instantiated, for every visible session.
+### Component Properties
 
-{% hint style="info" %}
-The **Content** value should contain an auto-layout component, such as `Vertical Layout Group`, `Horizontal Layout Group` or `Grid Layout Group`.
-{% endhint %}
+| Property | Type | Description |
+|----------|------|-------------|
+| **Content** | RectTransform | Container for session items |
+| **Prefab** | GameObject | Session item prefab to instantiate |
+| **Empty Message** | GameObject | Shown when no sessions available |
+| **Sort Direction** | Enum | Ascending or Descending |
+| **Sort Index** | Integer | Property index to sort by |
 
-The **Prefab** is the prefab instantiated inside the _Content_. It must contain a **Session Item UI** component, which is automatically configured by its parent.
+### Setup Steps
 
-The **Empty Message** is an option message to display when session list is empty.
-
-The **Sort Direction** field determines the order in which members are displayed based on the sort field index.
-
-The **Sort Index** specify the index of the session property to sort by. This allows for flexibility in sorting by different criteria, such as sessio name, player count, sessio properties and more.
-
-<figure><img src="../../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-The Fusion UI package provides a ready-to-use prefab for the session list.
-{% endhint %}
+1. Create a UI Panel with a **Scroll View**
+2. Add **Session List UI** component to the panel
+3. Assign the Scroll View's **Content** to the Content field
+4. Assign a **Session Item UI** prefab to the Prefab field
+5. Add a layout component to the Content (Vertical Layout Group recommended)
 
 {% hint style="info" %}
-Sessions marked as not visible are not displayed here.
+The **Content** must have an auto-layout component: `Vertical Layout Group`, `Horizontal Layout Group`, or `Grid Layout Group`.
 {% endhint %}
+
+### Sort Options
+
+| Sort Index | Sorts By |
+|------------|----------|
+| 0 | Session Name |
+| 1 | Player Count |
+| 2 | Max Players |
+| 3+ | Custom Session Properties |
+
+### Example Setup
+
+```
+SessionListPanel (Panel)
+├── Session List UI (Component)
+├── Scroll View
+│   └── Viewport
+│       └── Content (Vertical Layout Group)
+│           ├── [Session Item 1] (instantiated)
+│           ├── [Session Item 2] (instantiated)
+│           └── ...
+└── EmptyMessage (Text: "No sessions found")
+```
+
+### Integration Flow
+
+```
+┌─────────────────────────────────────────────────┐
+│           Session List Flow                      │
+├─────────────────────────────────────────────────┤
+│                                                  │
+│   Join Lobby                                     │
+│        │                                         │
+│        ▼                                         │
+│   On Session List Updated (Event)                │
+│        │                                         │
+│        ▼                                         │
+│   Session List UI auto-populates                 │
+│        │                                         │
+│        ▼                                         │
+│   Player clicks Join Button                      │
+│        │                                         │
+│        ▼                                         │
+│   Join Session instruction executes              │
+│                                                  │
+└─────────────────────────────────────────────────┘
+```
+
+{% hint style="info" %}
+Sessions marked as **not visible** do not appear in the list.
+{% endhint %}
+
+---
 
 ## Session Item UI
 
-The Session Item UI component is designed to represent individual entries within the session list, displaying various properties of a session.&#x20;
+Represents individual entries within the session list.
 
-<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption><p>Session Item UI component</p></figcaption></figure>
 
-The **alternate background** option allows you to set an alternate background image for the scoreboard item, which can help distinguish between different rows for better readability.
+### Component Properties
 
-The **Join Button** is required to allow playes to join the specifc session, this button can be disabled if the session is not open.
+| Property | Type | Description |
+|----------|------|-------------|
+| **Alternate Background** | Image | Optional alternating row background |
+| **Join Button** | Button | Button to join this session |
+| **Fields** | Array | Data fields to display |
 
-### The fields
+### Field Configuration
 
-Fields can be customized to display specific data of types **string** or **number**.
+Each field displays specific session data:
 
-The **Text** field is the component that displays the data
+| Field Property | Description |
+|----------------|-------------|
+| **Text** | UI Text component to display data |
+| **Use Format** | Enable string formatting |
+| **Use Color** | Enable dynamic coloring |
+| **Property** | Which session property to display |
 
-**Use Format** enables the formatting feature for the associated text or number field.
+### Formatting Options
 
 {% hint style="info" %}
-**Percentage Formatting**\
+**Percentage Formatting**
 Use `{0:P}` to convert 0.99 to 99%.
 
-**Currency Formatting**\
+**Currency Formatting**
 Use `{0:C}` to convert 1000 to $1,000.00.
 
-**Number Formatting**\
+**Number Formatting**
 Use `{0:N}` to convert 1000 to 1,000.
 {% endhint %}
 
-**Use Color** enables the option to apply color to the field using properties
+### Available Session Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| Session Name | String | Name of the session |
+| Player Count | Number | Current players |
+| Max Players | Number | Maximum allowed |
+| Region | String | Session region |
+| Is Open | Boolean | Accepting joins |
+| Custom Properties | Various | Your custom properties |
+
+### Example Prefab Structure
+
+```
+SessionItem (Session Item UI)
+├── Background (Image)
+├── SessionName (Text) [Field 0]
+├── PlayerCount (Text) [Field 1: "{0}/{1}"]
+├── Region (Text) [Field 2]
+├── MapName (Text) [Field 3: Custom Property]
+└── JoinButton (Button)
+```
 
 {% hint style="success" %}
-You can use fields to display **session properties** as well.
+You can display **session properties** set via the Set Session Property instruction.
 {% endhint %}
 
+---
 
+## Region Dropdown UI
 
-***
+Display available Photon regions in a dropdown menu.
 
-## Region Selection
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Region Dropdown UI</p></figcaption></figure>
 
-It is possibe to display availabe regions by attaching a **RegionDropdownUI** component in a DropDown menu. This will display enabled regions in [**Fusion Module Settings**](settings.md).
+### Setup
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+1. Create a **Dropdown** UI element (standard Unity UI or TMP)
+2. Add the **RegionDropdownUI** component
+3. The dropdown auto-populates with enabled regions from [Settings](settings.md)
+
+### Features
+
+- Automatically populates from Fusion Settings
+- Selected region saved to PlayerPrefs
+- Persists across sessions
+- Accessible via property getter
+
+### Accessing Selected Region
+
+```
+Property Getter: {Selected Region}
+```
+
+Use in **Start Game** instruction:
+
+```
+Trigger: On Play Button Click
+└── Instructions:
+    └── Start Game
+        ├── Region: {Selected Region}
+        └── ...
+```
 
 {% hint style="success" %}
-The **selected** region by this drop menu will be stored in player prefs. The selected region is accessibe through a Game Creator 2 string property.
+The selected region is automatically stored in PlayerPrefs and restored when the game restarts.
 {% endhint %}
+
+---
 
 ## Room Chat
 
-The Room Chat component is designed to facilitate real-time communication between players within a game session. It offers various customizable options to enhance the chat experience, ensuring smooth interaction and a polished user interface.
+Real-time text communication between players within a session.
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Room Chat component</p></figcaption></figure>
 
-**Prefab:** a game object that requirs to have a Text or TextMeshPro UI component
+### Component Properties
 
-**Input:** the input field to type messages
-
-**Background:** an image component that can fade in fade out depending if room chat is focused or not.
-
-**Container:**  a scroll rect view that contains chat entries
+| Property | Type | Description |
+|----------|------|-------------|
+| **Prefab** | GameObject | Chat message prefab (requires Text/TMP) |
+| **Input** | InputField | Text input for typing messages |
+| **Background** | Image | Fades based on focus state |
+| **Container** | ScrollRect | Scroll view for chat entries |
 
 ### Settings
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-08-18 at 6.46.06 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-08-18 at 6.46.06 PM.png" alt=""><figcaption><p>Room Chat settings</p></figcaption></figure>
 
-**Activate On Input:** if enabled chat input field can be activated with an specifed input trigger.
+| Setting | Type | Default | Description |
+|---------|------|---------|-------------|
+| **Activate On Input** | Boolean | `true` | Enable input key activation |
+| **Input Trigger** | KeyCode | `Return` | Key to activate chat |
+| **Max Lines** | Integer | `50` | Maximum stored messages |
+| **Max Visible Lines** | Integer | `5` | Visible when unfocused |
+| **Fade Out Start** | Float | `5` | Seconds before fade starts |
+| **Fade Out Duration** | Float | `1` | Fade animation duration |
+| **Background Fade Out Duration** | Float | `0.5` | Background fade duration |
+| **Disable Player When Typing** | Boolean | `true` | Disable movement while typing |
+| **Unseen Messages** | PropertySet | - | Track unread message count |
 
-**Input Trigger:** the input key to activate the chat.
+### Chat Message Prefab
 
-**Max Lines:** how many lines of messages can the room chat keep
+Create a simple prefab with:
+- Text or TextMeshProUGUI component
+- Optional background image
+- Optional sender name field
 
-**Max Visible Lines:**  how many chat entries stay visible when chat is unfocused/unselected
+### Usage Example
 
-**Fade Out Start:** how long until starts fading out since the last message received
+```
+Chat Prefab Structure:
+├── ChatMessage (RectTransform)
+│   ├── SenderName (Text)
+│   └── MessageText (Text)
+```
 
-**Fade Out Duration:** the duratin of the messages fade out
+### Sending Messages via Visual Scripting
 
-**Background Fade Out Duration:** how long it takes to fade out the backgroud image
+```
+Trigger: On Custom Event "SendChat"
+└── Instructions:
+    └── Send Chat Message
+        └── Message: {Local Variable: ChatInput}
+```
 
-**Disable Player When Typing:** if enabled the player movemet will be disabled when typing
+### Chat Events
 
-**Unseen Messages:** sets a property with the number of unseen messags when chat is unfocused
+| Event | Description |
+|-------|-------------|
+| **On Chat Message Received** | New message from any player |
+| **On Chat Focus Changed** | Chat gained/lost focus |
 
-
-
-***
+---
 
 ## Floating Text
 
-Floating text serves as an instruction to generate user interface text above a specific target. This feature is commonly utilized for displaying character nameplates, chat bubbles, and other similar elements.
+Generate dynamic UI text above game objects (nameplates, damage numbers, chat bubbles).
 
-<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption><p>Floating Text instruction</p></figcaption></figure>
 
-**Target**: the target where the floating text is going to be displayed
+### Instruction Parameters
 
-**Text:** the text that is going to be displayed in the floating UI
-
-**Prefab:** an optional prefab which you can customize to your needs the only thing needed is a Text or  TextMeshPro UI component.
-
-**Offset:** an offset value to display the UI
-
-**Duration:** how long is this UI going to be displayed, mostly useful for bubble chat. If set to 0 it will stay forever.
-
-**Fade Out Time:** the time takes to fade out if duratin is greater than 0
-
-**Color:** a color to tint the text component.
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| **Target** | GameObject | - | Object to display above |
+| **Text** | String | - | Text to display |
+| **Prefab** | GameObject | Auto-generated | Custom UI prefab |
+| **Offset** | Vector3 | (0, 2, 0) | Position offset from target |
+| **Duration** | Float | `0` | Display time (0 = permanent) |
+| **Fade Out Time** | Float | `0.5` | Fade duration |
+| **Color** | Color | White | Text tint color |
 
 {% hint style="info" %}
-The **prefab** is optional but if you don't define it a preconfigured UI will be generated autmatically.
+The **prefab** is optional. If not defined, a default UI is generated automatically.
 {% endhint %}
+
+### Use Cases
+
+#### Player Nameplate
+
+```
+Trigger: On Player Spawned
+└── Instructions:
+    └── Floating Text
+        ├── Target: {Spawned Player}
+        ├── Text: {Player Username}
+        ├── Duration: 0 (permanent)
+        └── Offset: (0, 2.5, 0)
+```
+
+#### Damage Numbers
+
+```
+Trigger: On Damage Received
+└── Instructions:
+    └── Floating Text
+        ├── Target: {Self}
+        ├── Text: "-{Damage Amount}"
+        ├── Duration: 1.5
+        ├── Color: Red
+        └── Offset: (0, 2, 0)
+```
+
+#### Chat Bubble
+
+```
+Trigger: On Chat Message Received
+└── Instructions:
+    └── Floating Text
+        ├── Target: {Message Sender}
+        ├── Text: {Chat Message}
+        ├── Duration: 5
+        └── Prefab: ChatBubblePrefab
+```
+
+### Custom Prefab Requirements
+
+- Must have **Text** or **TextMeshProUGUI** component
+- Optional: CanvasGroup for fade effects
+- Optional: Custom layout and styling
+
+---
+
+## Scoreboard UI
+
+Display player scores and statistics during gameplay.
+
+### Component Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| **Content** | RectTransform | Container for player entries |
+| **Prefab** | GameObject | Player score item prefab |
+| **Sort By** | Enum | Property to sort by |
+| **Sort Direction** | Enum | Ascending/Descending |
+
+### Setup
+
+1. Create a panel for the scoreboard
+2. Add **Scoreboard UI** component
+3. Create a player entry prefab with score fields
+4. Configure sorting by score/kills/name
+
+### Example Structure
+
+```
+Scoreboard Panel
+├── Header Row
+│   ├── "Player" (Text)
+│   ├── "Score" (Text)
+│   └── "Kills" (Text)
+└── Content (Vertical Layout Group)
+    ├── [Player Entry 1]
+    ├── [Player Entry 2]
+    └── ...
+```
+
+---
+
+## Player List UI
+
+Display all connected players in the current session.
+
+### Features
+
+- Auto-updates on player join/leave
+- Displays player information
+- Supports custom entry prefabs
+- Integration with kick functionality
+
+### Setup
+
+1. Create a panel with **Player List UI** component
+2. Assign a player entry prefab
+3. Configure display fields (name, ping, ready status)
+
+### Example Integration
+
+```
+Trigger: On Kick Button Click
+└── Condition Branch:
+    └── If Is Host:
+        └── Kick Player
+            └── Player: {Selected Player from List}
+```
+
+---
+
+## UI Prefab Gallery
+
+The Fusion.UI package includes these ready-to-use prefabs:
+
+| Prefab | Description |
+|--------|-------------|
+| **SessionListPanel** | Complete session browser |
+| **SessionItem** | Session list entry |
+| **ChatPanel** | Full chat interface |
+| **ChatMessage** | Chat message entry |
+| **Scoreboard** | Player scores display |
+| **Nameplate** | Floating player name |
+| **RegionSelector** | Region dropdown |
+| **LobbyUI** | Complete lobby interface |
+
+---
+
+## Best Practices
+
+### Performance
+
+- Use object pooling for frequently created items
+- Limit max visible chat messages
+- Disable updates when UI is hidden
+
+### Accessibility
+
+- Use readable font sizes
+- Provide color contrast
+- Support keyboard navigation
+
+### Responsiveness
+
+- Test on different screen sizes
+- Use anchors and layouts properly
+- Consider mobile/console UI differences
+
+---
+
+## Related Documentation
+
+- [Sessions](sessions.md) - Session management
+- [Settings](settings.md) - Region configuration
+- [Visual Scripting Events](visual-scripting/events/) - UI-related events
+- [Visual Scripting Instructions](visual-scripting/instructions/) - UI instructions

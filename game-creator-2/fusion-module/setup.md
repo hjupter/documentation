@@ -1,54 +1,227 @@
 ---
 description: >-
-  Welcome to getting started with the Factions module. In this section, you’ll
-  learn how to install this module and get started with the examples it comes
-  with.
+  Complete guide to installing and configuring the Fusion module for Game Creator 2.
 ---
 
 # Setup
 
-## Prepare your Project
+## Prerequisites
 
-Before installing the **Fusion** module, you’ll need to either create a new Unity project or open an existing one.
+Before installing the **Fusion** module, ensure you have:
+
+| Requirement | Description |
+|-------------|-------------|
+| **Unity 6** | Version 6000.0.0 or higher |
+| **Game Creator 2** | [Asset Store](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) |
+| **Photon Fusion SDK** | [Asset Store](https://assetstore.unity.com/packages/tools/network/photon-fusion-267958) |
 
 {% hint style="warning" %}
-It is important to note that [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Fusion**](https://assetstore.unity.com/packages/tools/network/photon-fusion-267958) should be present before attempting to install this module.
+**Game Creator 2** and **Photon Fusion SDK** must be imported before installing the Fusion module.
 {% endhint %}
 
-## Install the Fusion module
+---
 
-If you haven't purchased the [**Fusion**](https://u3d.as/2Cws) module, head to the Asset Store product page and follow the steps to get a copy of this module.
+## Step 1: Install Photon Fusion SDK
 
-Once you have bought it, click on **Window → Package Manager** to reveal a window with all your available assets.
+1. Import Photon Fusion from the Asset Store
+2. Open **Fusion > Fusion Hub** from the Unity menu
+3. Create a Photon account or sign in
+4. Create a new **Fusion App** in your dashboard
+5. Copy the **App ID** and paste it in the Fusion Hub
 
-Type in the little search field the name of this package and it will prompt you to download and install the latest stable version. Follow the steps and wait till Unity finishes compiling your project.
+{% hint style="info" %}
+Follow the official [Photon Fusion Getting Started Guide](https://doc.photonengine.com/fusion/current/tutorials/shared-mode-basics/1-getting-started) for detailed Photon setup.
+{% endhint %}
 
+---
 
+## Step 2: Install Fusion Module
 
-## Examples
+1. Purchase the [**Fusion Module**](https://u3d.as/2Cws) from the Asset Store
+2. Open **Window → Package Manager**
+3. Search for "Fusion" in your assets
+4. Click **Download** and then **Import**
+5. Wait for Unity to compile
 
-We highly recommend checking the examples that come with the **Fusin** module. To install them, click on the _Game Creator_ dropdown from the top toolbar and then the _Install_ option.
+---
 
-The **Installer** window will appear and you'll be able to manage all examples and template assets you have in your project.
+## Step 3: Install Examples (Recommended)
 
-* **Examples**: A collection of scenes with different use-case scenarios
-* **UI**: A bundle of common user interface elements
+The module includes example scenes and UI prefabs to help you get started.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+1. Open **Game Creator → Install** from the toolbar
+2. In the Installer window, find the Fusion section
+3. Click **Install** next to:
+   - **Examples**: Demo scenes with various use cases
+   - **UI**: Ready-to-use interface components
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Game Creator Installer Window</p></figcaption></figure>
 
 {% hint style="success" %}
-Clicking on the **Examples** install button will install all dependencies automatically.
+Installing **Examples** automatically includes all dependencies.
 {% endhint %}
 
-Once you have the examples installed, click on the _Select_ button or navigate to `Plugins/GameCreator/Installs/Fusion.Examples/`.
+Once installed, navigate to:
+```
+Plugins/GameCreator/Installs/Fusion.Examples/
+```
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Example scenes location</p></figcaption></figure>
 
+---
 
+## Step 4: Configure Fusion Settings
 
-## Getting Started
+Open **Game Creator → Fusion → Settings** to configure the module:
 
-This module requires Fusion to be installed first. After you have imported Fusion you need to set-it up and create your App Id in order for this to work.
+### General Settings
 
-You can follow this getting started [**guide from Fusion**](https://doc.photonengine.com/fusion/current/tutorials/shared-mode-basics/1-getting-started)
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Default Player Name** | Name format for unnamed players | `Player {0}` |
+| **Pool Size** | Default pool size for network objects | `10` |
+| **Enable Pooling** | Toggle object pooling | `true` |
+| **Custom Runner Prefab** | Optional custom NetworkRunner prefab | `null` |
 
+### Session Code Generator
+
+Configure human-readable session codes for easy sharing:
+
+| Setting | Description |
+|---------|-------------|
+| **Word List** | Words used for code generation |
+| **Separator** | Character between words |
+| **Word Count** | Number of words in generated code |
+
+### Regions
+
+Enable or disable Photon regions:
+
+- **US East** (us)
+- **US West** (usw)
+- **Europe** (eu)
+- **Asia** (asia)
+- **Japan** (jp)
+- **South America** (sa)
+- **South Korea** (kr)
+- **Australia** (au)
+
+{% hint style="info" %}
+Disabled regions won't appear in the Region Dropdown UI.
+{% endhint %}
+
+### Fail-Safe System
+
+Configure runtime protection against common errors:
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Enabled** | Toggle fail-safe protection | `true` |
+| **Close Error Threshold** | Errors before closing session | `20` |
+| **Shutdown Error Threshold** | Errors before forced shutdown | `50` |
+| **Error Time Window** | Time window for error counting (seconds) | `60` |
+
+### Error Messages
+
+Customize user-facing error messages for shutdown reasons:
+
+| Reason | Default Message |
+|--------|-----------------|
+| `GameNotFound` | "Session no longer exists" |
+| `GameIsFull` | "Session is full" |
+| `ConnectionTimeout` | "Connection timed out" |
+
+---
+
+## Step 5: Create Your First Networked Character
+
+### Basic Setup
+
+1. Create or select your player prefab
+2. Ensure it has a **Character** component (Game Creator 2)
+3. Add a **Network Character** component
+4. Required components are added automatically:
+   - NetworkObject
+   - NetworkTransform
+   - NetworkMecanimAnimator
+
+<figure><img src="../../.gitbook/assets/network-character-ezgif.com-optimize.gif" alt=""><figcaption><p>Adding Network Character component</p></figcaption></figure>
+
+### Register as Network Prefab
+
+1. Select your player prefab
+2. In the NetworkObject component, click **Register Prefab**
+3. Or drag to the Fusion **NetworkPrefabAssetSource** list
+
+---
+
+## Step 6: Create a Basic Session Flow
+
+### Start Session Trigger
+
+Create a trigger to start a network session:
+
+```
+Trigger: On Button Click
+└── Instructions:
+    └── Start Game
+        ├── Game Mode: Shared
+        ├── Session Name: "MyGame"
+        └── Scene: "GameScene"
+```
+
+### Spawn Player on Scene Load
+
+Create a trigger to spawn the player when the scene loads:
+
+```
+Trigger: On Scene Load Done (Fusion Event)
+└── Instructions:
+    └── Spawn Player
+        ├── Prefab: [Your Player Prefab]
+        └── Position: [Spawn Point Transform]
+```
+
+---
+
+## Project Structure
+
+After installation, your project should have:
+
+```
+Assets/
+├── Plugins/
+│   └── GameCreator/
+│       └── Installs/
+│           ├── Fusion.Examples/    # Demo scenes
+│           └── Fusion.UI/          # UI prefabs
+└── Photon/
+    └── Fusion/                     # Fusion SDK
+```
+
+---
+
+## Verification Checklist
+
+Ensure everything is set up correctly:
+
+- [ ] Photon Fusion SDK imported
+- [ ] Photon App ID configured in Fusion Hub
+- [ ] Fusion Module imported
+- [ ] Examples installed (optional but recommended)
+- [ ] Fusion Settings configured
+- [ ] Player prefab has NetworkCharacter component
+- [ ] Player prefab registered as network prefab
+
+---
+
+## Next Steps
+
+- [**Sessions**](sessions.md) - Learn about session management
+- [**Characters**](characters.md) - Deep dive into NetworkCharacter
+- [**Variables**](variables.md) - Synchronize game data
+- [**Visual Scripting**](visual-scripting/) - Explore available components
+
+{% hint style="success" %}
+Run one of the example scenes to verify your setup works correctly before building your own game.
+{% endhint %}
