@@ -21,6 +21,7 @@ description: State Machine 2 Releases
 
 #### Enhanced <a href="#enhanced-2618" id="enhanced-2618"></a>
 
+* Updated documentation
 * Graph updates are now significantly faster and more responsive
 * Improved variable synchronization between the blackboard and runner inspector
 * Better testability support with new runner factory pattern
