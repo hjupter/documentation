@@ -1,5 +1,60 @@
 # Releases
 
+## 1.4.0 (15th December 2025) <a href="#id-140-15th-december-2025" id="id-140-15th-december-2025"></a>
+
+**New**
+
+* Is Host condition — Check if local peer is the host (server with local player)
+* Is Dedicated Server condition — Check if local peer is a dedicated server (headless)
+* Release State Authority instruction — Release ownership in shared mode for other clients
+* Kick Player instruction — Host or server can disconnect players from the session
+* Set Session Property instruction — Set custom session properties for matchmaking
+* Is Host property getter — Quick boolean check for host status
+* RTT property getter — Get current round-trip time in milliseconds
+* State Authority Gained event — Detect when your object gains state authority
+* State Authority Lost event — Detect when your object loses state authority
+* Has Input Authority property getter — Check if local player has input authority
+* Is Controllable property getter — Check if network character is controllable
+* Is Dead property getter — Check if network character is dead
+* Is Local Player property getter — Check if character is the local player
+* Is Moving property getter — Check if network character is currently moving
+* Is Player property getter — Check if character belongs to a player
+* Is Ragdoll property getter — Check if network character is in ragdoll state
+
+**Enhanced**
+
+* NetworkManager architecture — Extracted lobby, connection, and host migration logic into dedicated services
+* Reduced NetworkManager complexity by ~900 lines through service extraction
+* NetworkCharacter state synchronization — Added grounded, busy, dashing, speed, and stand level sync
+* Improved memory usage in SessionListUI and RegionDropdownUI with fewer allocations
+* Optimized NetworkCharacter change detection for better performance
+* Optimized region selection with O(n) single-pass best region lookup
+* Optimized string allocations in NetworkCharacter using string interpolation
+* RPC system — New base classes reduce code duplication
+* RPCReceiver — Replaced string dictionary keys with structs for better performance
+* List variable synchronization — Consolidated common sync logic for better maintainability
+* Visual scripting events — Extracted shared logic to base class reducing duplication
+
+**Changed**
+
+* Updated Photon Fusion SDK to version 2.0.9
+* Extracted magic numbers into NetworkConstants for easier configuration
+* Combat state sync (defense, blocking, invincibility) moved to Melee submodule — No longer synced in base NetworkCharacter
+* Simplified NetworkCharacterController driver logic
+
+**Fixed**
+
+* Fixed potential collection modification crash in OnPlayerLeft when iterating network objects
+* Fixed async void OnHostMigration missing exception handling that could crash the application
+* Fixed recursive GetInstance in FloatingTextManager that could cause StackOverflowException
+* Fixed operator precedence bug in SpawnManagers that could spawn managers in incorrect situations
+* Fixed collection modification crash in NetworkDataManager FixedUpdateNetwork timer expiry
+* Fixed memory leak in FloatingTextManager \_prevMessages dictionary with LRU eviction
+* Fixed GetComponent calls every frame in Chat.cs with cached character reference
+* Fixed compiler warnings in FusionFailSafeDrawer and NetworkConnectionService
+* Improved async void exception handling to filter OperationCanceledException
+* Cleaned up commented dead code and unused fields
+
 ## 1.3.9 (26th October 2025) <a href="#id-139-25th-october-2025" id="id-139-25th-october-2025"></a>
 
 **Fixed**
