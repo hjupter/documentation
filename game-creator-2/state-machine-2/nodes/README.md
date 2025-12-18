@@ -29,10 +29,10 @@ The **Start Node** is the entry point of your state machine. Execution begins he
 
 ### Features
 
-* Automatically created in new state machines
+* **Automatically created** when you create a new state machine
+* Cannot be manually created or deleted
 * Can include initial actions
 * Only has **output ports** (no inputs)
-* Cannot be deleted
 
 ### Connections
 
@@ -41,7 +41,7 @@ The **Start Node** is the entry point of your state machine. Execution begins he
 | Output | → | Actions, Branch, Conditions, Sub-State Machine, Exit |
 
 {% hint style="info" %}
-A state machine can have **multiple Start nodes** for different entry points, but typically you only need one.
+The Start node executes immediately when the State Machine Runner starts. Connect it to your initial behavior.
 {% endhint %}
 
 ---
@@ -216,10 +216,11 @@ The **Exit Node** terminates state machine execution and can trigger callbacks.
 
 ### Features
 
+* **Automatically created** when you create a new state machine
+* Cannot be manually created or deleted
 * Clean termination point
 * Triggers parent Sub-State Machine outputs
 * Useful for signaling completion
-* Multiple exit nodes for different outcomes
 
 ### Connections
 

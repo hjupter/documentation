@@ -26,18 +26,9 @@ Before you begin, ensure you have:
 
 Double-click your new State Machine asset to open the Graph Editor.
 
-You'll see an empty canvas with a toolbar at the top.
+You'll see a canvas with a **Start Node** and **Exit Node** already created. These nodes are automatically added to every new state machine and cannot be deleted.
 
-## Step 3: Add a Start Node
-
-Every state machine needs at least one entry point:
-
-1. Right-click anywhere on the canvas
-2. Select **Create Node → Start**
-
-The Start node will execute immediately when the state machine runs.
-
-## Step 4: Add an Actions Node
+## Step 3: Add an Actions Node
 
 Let's add some behavior:
 
@@ -48,7 +39,7 @@ Let's add some behavior:
 5. Choose an action (e.g., **Debug → Log Message**)
 6. Configure the action (e.g., type "Hello from State Machine!")
 
-## Step 5: Connect the Nodes
+## Step 4: Connect the Nodes
 
 1. Click on the **output port** (right side) of the Start node
 2. Drag the connection to the **input port** (left side) of the Actions node
@@ -56,7 +47,7 @@ Let's add some behavior:
 
 <figure><img src="../../.gitbook/assets/first-state-machine.png" alt=""><figcaption><p>A simple state machine with Start and Actions nodes</p></figcaption></figure>
 
-## Step 6: Add a State Machine Runner
+## Step 5: Add a State Machine Runner
 
 The Runner component executes your state machine on a GameObject:
 
@@ -69,7 +60,7 @@ The Runner component executes your state machine on a GameObject:
 You can also create a runner via **Create → Ninjutsu Games → State Machine Runner**
 {% endhint %}
 
-## Step 7: Test It!
+## Step 6: Test It!
 
 1. Press **Play** in Unity
 2. Check the Console window — you should see your log message!
