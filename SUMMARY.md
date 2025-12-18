@@ -68,7 +68,7 @@
     * [Server Time](game-creator-2/loot-locker/date-time/server-time.md)
   * [Handling Errors](game-creator-2/loot-locker/handling-errors.md)
   * [Releases](game-creator-2/loot-locker/releases.md)
-* [State Machine 2](game-creator-2/state-machine-2/README.md)
+* [🤖 State Machine 2](game-creator-2/state-machine-2/README.md)
   * [Getting Started](game-creator-2/state-machine-2/getting-started.md)
   * [Graph Editor](game-creator-2/state-machine-2/graph-editor.md)
   * [State Machine Runner](game-creator-2/state-machine-2/state-machine-runner.md)
