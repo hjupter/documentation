@@ -4,6 +4,25 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 2.6.18 (17th December 2025)
+
+#### Fixed <a href="#fixed-2618" id="fixed-2618"></a>
+
+* "Couldn't find node with id" error when creating nodes via drag-and-drop
+* Variable list corruption when adding/removing variables from the blackboard
+* Graph window freezing when making frequent changes
+* Memory cleanup issues when disposing nodes
+* Serialization warnings for port classes when using \[SerializeReference]
+* Play mode node views not updating correctly after domain reload
+
+#### Enhanced <a href="#enhanced-2618" id="enhanced-2618"></a>
+
+* Graph updates are now significantly faster and more responsive
+* Improved variable synchronization between the blackboard and runner inspector
+* Better testability support with new runner factory pattern
+* Internal architecture improvements for future extensibility
+* Added support for Unity 6.3 (6000.3.1f1+)
+
 ## 2.6.17 (5th October 2025)
 
 * Support for Unity 6000.0.58+ (Added Pointer events)

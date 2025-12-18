@@ -1,39 +1,269 @@
+---
+description: All the node types available in State Machine 2
+---
+
 # Nodes
 
-There are multiple types of nodes that you can use in the State Machine 2
+State Machine 2 provides a variety of node types to build any game logic you can imagine.
 
-## Entry Node
+## Node Types Overview
 
-This node is entry point of the State Machine graph, it will be executed when the state machine is started. This node can also run actions.
+| Node | Icon | Purpose |
+|------|------|---------|
+| 🟢 **Start** | Entry point | Begins state machine execution |
+| ⚡ **Actions** | Execute tasks | Runs Game Creator 2 actions |
+| 🔀 **Branch** | Decision | Multiple conditional paths |
+| ❓ **Conditions** | Evaluate | Check conditions before proceeding |
+| 🎯 **Trigger** | Events | React to game events |
+| 📦 **Sub-State Machine** | Modular | Embed another state machine |
+| 🚪 **Exit** | Terminate | End execution with callbacks |
+| ➡️ **Relay** | Organization | Visual routing (no logic) |
 
-This only have one output but can be connected to any node except a trigger.
+---
 
-<img src="../../../.gitbook/assets/image (61).png" alt="" data-size="original">
+## 🟢 Start Node
+
+The **Start Node** is the entry point of your state machine. Execution begins here when the runner starts.
+
+<img src="../../../.gitbook/assets/image (61).png" alt="Start Node" data-size="original">
+
+### Features
+
+* Automatically created in new state machines
+* Can include initial actions
+* Only has **output ports** (no inputs)
+* Cannot be deleted
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Output | → | Actions, Branch, Conditions, Sub-State Machine, Exit |
 
 {% hint style="info" %}
-This node can't be deleted
+A state machine can have **multiple Start nodes** for different entry points, but typically you only need one.
 {% endhint %}
 
-## Trigger Node
+---
 
-This node can trigger any type of event including collision events. This has one output which can be connected to any node that has vertical input.
+## ⚡ Actions Node
 
-![](<../../../.gitbook/assets/image (101).png>)
-
-## Actions Node
-
-This node can run actions, can receive input from any other type of node
+The **Actions Node** executes one or more Game Creator 2 actions in sequence.
 
 ![](<../../../.gitbook/assets/image (51).png>)
 
-## Branch Node
+### Features
 
-This node can run a single branch which is a combination of conditions and actions, that output will only execute if the conditions are not met.
+* Add unlimited actions
+* Actions execute in order (top to bottom)
+* Supports async actions (waits for completion)
+* Can be triggered by any node type
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Input | ← | Start, Actions, Branch, Conditions, Trigger, Sub-State Machine |
+| Output | → | Any node |
+
+### Use Cases
+
+* Play animations or sounds
+* Modify variables
+* Control characters
+* Spawn objects
+* Any Game Creator 2 action
+
+---
+
+## 🔀 Branch Node
+
+The **Branch Node** creates multiple conditional paths, similar to a switch statement.
 
 ![](<../../../.gitbook/assets/image (48).png>)
 
-## Conditions Node
+### Features
 
-This node can run conditions, it has an horizontal input for any other node, a vertical input for triggers only and two outputs, one for when conditions are met and another when they are not.
+* Add multiple branches with conditions
+* Each branch has its own conditions and actions
+* First matching branch executes
+* Default output if no conditions match
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Input | ← | Any node |
+| True Outputs | → | Per-branch outputs |
+| Default Output | → | Fallback when no conditions match |
+
+### Example
+
+```
+Branch Node:
+├─ Branch 1: "Health < 25%" → Flee Actions
+├─ Branch 2: "Has Weapon" → Attack Actions
+└─ Default → Patrol Actions
+```
+
+---
+
+## ❓ Conditions Node
+
+The **Conditions Node** evaluates conditions and routes execution based on the result.
 
 ![](<../../../.gitbook/assets/image (67).png>)
+
+### Features
+
+* Add multiple conditions (AND logic)
+* Two outputs: True and False
+* Can be triggered by other nodes or triggers
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Input | ← | Any node |
+| Trigger Input | ↑ | Trigger nodes only |
+| True Output | → | When all conditions pass |
+| False Output | → | When any condition fails |
+
+### Use Cases
+
+* Check player state before actions
+* Validate game conditions
+* Gate progression
+
+---
+
+## 🎯 Trigger Node
+
+The **Trigger Node** reacts to Game Creator 2 events and triggers, providing event-driven execution.
+
+![](<../../../.gitbook/assets/image (101).png>)
+
+### Features
+
+* Use any GC2 trigger type
+* Event-driven (waits for trigger)
+* Self-contained entry point
+* Works with collision, input, timers, and more
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Output | → | Actions, Branch, Conditions, Sub-State Machine |
+| Condition Output | ↓ | Directly to Conditions nodes |
+
+### Common Triggers
+
+| Trigger | Description |
+|---------|-------------|
+| **On Start** | When runner begins |
+| **On Update** | Every frame |
+| **On Trigger Enter** | Collision detection |
+| **On Input** | Player input |
+| **On Timer** | Timed events |
+| **On Variable Change** | React to data changes |
+
+{% hint style="success" %}
+Trigger nodes can act as **alternative entry points**, running in parallel with the Start node.
+{% endhint %}
+
+---
+
+## 📦 Sub-State Machine Node
+
+The **Sub-State Machine Node** embeds another state machine, enabling modular and reusable design.
+
+### Features
+
+* Reference any State Machine asset
+* Nested execution
+* Exit nodes in the sub-machine connect to this node's outputs
+* Perfect for reusable behavior modules
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Input | ← | Any node |
+| Output | → | Triggered by Exit nodes in the sub-machine |
+
+### Use Cases
+
+* **Reusable AI behaviors** (Patrol, Combat, Flee)
+* **Game mode management** (Menu, Playing, Paused)
+* **Complex sequences** (Cutscenes, Tutorials)
+
+### Creating Sub-State Machines
+
+1. Drag a State Machine asset into the graph
+2. Or right-click → Create Node → Sub-State Machine
+3. Assign the state machine asset in the Inspector
+
+{% hint style="info" %}
+**Tip:** Drag and drop a State Machine asset from the Project window directly onto the graph to instantly create a Sub-State Machine node.
+{% endhint %}
+
+---
+
+## 🚪 Exit Node
+
+The **Exit Node** terminates state machine execution and can trigger callbacks.
+
+### Features
+
+* Clean termination point
+* Triggers parent Sub-State Machine outputs
+* Useful for signaling completion
+* Multiple exit nodes for different outcomes
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Input | ← | Any node |
+| _(No outputs)_ | — | Terminates execution |
+
+### Use Cases
+
+* End a sub-state machine and continue parent flow
+* Signal completion of a behavior
+* Clean shutdown with callbacks
+
+---
+
+## ➡️ Relay Node
+
+The **Relay Node** is for visual organization only — it doesn't execute any logic.
+
+### Features
+
+* Route connections for cleaner graphs
+* No execution overhead
+* Purely visual organization
+
+### Connections
+
+| Port | Direction | Connects To |
+|------|-----------|-------------|
+| Input | ← | Any node |
+| Output | → | Any node |
+
+### Use Cases
+
+* Organize complex connection paths
+* Improve graph readability
+* Route around node clusters
+
+---
+
+## See Also
+
+* [Node Features](node-features.md) — Common features like rename, lock, disable
+* [Graph Editor](../graph-editor.md) — Creating and connecting nodes
+* [Getting Started](../getting-started.md) — Build your first state machine
+
