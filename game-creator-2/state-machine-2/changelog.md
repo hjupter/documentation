@@ -6,6 +6,10 @@ description: State Machine 2 Releases
 
 ## 2.6.18 (17th December 2025)
 
+#### New <a href="#new-2618" id="new-2618"></a>
+
+* Main Toolbar Button - Quick access button in Unity's main toolbar to open State Machine assets
+
 #### Fixed <a href="#fixed-2618" id="fixed-2618"></a>
 
 * "Couldn't find node with id" error when creating nodes via drag-and-drop
