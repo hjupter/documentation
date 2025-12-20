@@ -4,6 +4,12 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 2.6.19 (20th December 2025)
+
+#### Fixed <a href="#fixed-2619" id="fixed-2619"></a>
+
+* Compatibility with Unity 6.2 and earlier versions
+
 ## 2.6.18 (17th December 2025)
 
 #### New <a href="#new-2618" id="new-2618"></a>
