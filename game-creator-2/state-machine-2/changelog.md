@@ -4,6 +4,53 @@ description: State Machine 2 Releases
 
 # Releases
 
+## 2.7.20 (26th July 2026)
+
+#### New <a href="#new-2720" id="new-2720"></a>
+
+* Is Running condition - Check whether a State Machine still has anything running, available for both a State Machine asset and a Runner
+* Wait Until Complete option on Run State Machine Runner Node and Run Runner Node with Variables, so you can run nodes one after another instead of all at once
+
+#### Fixed <a href="#fixed-2720" id="fixed-2720"></a>
+
+* Node, group, and toolbar icons no longer disappear at random and stay blank until the State Machine window is reopened
+* Installing State Machine into a project with a stock Game Creator now compiles straight away and applies its Game Creator patch on its own, instead of reporting an error that had to be fixed by hand first
+* Calling a State Machine from another State Machine or an Actions component now runs it on the intended GameObject without losing the caller or its variables
+* State Machines started from a UI Button or a Game Creator instruction now run with the current GameObject and variables instead of the ones from a previous run
+* The Runner's "Node Is Running" condition now shows its own name in the condition list instead of appearing as a duplicate of "Node Is Enabled"
+* On Disable nodes now run immediately and only once, matching other On Disable logic
+* Loop List with Node now runs every item in order and correctly waits for nodes that take time to finish
+* Changing the State Machine assigned to a Runner during play now cleanly switches to the new one
+* Sticky note titles and descriptions can now be edited reliably in Unity 6, with moving, resizing, undo, and redo working as expected
+* Trigger nodes can now be started from UI Buttons and Game Creator instructions
+* Relay nodes now work after either result of a Conditions node
+* Saving a runner now also remembers disabled nodes and whether the runner itself was enabled
+* Nested State Machines now wait for their child machine to finish and no longer start twice accidentally
+* Node selectors now list every node, even when several nodes have the same name or type
+* Editing runner variables no longer creates partial names, duplicate empty entries, or restores deleted variables
+* Docked State Machine windows no longer become blank or stop accepting edits after reloads
+* Connection lines no longer jump to incorrect positions when moving nodes
+* Improved recovery from damaged or incomplete State Machine data
+* Existing Runner State Machines continue to work after upgrading
+* Prefabs and variants now keep their own object assignments when saved and reopened
+* Changing a direct object reference no longer causes errors in the State Machine window
+* The Open a State Machine button now shows the project's State Machine assets correctly
+
+#### Enhanced <a href="#enhanced-2720" id="enhanced-2720"></a>
+
+* Added support for Unity 6.5, while keeping Unity 6.4 LTS supported
+* Updated networking compatibility for Fusion 2.1.1
+* State Machine assets now import and refresh faster
+* Improved editor stability when graph windows remain open for long sessions
+* Direct scene and prefab objects now appear automatically on the Runner, with no variables or extra setup
+* A State Machine can be shared by many prefabs and variants while each keeps its own referenced objects
+* The References section now matches the clear, familiar layout used by Runner variables
+* Runner setup is simpler: assign a State Machine and choose its referenced objects
+* The Runner clearly shows missing required references and explains assignments that cannot be saved
+* Reference lists stay tidy when reference nodes are renamed, duplicated, or removed
+* Runners wait to start until every reference marked Required has an object
+
+
 ## 2.6.19 (20th December 2025)
 
 #### Fixed <a href="#fixed-2619" id="fixed-2619"></a>
