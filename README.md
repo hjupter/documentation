@@ -20,7 +20,10 @@ layout:
 
 # 🖐️ Welcome!
 
-In this page you'll learn everything you need to use **Ninjutsu Games** modules for [**Game Creator**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069?aid=1100l36uR\&utm\_campaign=unity\_affiliate\&utm\_medium=affiliate\&utm\_source=partnerize-linkmaker)
+In this page you'll learn everything you need to use **Ninjutsu Games** modules for [**Game Creator**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_home_game_creator)
+
+{% hint style="info" %}
+{% endhint %}
 
 > **Game Creator** is an ecosystem that gives [Unity](https://unity3d.com/) developers a world class technology platform from which they can build games that work seamlessly across multiple platforms quickly and efficiently.
 
@@ -39,4 +42,3 @@ In this page you'll learn everything you need to use **Ninjutsu Games** modules 
 {% hint style="info" %}
 Have any question? Feel free to drop us a line at [support@ninjutsugames.com](mailto:support@ninjutsugames.com).
 {% endhint %}
-

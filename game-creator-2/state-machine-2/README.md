@@ -9,7 +9,7 @@ coverY: 0
 **Having troubles?** Join our channel in Game Creator's [**Discord server**](https://discord.com/invite/99bbWBzKDX) for realtime discussions.
 {% endhint %}
 
-This module allows to create state machines with [Game Creator 2](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069).\
+This module allows you to create state machines with [Game Creator 2](https://www.ninjutsugames.com/go/game-creator-2?src=docs_state_machine_overview_game_creator).\
 Keep things clean and organize your triggers, actions and conditions in a simple State Machine, easily re-use them with any type of game object.
 
 {% embed url="https://youtu.be/NFub2Fv-GZc" %}
@@ -48,13 +48,13 @@ You'll first need to have Game Creator 2 installed.
 
 The process is simple:
 
-1. Install [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069)
-2. Install [**State Machine 2**](https://u3d.as/32Gh)
+1. Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_state_machine_setup_game_creator)
+2. Install [**State Machine 2**](https://www.ninjutsugames.com/go/state-machine?src=docs_state_machine_setup_module)
 
 Finally bring up the _**Game Creator Install Window**_ select the **State Machine 2** package and install it.
 
 <figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
+This module requires **Game Creator 2** and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
 {% endhint %}

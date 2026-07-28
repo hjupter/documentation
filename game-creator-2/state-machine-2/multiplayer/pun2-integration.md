@@ -8,7 +8,7 @@ When using the [Photon Module 2](../../photon-module-2/), State Machine 2 works 
 
 ## Setup
 
-1. Install **Photon Module 2** for Game Creator 2
+1. Install [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_state_machine_pun_integration) for Game Creator 2
 2. Install **State Machine 2**
 3. Network settings automatically appear in node inspectors
 
@@ -44,4 +44,3 @@ Nodes configured with **RPC** option will:
 ## See Also
 
 * [Photon Module 2 Documentation](../../photon-module-2/)
-

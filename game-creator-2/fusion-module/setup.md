@@ -12,12 +12,15 @@ description: >-
 Before installing the **Fusion** module, you’ll need to either create a new Unity project or open an existing one.
 
 {% hint style="warning" %}
-It is important to note that [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Fusion**](https://assetstore.unity.com/packages/tools/network/photon-fusion-267958) should be present before attempting to install this module.
+It is important to note that [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_fusion_setup_game_creator) and [**Photon Fusion**](https://www.ninjutsugames.com/go/photon-fusion?src=docs_fusion_setup_sdk) should be present before attempting to install this module.
 {% endhint %}
 
 ## Install the Fusion module
 
-If you haven't purchased the [**Fusion**](https://u3d.as/2Cws) module, head to the Asset Store product page and follow the steps to get a copy of this module.
+If you haven't purchased the module, [**get Fusion Module on the Unity Asset Store →**](https://www.ninjutsugames.com/go/fusion?src=docs_fusion_setup_module), then follow the steps below to install it.
+
+{% hint style="info" %}
+{% endhint %}
 
 Once you have bought it, click on **Window → Package Manager** to reveal a window with all your available assets.
 
@@ -51,4 +54,3 @@ Once you have the examples installed, click on the _Select_ button or navigate t
 This module requires Fusion to be installed first. After you have imported Fusion you need to set-it up and create your App Id in order for this to work.
 
 You can follow this getting started [**guide from Fusion**](https://doc.photonengine.com/fusion/current/tutorials/shared-mode-basics/1-getting-started)
-

@@ -31,10 +31,13 @@ You can follow this guide to configure LootLocker SDK [https://docs.lootlocker.c
 
 ### 5. Install the Module
 
-After importing LootLocker module head to the Game Creator Install window and install the Core package.
+If you do not own it yet, [**get LootLocker for Game Creator 2 on the Unity Asset Store →**](https://www.ninjutsugames.com/go/loot-locker?src=docs_loot_locker_getting_started_module).
+
+After importing the LootLocker module, head to the Game Creator Install window and install the Core package.
 
 {% hint style="danger" %}
-This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
+This module requires [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_loot_locker_getting_started_game_creator) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
 {% endhint %}
+
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>

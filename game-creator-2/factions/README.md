@@ -29,6 +29,11 @@ The **Factions** module for **Game Creator 2** offers a comprehensive system for
 Play the [**Demo**](https://hjupter.itch.io/factions) now!
 {% endhint %}
 
+{% hint style="success" %}
+[**Get Factions on the Unity Asset Store →**](https://www.ninjutsugames.com/go/factions?src=docs_factions_overview)
+
+{% endhint %}
+
 ## Key features <a href="#key-features" id="key-features"></a>
 
 * Easy faction setup and management
