@@ -8,6 +8,10 @@ This module seamlessly integrates **Inventory 2** module from **Game Creator 2**
 Try the [**Demo**](https://hjupter.itch.io/photon-inventory-game-creator-2) now!
 {% endhint %}
 
+{% hint style="success" %}
+[**Get Photon Inventory 2 on the Unity Asset Store →**](https://www.ninjutsugames.com/go/photon-inventory?src=docs_photon_inventory_overview)
+{% endhint %}
+
 ## Key Features
 
 * Keeps player's Bag in sync even with late joiners
@@ -19,15 +23,12 @@ Try the [**Demo**](https://hjupter.itch.io/photon-inventory-game-creator-2) now!
 
 ## Setup <a href="#setup" id="setup"></a>
 
-You can get **Photon Unity Networking** from [**here**](https://www.assetstore.unity3d.com/en/#!/content/1786).
+Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_inventory_setup_gc2), [**Inventory 2**](https://www.ninjutsugames.com/go/inventory-2?src=docs_photon_inventory_setup_inventory), [**Photon Unity Networking 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_inventory_setup_pun), [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_inventory_setup_core), and [**Photon Inventory 2**](https://www.ninjutsugames.com/go/photon-inventory?src=docs_photon_inventory_setup_module).
 
-Download the package from the [**Unity Asset Store**](https://u3d.as/31Vd). \
-You'll first need to have Game Creator 2 and Photon Unity Networking 2 installed.
-
-Then, bring up the _Game Creator Install Window_ select the Photon Core package and install it.
+Then, bring up the _Game Creator Install Window_, select the Photon Inventory package, and install it.
 
 {% hint style="danger" %}
-This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Photon Unity Network 2**](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
+This module requires [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_inventory_warning_gc2), [**Photon Unity Network 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_inventory_warning_pun), [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_inventory_warning_core), and [**Inventory 2**](https://www.ninjutsugames.com/go/inventory-2?src=docs_photon_inventory_warning_inventory). Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>

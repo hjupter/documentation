@@ -10,6 +10,14 @@ This includes:
 * Relationships
 * And variables.
 
+{% hint style="success" %}
+[**Get Photon Factions on the Unity Asset Store →**](https://www.ninjutsugames.com/go/photon-factions?src=docs_photon_factions_overview)
+{% endhint %}
+
+## Requirements
+
+Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_factions_requirement_gc2), [**PUN 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_factions_requirement_pun), [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_factions_requirement_core), and [**Factions**](https://www.ninjutsugames.com/go/factions?src=docs_photon_factions_requirement_factions) before installing Photon Factions.
+
 ## Setup
 
 Once you have the package downloaded in your project just open **Game Creator Install** window and select Photon > Factions sub module and install it.&#x20;

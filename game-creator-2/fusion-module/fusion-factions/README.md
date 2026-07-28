@@ -10,6 +10,14 @@ This includes:
 * Relationships
 * And variables.
 
+{% hint style="success" %}
+[**Get Fusion Factions on the Unity Asset Store →**](https://www.ninjutsugames.com/go/fusion-factions?src=docs_fusion_factions_overview)
+{% endhint %}
+
+## Requirements
+
+Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_fusion_factions_requirement_gc2), [**Photon Fusion**](https://www.ninjutsugames.com/go/photon-fusion?src=docs_fusion_factions_requirement_sdk), [**Fusion**](https://www.ninjutsugames.com/go/fusion?src=docs_fusion_factions_requirement_core), and [**Factions**](https://www.ninjutsugames.com/go/factions?src=docs_fusion_factions_requirement_factions) before installing Fusion Factions.
+
 ## Setup
 
 If you haven't get the **Fusion Factions** sub-module, head to the Asset Store product page and follow the steps to get a copy of this module.
