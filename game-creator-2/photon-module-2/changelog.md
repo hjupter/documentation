@@ -4,6 +4,37 @@ description: Photon Module 2 Releases
 
 # Releases
 
+## 1.5.0 (27th July 2026)
+
+Photon Core is now ready for current Game Creator 2, Photon PUN 2, and Unity 6 projects.
+
+#### New
+
+* Events for Photon service errors, available cloud regions, and custom authentication failures
+* Conditions for full rooms and checking whether player or room properties exist
+* Instructions for finding friends, allowing the Master Client to kick players, and immediately sending queued network messages
+* Properties for the cloud region, connection state, local user ID, room player count, and room player limit
+
+#### Improved
+
+* Updated connection choices for current Photon Cloud regions
+* Safer player, room, ownership, and custom-property behavior when data is missing or a client is not connected
+* Clearer setup, player targeting, custom Action synchronization, and late-join guidance
+* Updated examples for Unity 6.3, Unity 6.4, and Unity 6.5
+* Refreshed sample characters using Game Creator mannequin variants
+
+#### Fixed
+
+* Room Is Open and Room Is Offline Conditions now return the correct result
+* Room property Events now react to the intended property
+* Room timers and ping values now behave correctly in empty or newly created rooms
+* Network objects no longer get destroyed after a failed ownership request
+* Misleading visual scripting names, descriptions, and Property outputs have been corrected
+
+#### Changed
+
+* Ready Player Me integration and examples have been removed from Photon Core
+
 ## v1.4.10 (January 7th 2025)
 
 * Fixed an issue where RPCs were sent incorrectly to newly joined players.
@@ -150,4 +181,3 @@ v1.2.1
 
 * First release.
 * Keep in mind this is a beta version, if there is any issues or missing feature please don't hesitate to contact me through my email or discord server.
-

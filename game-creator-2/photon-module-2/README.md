@@ -1,47 +1,59 @@
+---
+description: Multiplayer for Game Creator 2 powered by Photon PUN 2
+---
+
 # 🌐 Photon Module 2
 
-This is a module made for **Game Creator 2** that seamlessly integrates **Photon Unity Networking (PUN 2)** and allows you to have networking in your game with just few clicks and without writing a single line of code.
-
-{% embed url="https://www.youtube.com/watch?v=jdfM36jOYlA" %}
-
-{% hint style="info" %}
-To learn more about [Photon Unity Networking](https://doc.photonengine.com/en-us/pun/current/demos-and-tutorials/pun-basics-tutorial/intro) head out to their [website](https://doc.photonengine.com/en-us/pun/current/demos-and-tutorials/pun-basics-tutorial/intro).
-{% endhint %}
+Photon Module 2 brings Photon Unity Networking 2 to Game Creator 2. Build rooms, spawn network characters, synchronize visual scripting, and manage shared match data without writing networking code.
 
 {% hint style="success" %}
-Try the [**Demo**](https://hjupter.itch.io/photon-module-2-game-creator-2) now!
+Photon Core 1.5 supports Unity 6.3 LTS, Unity 6.4, and Unity 6.5 with Game Creator 2 Core 2.18.60 or newer and Photon PUN 2.55.
 {% endhint %}
 
-## Key features <a href="#key-features" id="key-features"></a>
+## What Photon Core includes
 
-* Complete **Character's synchronization** (Position, rotation, speed, jump etc.)
-* Full control of **Player Properties** and **Room Properties** via actions.
-* **Synchronize Actions** with a single click.
-* Character **Attachments** synchronization.
-* Cached prefab list editor, easily add prefabs for Network instantiation.
-* Item **pickup system**. Useful for power-ups or Game Creator's **Inventory** or **Quest** module.
-* Packed with **Actions** and **Conditions** that can be used on any other Game Creator module.
-* Built-in editor **debugging tools** to see connection status, player properties, room properties and more.
+* Character movement, rotation, animation, model, ragdoll, and attachment synchronization
+* Network spawning, room objects, ownership, and destruction
+* Connection, lobby, matchmaking, room, and scene controls
+* Networked Game Creator Actions, Triggers, Conditions, and variables
+* Player and room properties for shared gameplay state
+* Player identity, room chat, timers, ping, and region information
+* Events for players, rooms, friends, regions, authentication, and Photon service errors
+* Runtime tools for inspecting the connection, players, rooms, and custom properties
 
-{% hint style="success" %}
-All actions and conditions are compatible with other Game Creator modules.
-{% endhint %}
-
-## Setup <a href="#setup" id="setup"></a>
-
-You can get **Photon Unity Networking** from [**here**](https://www.assetstore.unity3d.com/en/#!/content/1786).
-
-Download the package from the [**Unity Asset Store**](https://u3d.as/31Vd). \
-You'll first need to have Game Creator 2 and Photon Unity Networking 2 installed.
-
-Then, bring up the _Game Creator Install Window_ select the Photon Core package and install it.
-
-{% hint style="danger" %}
-This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Photon Unity Network 2**](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+Photon Shooter, Photon Stats, Photon Inventory, Photon Abilities, and Photon Melee extend Core with synchronization for their matching Game Creator modules.
 
 {% hint style="warning" %}
-**Having troubles?** Join our channel in Game Creator's [**Discord server**](https://discord.com/invite/99bbWBzKDX) for realtime discussions.
+Ready Player Me is no longer included or required by Photon Core. Projects upgrading from an older release should remove any gameplay logic that depends on the retired integration.
 {% endhint %}
+
+## Start here
+
+1. Follow [Getting Started](getting-started.md) to install the required packages and connect two players.
+2. Read the [Overview](overview.md) for rooms, ownership, targets, and player references.
+3. Use the [Visual Scripting Reference](visual-scripting.md) to find Photon Instructions, Conditions, Events, and Properties.
+4. Follow the [Multiplayer Guide](multiplayer-guide.md) when building spawning, authority, shared state, and late-join support.
+5. Check [Troubleshooting](troubleshooting.md) when clients do not connect or show the same result.
+
+{% hint style="success" %}
+Try the [Photon Module 2 demo](https://hjupter.itch.io/photon-module-2-game-creator-2).
+{% endhint %}
+
+## Requirements
+
+| Package | Required version |
+| --- | --- |
+| Unity | 6.3 LTS, 6.4, or 6.5 |
+| Game Creator 2 Core | 2.18.60 or newer |
+| Photon Unity Networking 2 | 2.55 |
+| Photon Core | 1.5 |
+
+Get [Game Creator 2](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069), [Photon PUN 2](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922), and [Photon Module 2](https://u3d.as/31Vd) from the Unity Asset Store.
+
+{% hint style="danger" %}
+Install Photon Core through the **Game Creator Install** window. Do not manually extract it into a `Plugins` folder.
+{% endhint %}
+
+## Support
+
+For help, join the Photon Module channel in the [Game Creator Discord server](https://discord.com/invite/99bbWBzKDX). When reporting a problem, include your Unity, Game Creator, Photon PUN, and Photon Core versions and say whether the issue affects the Editor, a build, or both.
