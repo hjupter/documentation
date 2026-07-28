@@ -18,7 +18,7 @@ Once you've created and verified your account, you'll next want to create a new 
 
 The SDK can be downloaded through the Unity Asset Store, from the LootLocker Github repository release page, or installed directly using the Unity Package Manager.
 
-* [Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/lootlocker-sdk-233183)
+* [Unity Asset Store](https://www.ninjutsugames.com/go/lootlocker-sdk?src=docs_lootlocker_getting_started_sdk)
 * [Github Repository](https://github.com/LootLocker/unity-sdk) (Recommended)&#x20;
 
 {% hint style="info" %}

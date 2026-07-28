@@ -12,6 +12,10 @@ To learn more about [Photon Unity Networking](https://doc.photonengine.com/en-us
 Try the [**Demo**](https://hjupter.itch.io/photon-shooter-2) now!
 {% endhint %}
 
+{% hint style="success" %}
+[**Get Photon Shooter 2 on the Unity Asset Store →**](https://www.ninjutsugames.com/go/photon-shooter?src=docs_photon_shooter_overview)
+{% endhint %}
+
 ## Key features <a href="#key-features" id="key-features"></a>
 
 * Complete Character **Shooter Combat** synchronization
@@ -29,16 +33,16 @@ You'll first need to have Game Creator 2, Photon Module 2, Shooter 2 and Photon 
 
 The process is simple:
 
-1. Install  **Photon Unity Networking 2** from [**here**](https://www.assetstore.unity3d.com/en/#!/content/1786).
-2. Install [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069)
-3. Install [**Shooter 2**](https://assetstore.unity.com/packages/tools/game-toolkits/shooter-2-game-creator-2-by-catsoft-works-291968)
-4. Install [**Photon Module 2**](https://assetstore.unity.com/packages/tools/network/photon-module-2-game-creator-2-248274)
-5. Install [**Photon Shooter 2**](https://u3d.as/3jfa)
+1. Install [**Photon Unity Networking 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_shooter_setup_pun).
+2. Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_shooter_setup_gc2).
+3. Install [**Shooter 2**](https://www.ninjutsugames.com/go/shooter-2?src=docs_photon_shooter_setup_shooter).
+4. Install [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_shooter_setup_core).
+5. Install [**Photon Shooter 2**](https://www.ninjutsugames.com/go/photon-shooter?src=docs_photon_shooter_setup_module).
 
 Finally bring up the _**Game Creator Install Window**_ select the **Photon Shooter 2** package and install it.
 
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Photon Unity Network 2**](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
+This module requires [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_shooter_warning_gc2), [**Photon Unity Network 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_shooter_warning_pun), [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_shooter_warning_core), and [**Shooter 2**](https://www.ninjutsugames.com/go/shooter-2?src=docs_photon_shooter_warning_shooter). Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
 {% endhint %}

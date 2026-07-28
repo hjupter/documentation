@@ -12,6 +12,14 @@ This includes:
 * Status Effects
 * Modifiers
 
+{% hint style="success" %}
+[**Get Fusion Stats on the Unity Asset Store →**](https://www.ninjutsugames.com/go/fusion-stats?src=docs_fusion_stats_overview)
+{% endhint %}
+
+## Requirements
+
+Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_fusion_stats_requirement_gc2), [**Photon Fusion**](https://www.ninjutsugames.com/go/photon-fusion?src=docs_fusion_stats_requirement_sdk), [**Fusion**](https://www.ninjutsugames.com/go/fusion?src=docs_fusion_stats_requirement_core), and [**Stats 2**](https://www.ninjutsugames.com/go/stats-2?src=docs_fusion_stats_requirement_stats) before installing Fusion Stats.
+
 ## Setup
 
 If you haven't get the **Fusion Stats** sub-module, head to the Asset Store product page and follow the steps to get a copy of this module.

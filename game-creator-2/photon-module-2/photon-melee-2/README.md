@@ -1,6 +1,6 @@
 # ⚔️ Photon Melee 2
 
-This is a module made for **Game Creator** that seamlessly integrates **Photon Unity Networking** and [**Melee 2**](https://assetstore.unity.com/packages/tools/game-toolkits/melee-2-game-creator-2-by-catsoft-works-253446), this allows you to have networking in your game with just few clicks and without writing a single line of code.
+This is a module made for **Game Creator** that seamlessly integrates **Photon Unity Networking** and [**Melee 2**](https://www.ninjutsugames.com/go/melee-2?src=docs_photon_melee_intro), this allows you to have networking in your game with just few clicks and without writing a single line of code.
 
 {% embed url="https://youtu.be/Ex531qegnnE" %}
 
@@ -9,7 +9,11 @@ To learn more about [Photon Unity Networking](https://doc.photonengine.com/en-us
 {% endhint %}
 
 {% hint style="success" %}
-Try the [**Demo**](https://hjupter.itch.io/photon-stats-game-creator-2) now!
+Try the [**Demo**](https://hjupter.itch.io/photon-melee-2-game-creator-2) now!
+{% endhint %}
+
+{% hint style="success" %}
+[**Get Photon Melee 2 on the Unity Asset Store →**](https://www.ninjutsugames.com/go/photon-melee?src=docs_photon_melee_overview)
 {% endhint %}
 
 ## Key features <a href="#key-features" id="key-features"></a>
@@ -31,16 +35,16 @@ You'll first need to have Game Creator 2, Photon Module 2, Melee 2 and Photon Un
 
 The process is simple:
 
-1. Install  **Photon Unity Networking 2** from [**here**](https://www.assetstore.unity3d.com/en/#!/content/1786).
-2. Install [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069)
-3. Install [**Melee 2**](https://assetstore.unity.com/packages/tools/game-toolkits/melee-2-game-creator-2-by-catsoft-works-253446)
-4. Install [**Photon Module 2**](https://assetstore.unity.com/packages/tools/network/photon-module-2-game-creator-2-248274)
-5. Install [**Photon Melee 2**](https://u3d.as/359g)
+1. Install [**Photon Unity Networking 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_melee_setup_pun).
+2. Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_melee_setup_gc2).
+3. Install [**Melee 2**](https://www.ninjutsugames.com/go/melee-2?src=docs_photon_melee_setup_melee).
+4. Install [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_melee_setup_core).
+5. Install [**Photon Melee 2**](https://www.ninjutsugames.com/go/photon-melee?src=docs_photon_melee_setup_module).
 
-Finally bring up the _**Game Creator Install Window**_ select the [**Photon Melee 2**](https://u3d.as/359g) package and install it.
+Finally bring up the _**Game Creator Install Window**_, select the **Photon Melee 2** package and install it.
 
 <figure><img src="../../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-This module requires [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) and [**Photon Unity Network 2**](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) and won't work without it. Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
+This module requires [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_melee_warning_gc2), [**Photon Unity Network 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_melee_warning_pun), [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_melee_warning_core), and [**Melee 2**](https://www.ninjutsugames.com/go/melee-2?src=docs_photon_melee_warning_melee). Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
 {% endhint %}

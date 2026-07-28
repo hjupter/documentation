@@ -42,3 +42,7 @@ In this page you'll learn everything you need to use **Ninjutsu Games** modules 
 {% hint style="info" %}
 Have any question? Feel free to drop us a line at [support@ninjutsugames.com](mailto:support@ninjutsugames.com).
 {% endhint %}
+
+{% hint style="info" %}
+These guides are maintained alongside every Unity and Game Creator update. If they save you time, you can [support ongoing compatibility work](https://www.buymeacoffee.com/hjupter).
+{% endhint %}
