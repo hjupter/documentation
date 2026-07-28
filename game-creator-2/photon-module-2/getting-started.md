@@ -13,7 +13,8 @@ Install these packages in this order:
 1. Unity 6.3 LTS, Unity 6.4, or Unity 6.5
 2. Game Creator 2 Core 2.18.60 or newer
 3. Photon Unity Networking 2.55
-4. Photon Module 2 from the [Unity Asset Store](https://u3d.as/31Vd)
+4. Photon Module 2 from the [Unity Asset Store](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_getting_started_module)
+
 
 Back up or commit an existing project before upgrading.
 

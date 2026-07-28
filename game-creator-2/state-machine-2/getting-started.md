@@ -11,8 +11,9 @@ This guide will help you create your first state machine in just a few minutes.
 Before you begin, ensure you have:
 
 * Unity 6000.3.1f1 or later
-* [Game Creator 2](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) installed
-* [State Machine 2](https://u3d.as/32Gh) installed
+* [Game Creator 2](https://www.ninjutsugames.com/go/game-creator-2?src=docs_state_machine_getting_started_game_creator) installed
+* [State Machine 2](https://www.ninjutsugames.com/go/state-machine?src=docs_state_machine_getting_started_module) installed
+
 
 ## Step 1: Create a State Machine Asset
 
@@ -147,4 +148,3 @@ This creates a loop where the enemy:
 * Join our [Discord Community](https://discord.com/invite/99bbWBzKDX)
 * Check the [full documentation](https://docs.ninjutsugames.com/game-creator-2/state-machine-2/)
 * Email support: support@ninjutsugames.com
-

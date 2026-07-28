@@ -8,6 +8,11 @@ This module integrates [LootLocker](https://www.lootlocker.com) backend system w
 
 {% embed url="https://youtu.be/HJ-1H5AlbzU" %}
 
+{% hint style="success" %}
+[**Get LootLocker for Game Creator 2 on the Unity Asset Store →**](https://www.ninjutsugames.com/go/loot-locker?src=docs_loot_locker_overview)
+
+{% endhint %}
+
 ## Key Features
 
 * Leaderboards

@@ -48,7 +48,10 @@ Try the [Photon Module 2 demo](https://hjupter.itch.io/photon-module-2-game-crea
 | Photon Unity Networking 2 | 2.55 |
 | Photon Core | 1.5 |
 
-Get [Game Creator 2](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069), [Photon PUN 2](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922), and [Photon Module 2](https://u3d.as/31Vd) from the Unity Asset Store.
+Get [Game Creator 2](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_overview_game_creator), [Photon PUN 2](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_overview_pun), and [Photon Module 2](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_overview_module) from the Unity Asset Store.
+
+{% hint style="info" %}
+{% endhint %}
 
 {% hint style="danger" %}
 Install Photon Core through the **Game Creator Install** window. Do not manually extract it into a `Plugins` folder.

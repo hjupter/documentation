@@ -12,12 +12,15 @@ description: >-
 Before installing the **Factions** module, you’ll need to either create a new Unity project or open an existing one.
 
 {% hint style="warning" %}
-It is important to note that [**Game Creator 2**](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069) should be present before attempting to install any module.
+It is important to note that [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_factions_setup_game_creator) should be present before attempting to install any module.
 {% endhint %}
 
 ## Install the Factions module
 
-If you haven't purchased the [**Factions**](https://u3d.as/3iwW) module, head to the Asset Store product page and follow the steps to get a copy of this module.
+If you haven't purchased the module, [**get Factions on the Unity Asset Store →**](https://www.ninjutsugames.com/go/factions?src=docs_factions_setup_module), then follow the steps below to install it.
+
+{% hint style="info" %}
+{% endhint %}
 
 Once you have bought it, click on **Window → Package Manager** to reveal a window with all your available assets.
 

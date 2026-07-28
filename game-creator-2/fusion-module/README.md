@@ -32,7 +32,10 @@ This module ensures precise and efficient synchronization of characters, objects
 Play the [**Demo**](https://hjupter.itch.io/fusion-gamecreator-2) now!
 {% endhint %}
 
+{% hint style="success" %}
+[**Get Fusion Module on the Unity Asset Store →**](https://www.ninjutsugames.com/go/fusion?src=docs_fusion_overview)
 
+{% endhint %}
 
 ## Key features&#x20;
 
@@ -55,4 +58,3 @@ Play the [**Demo**](https://hjupter.itch.io/fusion-gamecreator-2) now!
 {% hint style="info" %}
 All actions and conditions are compatible with other Game Creator modules.
 {% endhint %}
-

@@ -8,7 +8,7 @@ When using the [Fusion Module](../../fusion-module/), State Machine 2 integrates
 
 ## Setup
 
-1. Install **Fusion Module** for Game Creator 2
+1. Install [**Fusion Module**](https://www.ninjutsugames.com/go/fusion?src=docs_state_machine_fusion_integration) for Game Creator 2
 2. Install **State Machine 2**
 3. Network settings automatically appear in node inspectors
 
@@ -44,4 +44,3 @@ For player-controlled state machines, ensure the NetworkObject has **Input Autho
 ## See Also
 
 * [Fusion Module Documentation](../../fusion-module/)
-
