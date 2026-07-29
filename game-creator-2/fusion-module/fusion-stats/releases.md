@@ -22,6 +22,8 @@
   Status Effect stacks per Network Object.
 * Added class-layout checks, upgrade-safe initialization, sample updates, tests,
   package validation, and separate-process Cloud proof coverage.
+* Added a guarded Fusion Stats sample installer that verifies Stats 2 and all
+  shared Fusion dependencies before importing the sample.
 
 ## 1.0.0 (15th December 2024)
 

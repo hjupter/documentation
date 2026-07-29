@@ -40,7 +40,9 @@ Stats conditions, events, properties, formulas, and UI.
 ## Reinstall the sample
 
 Do not merge installed sample folders by hand. Back up custom changes, remove the
-1.0.0 sample, and install the 1.1.0 sample from Game Creator's Hub.
+1.0.0 sample, and install the 1.1.0 sample with **Tools → Ninjutsu Games →
+Fusion → Safe Install → Stats Examples**. Do not use the Game Creator 2.18.60
+Install window for Fusion packages; it bypasses the guarded dependency preflight.
 
 ## Validate the upgrade
 

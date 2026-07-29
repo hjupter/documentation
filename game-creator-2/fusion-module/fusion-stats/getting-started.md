@@ -31,9 +31,18 @@ the Stat or Attribute IDs differ.
 
 ## Install the sample
 
-Open the Fusion Stats module installer in Game Creator's Hub and install the
-1.1.0 example. If a 1.0.0 sample is already installed, back up any custom work,
-remove the old sample, and install the new version.
+Choose **Tools → Ninjutsu Games → Fusion → Safe Install → Stats Examples**.
+Fusion Core checks the installed Game Creator 2, Photon Fusion, Fusion Core,
+Fusion UI, Stats 2, and serialized sample dependency versions before importing
+anything. A missing or older dependency blocks the import and reports the exact
+requirement.
+
+Do not install Fusion packages from the Game Creator 2.18.60 Install window. Its
+dependency comparison can accept an installed version below the declared
+minimum, and it bypasses Fusion Core's guarded preflight.
+
+If a 1.0.0 sample is already installed, back up any custom work, remove the old
+sample, and use the guarded menu to install the new version.
 
 The sample uses the network-aware actions under **Fusion → Stats** for mutations.
 Use it as a reference; do not copy a Photon AppId from another project.

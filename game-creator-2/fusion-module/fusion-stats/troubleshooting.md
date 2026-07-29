@@ -51,6 +51,14 @@ Game Creator 2 1.4.0 and Fusion Stats 1.1.0. Keep Photon App Settings and Networ
 Project Config while replacing the SDK. Confirm no old package source was copied
 back over the upgraded files.
 
+## The Stats sample install is blocked
+
+Use **Tools → Ninjutsu Games → Fusion → Safe Install → Stats Examples** and read
+the first failed requirement. Install or upgrade that dependency, let Unity
+finish compiling, and run the guarded menu again. Do not work around the check
+with the Game Creator 2.18.60 Install window; it can accept an installed version
+below the package minimum.
+
 ## Still stuck?
 
 Include the exact Unity, Photon Fusion, Fusion for Game Creator 2, Game Creator
