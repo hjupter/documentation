@@ -70,6 +70,10 @@ On Melee Network:
 The included `Player_Melee_Brawl` and `Player_Melee_Sword` prefabs are complete
 references.
 
+Photon Melee has no project-global settings panel. These three fields are real
+prefab-local authoring choices, so configure them on each network character rather
+than looking for a separate Photon Melee entry in Project Settings.
+
 {% hint style="danger" %}
 Spawn the player with Photon Core's **Photon Instantiate** instruction or an
 equivalent PUN network-instantiation flow. Unity's regular Instantiate instruction

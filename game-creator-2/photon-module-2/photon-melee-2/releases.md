@@ -20,8 +20,8 @@ description: Photon Melee 2 releases
   Melee 2.2.14, and final Unity 6.3–6.5 editors.
 * Refreshed Brawl and Sword network prefabs.
 * Clearer Melee Network inspector and authority guidance.
-* Photon App IDs stay out of tracked project settings while protected builds and
-  multiplayer validation can still inject the Realtime ID.
+* Photon App IDs stay out of tracked project settings and CI-built player artifacts;
+  only the running protected Cloud proof clients receive the Realtime ID.
 
 ### Fixed
 
@@ -38,6 +38,8 @@ description: Photon Melee 2 releases
 * Replaced the `CUSTOM_MELEE_EVENTS` conditional overlay with an idempotent,
   audited Melee 2.2.14 cancel/hit-buffer event seam.
 * Remote state mutations are accepted only from the PhotonView owner.
+* Photon Melee adds no empty project-settings panel; its synchronization choices
+  remain local to each Melee Network prefab component.
 
 ## 1.1.6 (18 December 2024)
 
