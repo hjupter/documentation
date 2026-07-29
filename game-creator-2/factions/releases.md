@@ -24,6 +24,7 @@
 * Fixed persistence after faction asset renames while retaining 1.1.x save and
   Remember compatibility.
 * Fixed duplicate UI subscriptions and null-reference cases.
+* Fixed uninstall confirmation and cleanup of optional Factions examples.
 
 ### Changed
 
