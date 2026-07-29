@@ -23,6 +23,21 @@ It synchronizes the owning player's complete Bag state, including items, stacks,
 
 Writes snapshot requests, sends, and applies to the Unity Console. Leave this disabled for normal play and enable it while diagnosing authority or late-join behavior.
 
+## Project settings
+
+Photon Inventory does not add a page to **Game Creator > Settings** because it has no module-wide project option:
+
+* Network runtime configuration belongs to Photon Core.
+* The Photon Cloud App ID belongs to PUN's PhotonServerSettings.
+* The item catalogue and Inventory data belong to Game Creator Inventory.
+* **Log State Changes** belongs to each Bag Network component and defaults to disabled.
+
+Unity serializes Log State Changes with the component's scene or prefab, so it persists through domain reloads without a global settings repository. Photon Inventory creates no settings asset or repository ID during install or upgrade, leaves none behind on uninstall, and does not duplicate or serialize the PUN App ID, authentication values, tokens, or secrets.
+
+{% hint style="info" %}
+An empty Photon Inventory settings panel would duplicate existing package ownership without adding a real project-level choice.
+{% endhint %}
+
 ## Instructions
 
 Photon Inventory adds no Instructions. Use Game Creator Inventory Instructions on the owning Bag.
