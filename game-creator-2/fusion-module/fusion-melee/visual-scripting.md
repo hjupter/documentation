@@ -28,7 +28,9 @@ consecutive input ticks.
 
 ### Request Cancel Melee Attack
 
-Requests a replay-safe cancellation of the current attack.
+Tries the local GC2 cancellation and, when it succeeds, contributes a
+replay-safe cancel edge through Fusion input. Use this instead of a stock
+`TryToCancel` instruction for player-driven network cancellation.
 
 ### Request Melee Block
 
@@ -100,6 +102,8 @@ Impact type values represent Hit, Blocked, Parried, or Guard Broken.
 | --- | --- |
 | Equip a registered weapon | Request Equip Melee Weapon |
 | Replace one equipped weapon | Request Swap Melee Weapon |
+| Cancel from player input | Request Cancel Melee Attack |
+| Reset a skill's hit buffer | Run the stock reset inside State Authority skill simulation |
 | Display the current attack | Network Melee Phase plus On Network Melee Attack Changed |
 | Test whether the guard is active | Network Melee Is Blocking |
 | Publish an already resolved result | Report Authoritative Melee Impact |

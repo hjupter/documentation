@@ -73,6 +73,16 @@ Confirm:
 
 Shared Mode uses the current physics scene rather than historical rewind.
 
+## Cancel or hit-buffer reset diverges
+
+For player-driven cancellation, use **Request Cancel Melee Attack**. A stock
+`MeleeStance.TryToCancel()` call alone never enters the Fusion input payload.
+
+Keep `MeleeStance.ResetHitsBuffer()` in the GC2 skill simulated by State
+Authority. Do not add a reset RPC: it would bypass deterministic input,
+deduplication, and resimulation. If the project needs a distinct player-driven
+reset command, extend the versioned Core input contract first.
+
 ## Unity reports missing scripts or assembly errors
 
 Verify the exact candidate dependencies and installation order from

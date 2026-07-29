@@ -36,6 +36,18 @@ State Authority owns the accepted gameplay-facing snapshot:
 Commands are deduplicated from networked counters so prediction resimulation can
 rewind them safely.
 
+### Cancel and hit-buffer reset
+
+Use **Request Cancel Melee Attack** for player-driven cancellation. Calling
+Game Creator's `MeleeStance.TryToCancel()` by itself changes only the local
+stance; it does not contribute the versioned cancel edge to Fusion input.
+
+Run `MeleeStance.ResetHitsBuffer()` from the GC2 skill simulated by State
+Authority. Fusion Melee does not send this authoritative hit-selection mutation
+through a separate RPC because RPC history is not a resimulation-safe
+replacement for the fixed input contract. A new player-driven reset command
+would require a versioned Fusion Core input allocation.
+
 ## Prediction and presentation
 
 The local owner may perform responsive Game Creator presentation while Fusion
