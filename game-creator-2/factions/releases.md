@@ -6,7 +6,6 @@
 
 * Added typed reputation point and status events for custom integrations.
 * Added deterministic batch membership and reputation restore support.
-* Added Unity 6.3 LTS, 6.4 LTS, and 6.5 validation.
 
 ### Improved
 
@@ -30,7 +29,9 @@
 
 * New relationship and Member memory data uses stable faction IDs.
 * Requires Game Creator 2 Core 2.18.60.
-* Supports Unity 6000.3 LTS, 6000.4 LTS, and Unity 6000.5.
+* Targets Unity 6000.3.14f1, 6000.4.12f1, and 6000.5.5f1 for release
+  validation. The final supported editor matrix will include only editors that
+  pass the complete Factions-specific release checks.
 
 ## 1.1.3 (31st December 2024)
 

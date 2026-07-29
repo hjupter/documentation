@@ -2,10 +2,14 @@
 
 ## Requirements
 
-Factions 1.2.0 requires:
+The Factions 1.2.0 release candidate requires:
 
-* Unity 6000.3 LTS, 6000.4 LTS, or Unity 6000.5
 * Game Creator 2 Core 2.18.60
+* Candidate editors: Unity 6000.3.14f1, 6000.4.12f1, and 6000.5.5f1
+
+The final supported editor matrix will list only editors that pass the
+Factions-specific compile, runtime, persistence, sample, build, package, and
+clean-install checks.
 
 The optional examples are validated with Dialogue 2.5.19 and Quests 2.3.11.
 
