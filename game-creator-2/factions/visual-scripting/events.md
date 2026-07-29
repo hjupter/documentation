@@ -2,7 +2,8 @@
 
 * **On Member Join Faction**
 * **On Member Leave Faction**
-* **On Member Factions Change**
+* **On Member Factions Change** — runs once after Join, Leave, Remember, or an
+  atomic membership restore completes.
 * **On Reputation Points Change**
 * **On Reputation Status Change**
 * **On Faction Status**
