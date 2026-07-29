@@ -20,6 +20,10 @@ Back up or commit the project first. Then:
 8. Configure the same Photon App ID, App Version, and region behavior for both test clients.
 9. Join the same Photon Cloud room from two clients and exercise every installed integration.
 
+{% hint style="warning" %}
+The Game Creator Install window can resolve versioned install packages, but it cannot install or version-check a base Asset Store gameplay module such as Stats 2 or Inventory 2. Import those dependencies before their Photon add-ons.
+{% endhint %}
+
 {% hint style="danger" %}
 Do not manually extract an installer's `Package.unitypackage` into `Plugins`. Use the **Game Creator Install** window.
 {% endhint %}
