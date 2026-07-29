@@ -1,5 +1,43 @@
 # Releases
 
+## 1.4.0 (release candidate)
+
+**Changed**
+
+* Updated to Photon Fusion 2.1.1 Stable build 2177 and Photon Realtime 5.
+* Updated to Game Creator Core 2.18.60.
+* Defined exact Unity support as 6000.0.60f1 and 6000.3.14f1.
+* Migrated authentication, matchmaking, reliable-data callbacks, lobby
+  joining, time synchronization, NetworkTransform, and object providers to
+  current Fusion 2.1 APIs.
+* Updated Examples to 1.4.0 and Fusion UI to 1.2.0.
+
+**New**
+
+* Added a fixed, versioned, allocation-free network-input extension for Fusion
+  Melee, Shooter, and Abilities.
+* Added runner-scoped contributor registration with deterministic ordering,
+  duplicate protection, reconnect overlap support, and resimulation helpers.
+* Added package-resident machine-readable compatibility, allocation,
+  descriptor schema, and validation files.
+* Added exact visual-scripting and add-on compatibility references.
+
+**Fixed**
+
+* String network variables now reconstruct as `System.String`.
+* Removed the stale PUN `StructWrapping` dependency.
+* Updated pooling, scene object acquisition, and nested prefab handling for
+  Fusion 2.1.
+* Corrected visual-scripting titles, categories, descriptions, and RPC labels.
+* Uninstall now removes the complete Core package, including compatibility and
+  test overlays.
+
+{% hint style="warning" %}
+This entry remains a release candidate until the linked Core pull request has
+terminal Unity matrix, builds, Asset Store, package upgrade, and separate
+process Photon Cloud topology proof.
+{% endhint %}
+
 ## 1.3.9 (26th October 2025) <a href="#id-139-25th-october-2025" id="id-139-25th-october-2025"></a>
 
 **Fixed**

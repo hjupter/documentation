@@ -1,150 +1,67 @@
 # User Interface
 
-The **Fusion** module comes with a collection of components designed to streamline the creation of UI windows and elements.
-
-All examples that come with the module have been created with them and are flexible to accommodate any type of window.
-
-***
+Install **Fusion UI 1.2.0** from **Game Creator → Install** for ready-to-use
+prefabs. The runtime components also work with custom Unity UI.
 
 ## Session List UI
 
-This is one of the most important components and allows to display a list of avalable sessions to join.
+**Session List UI** creates one Session Item UI prefab for every visible
+session returned by the lobby.
 
-<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
+* **Content** is the RectTransform that receives rows and should use a layout
+  group.
+* **Prefab** must contain **Session Item UI**.
+* **Empty Message** is shown when the list has no visible sessions.
+* **Sort Index** selects the displayed field used for sorting.
+* **Sort Direction** controls ascending or descending order.
 
-The **Content** field defines the `Rect Transform` where each prefab instance will be instantiated, for every visible session.
-
-{% hint style="info" %}
-The **Content** value should contain an auto-layout component, such as `Vertical Layout Group`, `Horizontal Layout Group` or `Grid Layout Group`.
-{% endhint %}
-
-The **Prefab** is the prefab instantiated inside the _Content_. It must contain a **Session Item UI** component, which is automatically configured by its parent.
-
-The **Empty Message** is an option message to display when session list is empty.
-
-The **Sort Direction** field determines the order in which members are displayed based on the sort field index.
-
-The **Sort Index** specify the index of the session property to sort by. This allows for flexibility in sorting by different criteria, such as sessio name, player count, sessio properties and more.
-
-<figure><img src="../../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-The Fusion UI package provides a ready-to-use prefab for the session list.
-{% endhint %}
-
-{% hint style="info" %}
-Sessions marked as not visible are not displayed here.
-{% endhint %}
+**SessionList UI Tab** can bind a tab/view to the session browser lifecycle.
 
 ## Session Item UI
 
-The Session Item UI component is designed to represent individual entries within the session list, displaying various properties of a session.&#x20;
+**Session Item UI** displays a session and joins that exact session when its
+Join Button is selected. Disable the button when the latest session snapshot
+is closed or full, and still handle a join rejection because the room can
+change after discovery.
 
-<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
+Fields accept String or Number properties. Standard .NET formatting works,
+including `{0:P}`, `{0:C}`, and `{0:N}`.
 
-The **alternate background** option allows you to set an alternate background image for the scoreboard item, which can help distinguish between different rows for better readability.
+## Region Dropdown UI
 
-The **Join Button** is required to allow playes to join the specifc session, this button can be disabled if the session is not open.
-
-### The fields
-
-Fields can be customized to display specific data of types **string** or **number**.
-
-The **Text** field is the component that displays the data
-
-**Use Format** enables the formatting feature for the associated text or number field.
-
-{% hint style="info" %}
-**Percentage Formatting**\
-Use `{0:P}` to convert 0.99 to 99%.
-
-**Currency Formatting**\
-Use `{0:C}` to convert 1000 to $1,000.00.
-
-**Number Formatting**\
-Use `{0:N}` to convert 1000 to 1,000.
-{% endhint %}
-
-**Use Color** enables the option to apply color to the field using properties
-
-{% hint style="success" %}
-You can use fields to display **session properties** as well.
-{% endhint %}
-
-
-
-***
-
-## Region Selection
-
-It is possibe to display availabe regions by attaching a **RegionDropdownUI** component in a DropDown menu. This will display enabled regions in [**Fusion Module Settings**](settings.md).
-
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-The **selected** region by this drop menu will be stored in player prefs. The selected region is accessibe through a Game Creator 2 string property.
-{% endhint %}
+**Region Dropdown UI** lists regions enabled in Fusion Module settings. The
+selected region is stored locally and exposed through **Selected Region**.
+Use **On Selected Region Changed** to refresh dependent UI.
 
 ## Room Chat
 
-The Room Chat component is designed to facilitate real-time communication between players within a game session. It offers various customizable options to enhance the chat experience, ensuring smooth interaction and a polished user interface.
+**Room Chat** requires:
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+* a message prefab with Text or TextMeshProUGUI;
+* an input field;
+* a ScrollRect/container for entries;
+* optional background and focus-fade presentation.
 
-**Prefab:** a game object that requirs to have a Text or TextMeshPro UI component
+Settings control activation input, stored and visible line limits, fade
+timing, player input suppression while typing, profanity filtering, and unseen
+message count.
 
-**Input:** the input field to type messages
-
-**Background:** an image component that can fade in fade out depending if room chat is focused or not.
-
-**Container:**  a scroll rect view that contains chat entries
-
-### Settings
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-08-18 at 6.46.06 PM.png" alt=""><figcaption></figcaption></figure>
-
-**Activate On Input:** if enabled chat input field can be activated with an specifed input trigger.
-
-**Input Trigger:** the input key to activate the chat.
-
-**Max Lines:** how many lines of messages can the room chat keep
-
-**Max Visible Lines:**  how many chat entries stay visible when chat is unfocused/unselected
-
-**Fade Out Start:** how long until starts fading out since the last message received
-
-**Fade Out Duration:** the duratin of the messages fade out
-
-**Background Fade Out Duration:** how long it takes to fade out the backgroud image
-
-**Disable Player When Typing:** if enabled the player movemet will be disabled when typing
-
-**Unseen Messages:** sets a property with the number of unseen messags when chat is unfocused
-
-
-
-***
+Room chat is session communication, not authoritative gameplay transport.
+Rate-limit and validate user-generated content for the target platform.
 
 ## Floating Text
 
-Floating text serves as an instruction to generate user interface text above a specific target. This feature is commonly utilized for displaying character nameplates, chat bubbles, and other similar elements.
+The **Floating Text** instruction shows text above a target using an optional
+prefab. Configure offset, duration, fade-out time, and color. With no prefab,
+Core creates a basic compatible presentation.
 
-<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
+Do not spawn permanent floating UI for objects that may despawn without also
+cleaning it up.
 
-**Target**: the target where the floating text is going to be displayed
+## Component menu paths
 
-**Text:** the text that is going to be displayed in the floating UI
-
-**Prefab:** an optional prefab which you can customize to your needs the only thing needed is a Text or  TextMeshPro UI component.
-
-**Offset:** an offset value to display the UI
-
-**Duration:** how long is this UI going to be displayed, mostly useful for bubble chat. If set to 0 it will stay forever.
-
-**Fade Out Time:** the time takes to fade out if duratin is greater than 0
-
-**Color:** a color to tint the text component.
-
-{% hint style="info" %}
-The **prefab** is optional but if you don't define it a preconfigured UI will be generated autmatically.
-{% endhint %}
+* `Game Creator/UI/Fusion/Session List UI`
+* `Game Creator/UI/Fusion/Session Item UI`
+* `Game Creator/UI/Fusion/SessionList UI Tab`
+* `Game Creator/UI/Fusion/Region Dropdown UI`
+* `Game Creator/Fusion/Room Chat`

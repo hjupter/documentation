@@ -1,13 +1,18 @@
-# How to toggle Debug mode
+# How to toggle Fusion debug DLLs
 
-Since few versions of Fusion 2 SDK is comign with debug mode enabled by default to disable it you need to go to **`Tools > Fusion > Toggle Debug Dlls`**
+Use **Tools → Fusion → Toggle Debug DLLs** when the installed Fusion SDK
+provides that command. Debug DLLs provide additional diagnostics but increase
+build size and are not intended for the final customer build.
 
-{% hint style="info" %}
-Some times after doing this you will need to click on **Run Weaver** in order to apply the updated Dlls
-{% endhint %}
+After toggling:
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+1. Let Unity reimport and compile.
+2. Run **Tools → Fusion → Run Weaver** if Fusion reports stale woven
+   assemblies.
+3. Open **Tools → Fusion → Network Project Config** and confirm the displayed
+   Fusion version and Debug/Release mode.
+4. Rebuild every player; do not mix clients built against different Fusion
+   DLL modes.
 
-To confirm if you are on **Release** or **Debug** mode you can go to Tools > Network Project Config and the top where it says Fusion Version it should Release or Debug
-
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+Return to Release DLLs and rerun compile, tests, and multiplayer proof before
+shipping.

@@ -1,65 +1,53 @@
 # Variables
 
-## Overview
-
-Fusion module has built-in components to synchronize Local or Global Name Variabes and Lists.
+Fusion Module synchronizes Game Creator Local or Global Name Variables and List
+Variables. Each synchronizer must be on a GameObject with a Fusion
+`NetworkObject`.
 
 {% hint style="info" %}
-They all require to exist in a scene with a **Network Object** in order to work.
+The peer with State Authority writes replicated variable state. Remote peers
+reconstruct the corresponding Game Creator values, including late joiners.
 {% endhint %}
 
-{% hint style="success" %}
-These components, besides synchronizing their current state to remote players, will replicate the state to newly joined players.
-{% endhint %}
+## Name Variables
 
-## Local Name Variables
+* **Local Name Variables Network** synchronizes a Local Name Variables
+  component on the same object.
+* **Global Name Variables Network** synchronizes a selected Global Name
+  Variables asset.
 
-To synchronize Local Name Variables simply attach a Local Name Variables Netwok component.
+The supported value conversion preserves Game Creator runtime types. In
+particular, String values are reconstructed as `System.String`, not as
+Fusion's `NetworkString`.
 
-<figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
+## List Variables
 
-## Global Name Variables
+* **Local List Variables Network** synchronizes a Local List Variables
+  component.
+* **Global List Variables Network** synchronizes a selected Global List
+  Variables asset.
 
-To synchronize Global Name Variables create a new game object, attach a **`Global Name Variables Netwok`** then select the Global Name Variables you need
+Choose one Sync Mode:
 
-<figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption></figcaption></figure>
+| Mode | Purpose |
+| --- | --- |
+| **Sync Data** | Replicates the ordered list values. |
+| **Players List** | Maintains the active player/avatar list as peers join and leave. |
+| **Attachments** | Registers network prop prefabs used by Character attachments. |
+| **Models** | Registers Character models/skins used by Change Model. |
 
-## Local List Variables
+## Network Prefab Ref
 
-To synchronize Local List Variables simply attach a Local List Variables Netwok component and select **Sync Mode** to **Sync Data**
+Use **Set Network Prefab Ref** to assign a prefab registered in Fusion's
+Network Project Config. The value resolves through Fusion 2.1's prefab table;
+it no longer depends on legacy Photon/PUN struct wrappers.
 
-<figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
+## Design rules
 
-## Global List Variables
-
-To synchronize Global List Variables create a new game object, attach a **`Global List Variables Netwok`** then select the Global List Variables you need and select **Sync Mode** to **Sync Data**
-
-<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
-
-## List Sync Modes
-
-List Network components has 4 different types of synchronization modes:
-
-### **Sync Data**&#x20;
-
-This mode will sync state of list data
-
-### **Players List**&#x20;
-
-This mode will populate the list with all players and update it as they join or leave.
-
-### **Attachments**&#x20;
-
-This mode is meant to be used to register attachment props through the network, once props are registered you can freely use Attach or Remove Prop instructions and it wil automatically replicate the attachments.&#x20;
-
-{% hint style="success" %}
-You can read more about this [**here**](characters.md#attachments).
-{% endhint %}
-
-### Models
-
-This mode is meant to be used to register models or skins through the network, once props are registered you can freely use Change Model instructions and it wil automatically replicate it.&#x20;
-
-{% hint style="success" %}
-You can read more about this [**here**](characters.md#models).
-{% endhint %}
+* Keep list schema and registry order identical on every peer.
+* Validate writes on State Authority.
+* Use Networked state for durable facts; do not depend on an RPC arriving
+  before a late joiner.
+* Avoid writing the same variable from multiple authorities.
+* Test String, Boolean, Number, Vector, GameObject/prefab, model, and list
+  migrations after upgrading an existing project.

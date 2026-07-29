@@ -1,6 +1,7 @@
 # Shutdown Reasons
 
-Describes a list of Reason why the Fusion Runner was Shutdown
+These are the Fusion shutdown reasons exposed by Core's **Shutdown Reason**
+property and **Compare Shutdown Reason** condition.
 
 * **`Ok:`** means Fusion was Shutdown by request
 * **`Error:`** Shutdown was caused by some internal error
