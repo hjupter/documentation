@@ -1,51 +1,44 @@
 # Properties
 
+## Faction values
 
+* **Faction**
+* **Faction from Member**
+* **Faction from String**
+* **Faction from UI**
+* **Last Faction Joined**, **Last Faction Left**, **Last Status Changed**, and
+  **Last Status Changed Target**
+* **Global Name Variable**
+* **Local Name Variable**
+* **Global List Variable**
+* **Local List Variable**
+* **None** for clearing a settable Faction value
 
-## String Properties
+## Display and status values
 
-<div align="left">
+* **Faction Name**
+* **Faction Description**
+* **Faction Color**
+* **Faction Icon**
+* **Faction Status**
+* **Faction Status Towards**
+* **Status Name**
+* **Status Color**
+* **Member Status**, **Member Status Towards Faction**, and their color
+  counterparts
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt="" width="375"><figcaption></figcaption></figure>
+## Reputation and membership values
 
-</div>
+* **Reputation Points**
+* **Reputation Next Threshold**
+* **Member Count**
 
+## Faction variables
 
+**Faction Name Variable** get/set properties support Animation Clip, Audio
+Clip, Boolean, Color, Decimal/Number, Direction, Game Object, Material,
+Position/Vector3, Rotation Direction, Rotation Euler, Scale, Sprite, String, and
+Texture values.
 
-## Number Properties
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (26).png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
-
-
-## Color Properties
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (27).png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
-
-
-## Faction Properties
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (28).png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
-
-
-## Sprite Properties
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (29).png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
+The rotation-specific picker titles are **Direction Faction Name Variable** and
+**Euler Faction Name Variable**.

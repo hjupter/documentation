@@ -1,9 +1,20 @@
 # Memory
 
-The **Faction Memory** component integrates with the Game Creator 2 Save & Load system to persistently save and load the faction-related data for any object, character, or player. This component ensures that all member joined factions, reputation points, and statuses are retained across game sessions, enhancing the continuity and immersion of your game’s faction system.
+Add the Faction Memory/Remember integration to an object that already has a
+**Member** component. It stores the complete list of joined factions and the
+member's reputation points for each faction.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-16 at 4.29.20 PM.png" alt=""><figcaption></figcaption></figure>
+On restore, Factions applies the complete snapshot as one operation. It clears
+stale memberships and reputation, updates each Faction member registry, clamps
+points to the configured range, and emits one normal restore/change
+notification after the snapshot is complete. It does not emit temporary
+Leave/Join events or expose an intermediate empty state to Faction registry
+listeners.
 
-{% hint style="success" %}
-The Faction Memory component works similarly to other memory components (e.g., Position, Rotation, Scale) within Game Creator 2. By adding this component to an object or character, you enable the game to remember and restore their faction memberships and related data.
+Factions 1.2.0 stores stable faction IDs. Tokens created by 1.1.x continue to
+load through the legacy faction-name mapping.
+
+{% hint style="warning" %}
+Do not regenerate a Faction ID after shipping saved games unless you also
+provide a project-specific migration from the previous ID.
 {% endhint %}

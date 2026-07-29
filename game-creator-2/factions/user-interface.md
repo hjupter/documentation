@@ -1,8 +1,9 @@
 # User Interface
 
-The **Factions** module comes with a collection of components designed to streamline the creation of UI windows and elements.
-
-All examples that come with the module have been created with them and are flexible to accommodate any type of window.
+Factions includes components for faction lists, selected-faction details,
+reputation displays, and scoreboards. The UI refreshes when the relevant
+Faction or Member changes and ignores unrelated reputation, relationship, and
+member-count events.
 
 
 
@@ -26,7 +27,9 @@ The **Content** field defines the `Rect Transform` where each prefab instance wi
 The **Content** value should contain an auto-layout component, such as `Vertical Layout Group`, `Horizontal Layout Group` or `Grid Layout Group`.
 {% endhint %}
 
-The **Prefab** is the prefab instantiated inside the _Content_. It must contain a **Faction UI** component, which is automatically configured by its parent.
+The **Prefab** is instantiated inside _Content_. It must contain a **Faction
+Item UI** component, which the list configures with the corresponding Member
+and Faction.
 
 
 
@@ -38,9 +41,9 @@ The Faction List UI Tab component is typically used to filter and present factio
 
 
 
-## Faction UI
+## Faction Item UI
 
-This component is used in tandem with the **Factions List UI** to display a faction based on a set of rules and filters.
+This component is used with **Faction List UI** to display one indexed Faction.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-06-16 at 9.58.12 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -48,9 +51,10 @@ The **Title**, **Description**, **Member Count**, **Color** and **Sprite** field
 
 The **Reputation Elements**  dynamically display the faction’s reputation status, points, and progress. This is essential for showing the player’s standing with different factions and how close they are to changing their reputation status.
 
-The **Active Elements** section defines a set of optional game objects that are activated/deactivated according to different conditions.
+The **Active Elements** section can activate an object when this item is the
+currently selected Faction.
 
-The **Interactive** elements allow to define different types of interactions performed by the player.
+The **Interactions** section connects optional join, leave, and select controls.
 
 For example, the `Button Leave` field instructs a button to leave a faction when clicked.
 
@@ -58,9 +62,11 @@ The `Select Faction` field allows to define a selection element as a button to s
 
 
 
-## Selection UI
+## Selected Faction UI
 
-Upon selecting a faction, any Faction UI component with the _Selection_ keyword will be automatically updated.
+When a Faction Item UI is selected, **Selected Faction UI** receives the
+selected Member and Faction. Selection is retained when the selected panel is
+temporarily disabled and enabled.
 
 <div align="left">
 
@@ -80,13 +86,15 @@ The Scoreboard UI component provides a structured interface to display a list of
 
 The **Faction** field determines which faction’s members to display. If set to “Any”, it will display members from all factions. If set to “Specific”, you can choose a particular faction.
 
-The **Content** field is UI container that will hold the instantiated member items.
+The **Content** field is the UI container that holds instantiated member items.
 
-The **prefab** to be used for each member item in the scoreboard. This prefab should include all the necessary UI elements to display member information.
+The **Prefab** is used for each member item. It should contain a **Scoreboard
+Item UI** component.
 
 The **Sort Direction** field determines the order in which members are displayed based on the sort field index.
 
-The **Sort Index** specify the index of the member attribute to sort by. This allows for flexibility in sorting by different criteria, such as points, rank, or other custom fields.
+The **Sort Index** specifies the field used for sorting. Invalid field indexes
+are ignored safely.
 
 {% hint style="success" %}
 By utilizing the Scoreboard UI component, you can create a dynamic and interactive leaderboard or member listing for your factions, enhancing the competitive and social aspects of your game.
@@ -98,7 +106,7 @@ By utilizing the Scoreboard UI component, you can create a dynamic and interacti
 
 The Scoreboard Item UI component is designed to represent individual entries within the scoreboard, displaying various attributes of faction members.&#x20;
 
-The **alternate background** option allows you to set an alternate background image for the scoreboard item, which can help distinguish between different rows for better readability.
+The **Alternate Background** option distinguishes alternating rows.
 
 
 
@@ -106,7 +114,7 @@ The **alternate background** option allows you to set an alternate background im
 
 Fields can be customized to display specific data of types **string** or **number**.
 
-The **Text** field is the component that displays the data
+The **Text** field is the component that displays the data.
 
 **Use Format** enables the formatting feature for the associated text or number field.
 
@@ -121,7 +129,7 @@ Use `{0:C}` to convert 1000 to $1,000.00.
 Use `{0:N}` to convert 1000 to 1,000.
 {% endhint %}
 
-**Use Color** enables the option to apply color to the field using properties
+**Use Color** applies the configured color property to the field.
 
 <figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption><p>This component can be customized to show different fields such as player names, scores, and other relevant data.</p></figcaption></figure>
 

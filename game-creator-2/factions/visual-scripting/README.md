@@ -1,21 +1,12 @@
 # Visual Scripting
 
-The **Factions** module symbiotically works with **Game Creator** and the rest of its modules using its visual scripting tools.
+Factions nodes use standard Game Creator targets, properties, lists, and event
+arguments. Relationship checks are directional: “source toward target” is not
+the same as “target toward source.”
 
-{% content-ref url="conditions.md" %}
-[conditions.md](conditions.md)
-{% endcontent-ref %}
+The following pages list every Factions 1.2.0 visual-scripting title:
 
-{% content-ref url="events.md" %}
-[events.md](events.md)
-{% endcontent-ref %}
-
-{% content-ref url="instructions.md" %}
-[instructions.md](instructions.md)
-{% endcontent-ref %}
-
-{% content-ref url="properties.md" %}
-[properties.md](properties.md)
-{% endcontent-ref %}
-
-Each scripting node allows other modules to use any **Factions** feature.
+* [Instructions](instructions.md)
+* [Conditions](conditions.md)
+* [Events](events.md)
+* [Properties](properties.md)

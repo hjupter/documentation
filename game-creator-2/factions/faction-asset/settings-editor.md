@@ -7,7 +7,8 @@ The Faction Settings Editor is the central hub for managing all faction relation
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-06-15 at 9.53.32 PM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Faction relationships** in this system are inherently **two-way**, meaning that each faction’s stance towards another can differ.&#x20;
+**Faction relationships are directional.** Each faction stores its own stance
+toward every other faction, so the two directions may differ.
 {% endhint %}
 
 {% hint style="success" %}
