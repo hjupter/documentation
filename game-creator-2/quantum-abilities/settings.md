@@ -17,6 +17,15 @@ There is no global default catalog, mutable capacity override, module-wide
 authority toggle, Photon App ID, credential, token, password, or secret in
 Quantum Abilities.
 
+Quantum Core source contract
+`78feba0ff454828aeb425fc28a3c208f20ae7b25` lists Abilities as
+**not applicable** with contribution `none`, no registered subsection, no
+repository ownership, and an empty project-options list. Abilities therefore
+does not implement Core's editor-only contributor interface or settings-section
+base type. This source assignment does not pin simulation transport allocations
+or establish runtime compatibility; the external Settings-window contract
+remains pending.
+
 ## Persistence and lifecycle
 
 Catalogs and scene components use their normal Unity serialization. The
