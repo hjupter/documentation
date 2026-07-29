@@ -20,3 +20,21 @@ duplicates, missing Items, and mismatches.
 Late join and reconnect rebuild the presentation from the verified Quantum
 frame. Do not restore the authoritative inventory from a Game Creator save
 token.
+
+## Project settings
+
+Quantum Inventory currently contributes no project-wide settings and does not
+show an empty Inventory subsection in the Quantum settings panel.
+
+- Items, recipes, stack limits, and stable IDs belong to the deterministic
+  Quantum catalog.
+- Container, slot, transaction, and dedupe bounds are fixed by the simulation
+  contract.
+- The Item Map and Authoring Profile are explicit authoring assets assigned to
+  each Inventory view.
+- Mirroring verified state into a Game Creator Bag is configured per view.
+- Player routing and request-ID continuity belong to Quantum Core.
+
+No Photon App ID, credential, token, or secret is stored by Quantum Inventory.
+User-created catalogs, maps, profiles, scenes, and prefabs remain project-owned
+when the module is uninstalled.
