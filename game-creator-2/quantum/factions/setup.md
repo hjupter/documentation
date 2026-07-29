@@ -19,7 +19,7 @@ and real online validation.
 ## Before an install can be documented
 
 1. Quantum Core must publish its exact deterministic command, event, catalog,
-   simulation, and view-bridge contract.
+   simulation, view-bridge, and Game Creator settings-extension contract.
 2. Standalone Factions must publish the stable ID and atomic membership restore
    APIs consumed by this module.
 3. The package must compile and run codegen with licensed dependencies hydrated
@@ -30,3 +30,8 @@ and real online validation.
 The blocked development package owns only
 `Assets/Plugins/NinjutsuGames/Packages/QuantumFactions`. It must not install or
 remove the Core-owned `Assets/QuantumUser` generated output directly.
+
+It also must not create a separate Quantum Game Creator settings repository or
+directly mutate Core's settings asset. The applicable project-wide catalog
+selector remains blocked until Core publishes the exact collision-safe
+**Factions** subsection contract.

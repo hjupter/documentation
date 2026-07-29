@@ -12,6 +12,19 @@ stable-ID contract.
 The candidate migration source is standalone Factions' stable ID. That mapping
 remains provisional until the supported Factions commit is pinned.
 
+## Settings boundary
+
+The package-owned Quantum Faction Catalog is the only implemented
+configuration surface. It stores deterministic bake inputs and defaults, not
+authoritative frame state.
+
+A project-wide catalog selector belongs in a titled **Factions** subsection of
+the single Quantum settings panel owned by Core. The add-on does not own a
+separate settings repository and must not modify Core's settings asset through
+an incompatible editor path. Exact subsection types, ordering, persistence,
+migration, and removal behavior remain blocked on Core's published contract.
+See [Settings](settings.md).
+
 ## Frame state
 
 Each Quantum entity stores its memberships, primary faction, reputation, and

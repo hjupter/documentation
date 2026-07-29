@@ -34,6 +34,7 @@ The module requires customer-owned Photon Quantum, Game Creator 2, and
 standalone Factions packages. Those paid dependencies are not redistributed.
 
 * [Setup and current gates](setup.md)
+* [Settings](settings.md)
 * [Deterministic architecture](architecture.md)
 * [Visual scripting reference](visual-scripting.md)
 * [Multiplayer validation](multiplayer-validation.md)
