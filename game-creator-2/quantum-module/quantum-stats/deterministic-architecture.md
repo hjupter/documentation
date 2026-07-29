@@ -39,6 +39,13 @@ Status Effects, damage types, and healing types are resolved from the immutable
 catalog; invalid IDs, duplicate IDs, mismatched target Stats, and amounts
 outside catalog bounds are rejected.
 
+Every catalog stores a versioned 64-bit digest derived from its ordered IDs,
+fixed-point values, durations, operations, and stacking policies. The
+simulation recomputes this value before initialization and rejects missing,
+arbitrary, stale, or content-mismatched digests. Definitions within each
+catalog section must use strictly ascending IDs, and authored base and current
+values must already be inside their declared bounds.
+
 ## Commands and authorization
 
 Quantum Core owns the command transport and numeric allocations. Stats does not

@@ -24,8 +24,16 @@ one editor, or Core-only behavior is not module proof.
 
 ## Current status
 
-The independent deterministic contract and lock protocol tests pass. The
-module's simulation asmref remains intentionally unmaterialized. Quantum SDK
-code generation, Unity builds, exported packages, and Cloud proof remain
-blocked until Quantum Core supplies its exact pushed compatibility contract,
-simulation assembly GUID, and coordinator-only authorization policy.
+The independent deterministic contract, catalog digest, catalog validation,
+rollback, snapshot, reconnect, and lock protocol tests pass as source-level
+checks. Static package validation also checks the exact 22-item visual scripting
+surface, deterministic GUID derivation, assembly ownership, and the absence of
+vendored SDK payloads.
+
+The package-resident export plan lists separate module and examples artifacts,
+but both remain explicitly unproven with null content and artifact hashes. The
+module's simulation asmref and sole compatibility descriptor remain
+intentionally unmaterialized. Quantum SDK code generation, Unity tests and
+builds, exported packages, install lifecycle, and Cloud proof remain blocked
+until Quantum Core supplies its exact pushed compatibility contract, simulation
+assembly GUID, allocations, and coordinator-only authorization policy.

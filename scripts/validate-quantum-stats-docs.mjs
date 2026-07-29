@@ -43,6 +43,17 @@ if (!combined.includes("private development")) {
 if (!combined.includes("separately")) {
   errors.push("dependency installation policy is missing");
 }
+for (const required of [
+  "quantum-stats.compatibility.json",
+  "48-byte Stats payload",
+  "versioned 64-bit digest",
+  "explicitly unproven",
+  "separate-process two-client Quantum Cloud run",
+]) {
+  if (!combined.includes(required)) {
+    errors.push(`required release boundary missing: ${required}`);
+  }
+}
 
 if (errors.length) {
   console.error(errors.join("\n"));
