@@ -47,6 +47,14 @@ final Core contract must carry the hashed N/A evidence without rendering UI;
 Shooter will not bind any settings extension until that exact contract is
 published.
 
+Core source candidate
+`78feba0ff454828aeb425fc28a3c208f20ae7b25` makes this omission explicit:
+Shooter is `QuantumSettingsContribution.None`, implements no contributor, owns
+no section asset, and is rejected if it attempts to add one. Core alone owns
+the `quantum.general` repository. This records source architecture only; the
+Core Settings contract remains pending, its Unity matrix is empty, and no
+transport allocation or release compatibility is implied.
+
 Existing catalogs and component references require no project-settings
 migration. Uninstalling Shooter must leave the Core settings asset unchanged
 and cannot leave a Shooter settings repository behind.
