@@ -39,8 +39,26 @@ then applies the snapshot.
 | Photon Core | 1.5 or newer |
 | Photon Shooter | 1.2 |
 
-Install each package through the **Game Creator Install** window. Do not manually merge
-versioned package folders under `Assets/Plugins/GameCreator/Installs`.
+Import Photon PUN, Game Creator Core, and Shooter through their supported package channels.
+Install Photon Core and Photon Shooter through the **Game Creator Install** window. Do not
+manually merge versioned package folders under `Assets/Plugins/GameCreator/Installs`.
+
+## Settings ownership
+
+Photon Shooter does not add a **Game Creator > Settings** panel because it has no project-wide
+defaults of its own:
+
+* Photon Core owns network rates and player defaults.
+* PUN's `PhotonServerSettings` owns the App ID and connection configuration.
+* Shooter weapon assets and visual scripting own fire, projectile, ammo, reload, and hit rules.
+* The player prefab owns its `PhotonView` observed-components list.
+
+Shooter Network keeps one fixed synchronization and owner-authority contract for every client.
+The module does not serialize an App ID, API key, access token, or other secret. The package
+repository keeps all tracked `PhotonServerSettings` App ID fields blank; automated Cloud
+validation provides its protected Realtime App ID only to the running validation processes,
+not to compile, export, or build steps. Since Photon Shooter creates no settings repository or
+asset, upgrade and uninstall cannot leave behind a Shooter-owned settings file.
 
 ## Start here
 

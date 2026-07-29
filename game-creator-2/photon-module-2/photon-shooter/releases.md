@@ -28,6 +28,10 @@
 
 * Photon Core 1.5 is now required
 * Photon Shooter and Photon Shooter Examples now use version 1.2.0 package markers
+* Photon Core/PUN and Shooter assets remain the owners of project configuration; Photon
+  Shooter does not create a duplicate settings asset or store connection secrets
+* Tracked Photon App ID fields remain blank; Cloud validation receives its protected Realtime
+  ID only in running validation processes
 
 ## 1.1.1 — 2024-12-18
 

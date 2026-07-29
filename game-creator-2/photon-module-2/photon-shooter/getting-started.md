@@ -11,12 +11,18 @@ Install the required packages in this order:
 5. Photon Shooter 1.2
 6. Photon Shooter Examples 1.2, if you want the sample scenes
 
-Open **Game Creator > Install** and install the Photon Shooter entry. The installer checks
-the minimum Photon Core version. Shooter itself is a base Game Creator package, not an
-install-window package with a dependency ID, so the installer cannot verify its version.
-Confirm that `Assets/Plugins/GameCreator/Packages/Shooter/Editor/Version.txt` reports 2.2.7
-before installing Photon Shooter. Install the examples separately after Shooter Examples and
-Shooter Weapons are present.
+Open **Game Creator > Install** and install the Photon Shooter entry. The entry declares
+`Photon.Core` 1.5 as its minimum install-window dependency. Shooter itself is a base Game
+Creator package, not an install-window package with a dependency ID, so that schema cannot
+represent or verify the Shooter version. Before installing Photon Shooter, confirm Photon
+Core 1.5 or newer is present and
+`Assets/Plugins/GameCreator/Packages/Shooter/Editor/Version.txt` reports 2.2.7. Install the
+examples separately after Shooter Examples and Shooter Weapons are present.
+
+Configure your own Photon Realtime App ID through PUN's supported project setup before
+connecting a game. Photon Shooter itself does not own or serialize that ID. The source
+repository and distributable artifacts keep tracked App ID fields blank; repository Cloud
+validation supplies a protected ID only in the validation processes' memory.
 
 ## Configure the player prefab
 
@@ -33,6 +39,9 @@ On the root GameObject of the network player:
 
 Shooter Network is the only component added by Photon Shooter. Its runtime inspector shows
 the weapon ID, magazine, trigger, reload, jam, and target information received by that player.
+There is no separate Photon Shooter panel under **Game Creator > Settings**. Configure network
+defaults in Photon Core, connection details in PUN, weapon behavior in Shooter assets, and
+observed components on each player prefab.
 
 ## Equip and swap weapons
 
@@ -75,3 +84,8 @@ Use two real clients in the same Photon Cloud room. Confirm:
 
 An offline or single-editor test cannot prove Photon ownership, late-join ordering, or
 disconnect behavior.
+
+Repository pull requests and pushes run static source, settings, package-inventory, workflow,
+and credential-hygiene checks only. The supported-editor matrix, clean lifecycle checks,
+Asset Store Tools, player builds, package exports, and real two-client Photon Cloud session
+require an explicitly reviewed heavy workflow dispatch.
