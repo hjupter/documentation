@@ -28,6 +28,14 @@ The Game Creator Install window can resolve versioned install packages, but it c
 Do not manually extract an installer's `Package.unitypackage` into `Plugins`. Use the **Game Creator Install** window.
 {% endhint %}
 
+## Game Creator Settings
+
+Photon Core exposes **Game Creator → Settings → Photon → Network Settings** for project-wide network behavior. Photon App IDs and authentication values remain in PUN's Photon Server Settings; they are not stored in the Game Creator repository.
+
+Core 1.5.0 creates the project-local `photon.general` asset when Game Creator needs the Settings repository. Existing serialized values are preserved across upgrades and removal of the Core install root. A clean auto-created asset uses the Core source defaults, while an existing project asset keeps its serialized customer values.
+
+The other integrations add a Settings page only when they own a genuine project-wide option. Per-component, per-prefab, or per-Ability choices remain on those objects. Photon Stats, Inventory, Abilities, and Factions have evidence-backed no-panel decisions; they do not add empty placeholder repositories. The family release gate rejects duplicate Settings paths, GUIDs, repository IDs, or serialized App ID/secret fields.
+
 ## Upgrade
 
 1. Back up or commit the project.

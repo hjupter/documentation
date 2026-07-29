@@ -18,8 +18,10 @@ description: Photon Bundle releases
 * Explained the difference between Bundle, integration, and installed package versions.
 * Added cached-download and duplicate-install recovery guidance.
 * Documented the Photon PUN 2.55 and Photon Core 1.5.0 family baseline.
+* Documented which integration options belong in Game Creator Settings and which remain per component.
 
 ### Fixed
 
 * Removed the implication that importing Bundle installs the Photon integrations.
 * Added an explicit warning against importing the old all-in-one 1.0.2 payload over a current project.
+* Added family gates for empty or colliding Settings repositories and serialized App ID or secret fields.
