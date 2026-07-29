@@ -11,9 +11,9 @@ Photon Bundle delivers entitlements, while each included integration is installe
 Back up or commit the project first. Then:
 
 1. Install Game Creator 2 Core and the matching Game Creator gameplay modules you intend to use.
-2. Install Photon Unity Networking 2.
+2. Install Photon Unity Networking 2 version 2.55.
 3. Download Photon Module 2 from **My Assets**.
-4. Open **Game Creator → Install**, then install **Photon → Core**.
+4. Open **Game Creator → Install**, then install **Photon → Core** version 1.5.0.
 5. Download the remaining included Photon integrations individually.
 6. Install one integration's main package, let Unity compile, then install its Examples package if needed.
 7. Repeat for the other integrations.
@@ -25,18 +25,24 @@ The Game Creator Install window can resolve versioned install packages, but it c
 {% endhint %}
 
 {% hint style="danger" %}
+Do not bypass a Photon dependency preflight. It rejects a missing dependency or a version below the required minimum, while accepting an equal or newer version. A rejection identifies the exact installed and required versions.
+{% endhint %}
+
+{% hint style="danger" %}
 Do not manually extract an installer's `Package.unitypackage` into `Plugins`. Use the **Game Creator Install** window.
 {% endhint %}
 
 ## Upgrade
 
 1. Back up or commit the project.
-2. Update Game Creator and Photon PUN dependencies first.
-3. Update and install Photon Core.
-4. Update the remaining Photon integrations one at a time.
-5. Let Unity compile after each integration.
-6. Reopen representative prefabs and scenes.
-7. Repeat the two-client Photon Cloud test before shipping.
+2. Update the matching Game Creator gameplay dependencies first.
+3. Update Photon PUN to 2.55.
+4. Update and install Photon Core 1.5.0.
+5. Update the remaining Photon integrations one at a time.
+6. Install each integration's Examples package last.
+7. Let Unity compile after each integration.
+8. Reopen representative prefabs and scenes.
+9. Repeat the two-client Photon Cloud test before shipping.
 
 Do not import the old all-in-one Bundle 1.0.2 payload over a current project. It embedded old dependencies and integration copies that can replace newer files.
 

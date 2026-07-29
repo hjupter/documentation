@@ -25,6 +25,8 @@ The Bundle purchase unlocks the six integrations above. It does not combine them
 
 Photon PUN 2, Game Creator 2, and the matching Game Creator gameplay modules are separate dependencies. Install only the gameplay modules your project uses.
 
+The 1.1.5 family compatibility pass uses Photon PUN 2.55 and Photon Core 1.5.0. Its safe order is Game Creator gameplay dependencies, PUN, Photon Core, Photon add-ons, then Examples.
+
 {% hint style="warning" %}
 Photon Factions is a separate product. It is part of the wider Photon integration family, but it is not included with Photon Bundle.
 {% endhint %}
