@@ -42,6 +42,18 @@ hook, migration hook, and add-on removal behavior remain unresolved. No
 subsection implementation will be shipped until Core publishes and statically
 validates that contract.
 
+## Standalone Factions settings
+
+Standalone Factions already owns its `factions.general` settings repository and
+the generated asset at:
+
+`Assets/Plugins/GameCreator/Data/Resources/Settings/factions.general.asset`
+
+That separate panel owns **Reputation Stances** and **Factions**, including its
+default reputation thresholds `0`, `20`, `40`, and `80`. Quantum Factions does
+not duplicate, modify, or uninstall those settings. Its future Quantum
+subsection will only select and validate Quantum-specific catalog authoring.
+
 ## Migration and uninstall
 
 No automatic migration is implemented. The candidate source is standalone
