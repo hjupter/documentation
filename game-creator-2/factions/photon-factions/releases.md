@@ -15,6 +15,9 @@
   version markers.
 * Added package validation for clean install, stale-overlay upgrade, sample
   integrity, and uninstall.
+* Audited Game Creator Settings ownership and gated the intentional absence of
+  an empty Photon Factions panel. Import, domain reload, upgrade, and uninstall
+  must not create or leave `photon.factions.asset`.
 
 ### Fixed
 

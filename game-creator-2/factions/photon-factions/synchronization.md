@@ -3,6 +3,17 @@
 Photon Factions 1.1.0 uses the `PhotonView` controller as the authority for each
 network component.
 
+## Configuration ownership
+
+There is no Photon Factions project settings repository. The only serialized
+module option is the Faction selected on each **Faction Network**. A **Member
+Network** has no configurable default.
+
+This is intentional. Authority belongs to the `PhotonView`; room lifetime and
+rejoin policy belong to the room bootstrap; connection settings belong to
+Photon Core/PUN. Snapshot replacement, sender validation, and schema rejection
+are protocol invariants rather than preferences.
+
 ## Member state
 
 **Member Network** replicates:

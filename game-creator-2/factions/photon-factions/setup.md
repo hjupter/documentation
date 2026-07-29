@@ -32,6 +32,24 @@ Do not commit an App ID to a public source repository or include it in validatio
 logs. The Photon Factions release workflow injects its Cloud proof credential
 from a repository secret at runtime.
 
+## Game Creator Settings
+
+Photon Factions intentionally adds no **Photon Factions** panel under **Game
+Creator → Settings** because it has no safe project-wide default:
+
+* Select the Faction asset on each **Faction Network**.
+* Keep the Faction catalogue and stances in the base Factions
+  `factions.general` settings repository.
+* Configure authority and transfer policy on that object's `PhotonView`.
+* Configure the App ID and connection policy through Photon Core/PUN.
+* Configure App Version, room TTL, and reconnect flow in the game's room
+  bootstrap.
+
+Membership, absolute reputation, full snapshot replacement, controller
+validation, and schema rejection are fixed synchronization rules. Making them
+client-specific settings would allow incompatible state. Photon Factions
+therefore creates no `photon.factions.asset` during import or domain reload.
+
 ## Member Network
 
 On every networked member:

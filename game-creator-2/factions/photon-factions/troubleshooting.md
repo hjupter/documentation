@@ -1,5 +1,12 @@
 # Troubleshooting
 
+## I cannot find Photon Factions in Game Creator Settings
+
+This is expected. Photon Factions has no project-wide settings panel. Assign the
+Faction on each **Faction Network**, configure ownership on its `PhotonView`,
+and keep connection settings in Photon Core/PUN. Import, domain reload, upgrade,
+and uninstall should not create or leave a `photon.factions.asset`.
+
 ## A late joiner has the wrong state
 
 Check that the object has a non-zero `PhotonView` ID, has a current controller,
