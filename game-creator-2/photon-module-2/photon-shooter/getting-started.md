@@ -1,21 +1,91 @@
 # Getting Started
 
-## Overview
+## Install
 
-Most of the magic happens automatically by simply attaching the ShooterNetwork, in some cases like equipping a weapon can simply be done by using an RPC component.
+Install the required packages in this order:
 
-## Considerations
+1. Photon PUN 2.55
+2. Game Creator 2 Core 2.18.60 or newer
+3. Game Creator 2 Shooter 2.2.7 or newer compatible release
+4. Photon Core 1.5 or newer
+5. Photon Shooter 1.2
+6. Photon Shooter Examples 1.2, if you want the sample scenes
 
-When using sights and you need to change camera FOV we don't want this to be run by remote players so always check if **Self** (the player who executed) is Mine&#x20;
+Open **Game Creator > Install** and install the Photon Shooter entry. The entry declares
+`Photon.Core` 1.5 as its minimum install-window dependency. Shooter itself is a base Game
+Creator package, not an install-window package with a dependency ID, so that schema cannot
+represent or verify the Shooter version. Before installing Photon Shooter, confirm Photon
+Core 1.5 or newer is present and
+`Assets/Plugins/GameCreator/Packages/Shooter/Editor/Version.txt` reports 2.2.7. Install the
+examples separately after Shooter Examples and Shooter Weapons are present.
 
-When using Aims that requies Camera instead of using Main Camera alway choose Photon > Player Camera to avoid Remote Player aim direction to point to the local player camera direction.
+Configure your own Photon Realtime App ID through PUN's supported project setup before
+connecting a game. Photon Shooter itself does not own or serialize that ID. The source
+repository and distributable artifacts keep tracked App ID fields blank; repository Cloud
+validation supplies a protected ID only in the validation processes' memory.
 
-<div align="left">
+## Configure the player prefab
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt="" width="375"><figcaption></figcaption></figure>
+On the root GameObject of the network player:
 
-</div>
+1. Add **Character**.
+2. Add **Photon View**.
+3. Add **Character Network**.
+4. Add **Shooter Network**.
+5. In Photon View, add **Character Network** and **Shooter Network** to
+   **Observed Components**.
+6. Keep ownership fixed to the player that created the PhotonView unless your game has an
+   explicit ownership-transfer design.
 
-In some cases in ShooterWeapon you will have to use Self or Target instead of Player, like in projectile section the Character Target needs to be picked from who is executing the action in this case Self if you pick player remote players who fire to the local player target instead.
+Shooter Network is the only component added by Photon Shooter. Its runtime inspector shows
+the weapon ID, magazine, trigger, reload, jam, and target information received by that player.
+There is no separate Photon Shooter panel under **Game Creator > Settings**. Configure network
+defaults in Photon Core, connection details in PUN, weapon behavior in Shooter assets, and
+observed components on each player prefab.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+## Equip and swap weapons
+
+Every client needs a local Shooter weapon prop for each visible character. Run **Equip Shooter
+Weapon** and **Unequip Shooter Weapon** through a Photon Core RPC component so the same weapon
+is created or removed on every client.
+
+Use the same Shooter weapon asset on all clients. Photon Shooter matches weapons by the stable
+ID stored in the asset, not by list order or Unity instance ID.
+
+For a swap, attach the replacement prop and run **Equip Shooter Weapon** before running
+**Unequip Shooter Weapon** and removing the previous prop. This keeps a valid Shooter rig
+throughout the asynchronous change and avoids publishing a temporary empty-weapon snapshot.
+
+{% hint style="warning" %}
+Shooter Network synchronizes state; it does not create a missing weapon prop by itself. If a
+late joiner cannot see an equipped weapon, make the equip RPC available to new players and
+keep Shooter Network on the observed-components list.
+{% endhint %}
+
+## Configure aim references
+
+For Shooter instructions that execute on remote characters:
+
+* Use **Self** or an explicit **Target** instead of the local **Player** shortcut.
+* Use **Photon > Player Camera** instead of **Main Camera** for camera-based aim.
+* Give synchronized combat targets a PhotonView.
+
+These choices prevent a remote weapon from using the local player's camera or target.
+
+## Test with two clients
+
+Use two real clients in the same Photon Cloud room. Confirm:
+
+1. Client A equips, fires, reloads, swaps, and unequips while Client B observes.
+2. Client B performs the same operations while Client A observes.
+3. A client joins after the other player is already equipped.
+4. A client disconnects and rejoins.
+5. Projectile and hit results use the intended owner or authority rule in your game.
+
+An offline or single-editor test cannot prove Photon ownership, late-join ordering, or
+disconnect behavior.
+
+Repository pull requests and pushes run static source, settings, package-inventory, workflow,
+and credential-hygiene checks only. The supported-editor matrix, clean lifecycle checks,
+Asset Store Tools, player builds, package exports, and real two-client Photon Cloud session
+require an explicitly reviewed heavy workflow dispatch.
