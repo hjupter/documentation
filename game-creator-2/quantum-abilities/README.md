@@ -30,4 +30,5 @@ release proof is complete.
 - rollback, late join, and reconnect from Quantum frame state
 
 Continue with [Setup](setup.md), then create the four representative definitions
-in [Authoring](authoring.md).
+in [Authoring](authoring.md). See [Settings](settings.md) for why this module
+does not add global project options or an empty Quantum settings subsection.

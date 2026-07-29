@@ -132,6 +132,7 @@
 * [⚛️ Quantum Abilities](game-creator-2/quantum-abilities/README.md)
   * [Setup](game-creator-2/quantum-abilities/setup.md)
   * [Authoring](game-creator-2/quantum-abilities/authoring.md)
+  * [Settings](game-creator-2/quantum-abilities/settings.md)
   * [Visual Scripting](game-creator-2/quantum-abilities/visual-scripting.md)
   * [Deterministic Model](game-creator-2/quantum-abilities/deterministic-model.md)
   * [Troubleshooting](game-creator-2/quantum-abilities/troubleshooting.md)
