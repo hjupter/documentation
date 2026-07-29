@@ -1,40 +1,72 @@
 ---
-description: Photon Melee 2 Releases
+description: Photon Melee 2 releases
 ---
 
 # Releases
 
-## 1.1.6 (18th December 2024)
+## 1.2.0
 
-* Unity 6 support
-* Game Creator v2.17.51 support
-* Melee v2.2.11 support
+### New
 
-## 1.0.5 (5th August  2024)
+* Synchronized weapon equip, unequip, and swap.
+* Owner-selected charge and combo replication for variable- and Stats-driven combo
+  trees.
+* Late-join snapshots for equipment, defense, blocking, poise, invincibility,
+  targets, and charge state.
 
-* Support for latest Game Creator v2.16.50
-* Support for latest Melee v2.1.10
+### Improved
 
-## 1.0.4 (29th January 2024)
+* Compatibility with Photon Core 1.5.0, Photon PUN 2.55, Game Creator Core 2.18.60,
+  Melee 2.2.14, and final Unity 6.3–6.5 editors.
+* Refreshed Brawl and Sword network prefabs.
+* Clearer Melee Network inspector and authority guidance.
+* Photon App IDs stay out of tracked project settings while protected builds and
+  multiplayer validation can still inject the Realtime ID.
 
-* Support for latest Game Creator v2.14.48
-* Support for latest Melee v2.1.8
+### Fixed
 
-## 1.0.3 (23rd June 2023)
+* Remote combo selection when local variable or Stats conditions differ.
+* Target clearing, successful cancel, skill-hit buffer, maximum poise, and
+  invincibility replication.
+* Stale target references after disconnect.
+* The required Melee compatibility seam being duplicated or left incomplete during
+  upgrades.
 
-* Compatible with latest Game Creator 2 version
-* Updated demos
-* Requires Unity 2022 LTS
+### Changed
 
-## 1.0.2 (27th May 2023)
+* Melee 2.2.14 must be imported before Photon Melee.
+* Replaced the `CUSTOM_MELEE_EVENTS` conditional overlay with an idempotent,
+  audited Melee 2.2.14 cancel/hit-buffer event seam.
+* Remote state mutations are accepted only from the PhotonView owner.
 
-* Improved installation process, if you run into issues when installing new Melee update make sure to uninstall and reinstall Photon Melee 2 after that.
+## 1.1.6 (18 December 2024)
+
+* Unity 6 support.
+* Game Creator 2.17.51 support.
+* Melee 2.2.11 support.
+
+## 1.0.5 (5 August 2024)
+
+* Game Creator 2.16.50 support.
+* Melee 2.1.10 support.
+
+## 1.0.4 (29 January 2024)
+
+* Game Creator 2.14.48 support.
+* Melee 2.1.8 support.
+
+## 1.0.3 (23 June 2023)
+
+* Updated demos and Unity 2022 LTS support.
+
+## 1.0.2 (27 May 2023)
+
+* Improved installation after Melee updates.
 
 ## 1.0.1
 
-* Compile error fix
+* Compile error fixes.
 
-## 1.0.0 (21st May 2023)
+## 1.0.0 (21 May 2023)
 
 * First release.
-* Keep in mind this is a beta version, if there is any issues or missing feature please don't hesitate to contact me through my email or discord server.
