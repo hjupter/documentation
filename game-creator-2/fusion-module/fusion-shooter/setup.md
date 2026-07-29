@@ -80,6 +80,20 @@ Complete the base [Fusion Module setup](../setup.md), including:
 
 Fusion Shooter adds weapon input to Fusion Core's existing root input. It does not replace the root input type or create another input callback.
 
+## Where Shooter configuration lives
+
+Fusion Shooter 1.0.0 has no project-global settings subsection. This is
+intentional:
+
+* Network-compatible weapon, ammunition, cadence, hit and projectile values are serialized in each Shooter catalog and covered by its schema version and deterministic hash.
+* The catalog reference, Character, aim origin and **Apply Game Creator Presentation** option are serialized on each Shooter Network component or prefab.
+* Photon App IDs and authentication secrets remain in Photon/Fusion configuration or the release-proof process environment; Fusion Shooter does not store them.
+
+These asset and prefab values persist across editor restarts and domain reloads.
+Do not edit Fusion Core's `fusion.general.asset` directly. If Shooter gains a
+genuine project-wide policy in a future release, it will appear only through
+Fusion Core's supported settings-extension contract.
+
 ## Create a Shooter catalog
 
 1. In the Project window, choose **Create > Game Creator > Fusion > Shooter Catalog**.
