@@ -24,7 +24,10 @@ token.
 ## Project settings
 
 Quantum Inventory currently contributes no project-wide settings and does not
-show an empty Inventory subsection in the Quantum settings panel.
+show an empty Inventory subsection in the Quantum settings panel. Quantum Core
+owns the single `quantum.general` repository; Inventory does not access it,
+implement a settings contributor, or provide a section, order, asset, option,
+or UI.
 
 - Items, recipes, stack limits, and stable IDs belong to the deterministic
   Quantum catalog.
@@ -38,3 +41,8 @@ show an empty Inventory subsection in the Quantum settings panel.
 No Photon App ID, credential, token, or secret is stored by Quantum Inventory.
 User-created catalogs, maps, profiles, scenes, and prefabs remain project-owned
 when the module is uninstalled.
+
+The current Core source contract records this N/A disposition, but it is not a
+runtime compatibility or release claim. Use only the exact Core build named by
+the final Inventory compatibility descriptor after its Unity validation gates
+have passed.
