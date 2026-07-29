@@ -1,5 +1,60 @@
 # Releases
 
+## 1.4.0 (release candidate)
+
+**Changed**
+
+* Updated to Photon Fusion 2.1.1 Stable build 2177 and Photon Realtime 5.
+* Updated to Game Creator Core 2.18.60.
+* Defined exact Unity support as 6000.0.60f1 and 6000.3.14f1.
+* Migrated authentication, matchmaking, reliable-data callbacks, lobby
+  joining, time synchronization, NetworkTransform, and object providers to
+  current Fusion 2.1 APIs.
+* Updated Examples to 1.4.0 and Fusion UI to 1.2.0.
+* Added **Tools → Ninjutsu Games → Fusion → Safe Install** for Core package
+  upgrades, UI, Examples, and add-ons. The shared preflight rejects missing,
+  below-minimum, duplicate, malformed, or conflicting dependency evidence.
+* Add-ons now contribute authentic gameplay module `Editor/Version.txt`
+  requirements through the Fusion Core API instead of duplicating installer
+  logic.
+* Versionless publisher assets can use the new bounded exact-manifest API.
+  It pins canonical evidence bytes, the complete owned file set and root
+  `.meta`, archive provenance fields, portable paths, and pre/post-mutation
+  revalidation without fabricating a vendor marker or installer ID.
+* Regenerates both embedded installers before Core export and validates every
+  package pathname against its exact source root.
+
+**New**
+
+* Added a fixed, versioned, allocation-free network-input extension for Fusion
+  Melee, Shooter, and Abilities.
+* Added runner-scoped contributor registration with deterministic ordering,
+  duplicate protection, reconnect overlap support, and resimulation helpers.
+* Added package-resident machine-readable compatibility, allocation,
+  descriptor schema, and validation files.
+* Added a Core-owned settings extension contract and runtime registry.
+  Add-ons with real project defaults can render module-owned, deterministically
+  ordered Fusion subsections without mutating `fusion.general.asset`. Add-ons
+  with no project settings create no empty subsection, asset, ID, or order
+  reservation.
+* Added exact visual-scripting and add-on compatibility references.
+
+**Fixed**
+
+* String network variables now reconstruct as `System.String`.
+* Removed the stale PUN `StructWrapping` dependency.
+* Updated pooling, scene object acquisition, and nested prefab handling for
+  Fusion 2.1.
+* Corrected visual-scripting titles, categories, descriptions, and RPC labels.
+* Uninstall now removes every Core-owned file, including compatibility and
+  test overlays, while preserving installed add-ons under `Fusion/SubModules`.
+
+{% hint style="warning" %}
+This entry remains a release candidate until the linked Core pull request has
+terminal Unity matrix, builds, Asset Store, package upgrade, and separate
+process Photon Cloud topology proof.
+{% endhint %}
+
 ## 1.3.9 (26th October 2025) <a href="#id-139-25th-october-2025" id="id-139-25th-october-2025"></a>
 
 **Fixed**

@@ -1,64 +1,82 @@
 # Characters
 
-## Overview
+## Network Character
 
-The **Network Character** is the component resposible for synchronizing player's movement, rotation, jump, attachments, ragdoll state, model change, look tracking and more.
+Add **Network Character** to a Game Creator Character prefab that also has a
+Fusion `NetworkObject`. The inspector adds and configures the required Fusion
+behaviours.
 
-{% hint style="success" %}
-This works with any type of controller like Navmesh, Tank, Rigidbody etc.
-{% endhint %}
+Network Character synchronizes:
 
-***
+* movement input, facing, and jump state;
+* alive/dead and ragdoll state;
+* selected model;
+* registered props and attachments;
+* look target;
+* player identity and ping surfaces used by the UI.
 
-## Setup
+Game Creator controllers such as directional, point-and-click, NavMesh, tank,
+or Rigidbody can use the same Network Character bridge. The controller still
+needs an authority-safe gameplay design.
 
-Setting up a Game Creator character for Fusion is simple. Just attach a **`Network Character`** component, and it will automatically add all the necessary components, making it ready to use.
+## Shared Mode
 
-<figure><img src="../../.gitbook/assets/network-character-ezgif.com-optimize.gif" alt=""><figcaption></figcaption></figure>
+The peer with State Authority drives the Character. Remote peers render the
+replicated result. If ownership can move between peers, enable
+`Allow State Authority Override` on the `NetworkObject` and request authority
+before writing state.
 
+## Host/Client
 
+The client with Input Authority contributes `NetworkInputData`. State
+Authority reads that input during `FixedUpdateNetwork`, simulates the
+Character, and replicates the result. Core preserves the existing
+`MoveDirection`, `FaceDirection`, and `JumpCount` fields.
 
-***
+Fusion add-ons use the fixed `Extensions` payload in the same root input.
+They must not send gameplay input only by RPC or encode buttons in vector
+magnitudes. See [Compatibility and input contract](references/compatibility.md).
+
+## Spawn and despawn
+
+Use **Spawn Player** after **On Scene Load Done**. State Authority should
+validate the requested prefab and initial position. Use **Despawn Object** for
+networked teardown; destroying only the local GameObject leaves other peers
+out of sync.
+
+Treat peer and avatar lifecycle separately:
+
+* **On Player Joined/Left** reports the connection.
+* **On Player Spawned/Despawned** reports the avatar.
+* A late joiner may observe existing avatars before local UI has finished
+  initializing.
 
 ## Attachments
 
-To synchronize attachments the objecs needs to be registered first, you can do this by using **Local List Variables Network** or **Gloal List Variables Network** and select the Attachments sync mode.
+Register allowed prop prefabs in **Local List Variables Network** or
+**Global List Variables Network** with Sync Mode **Attachments**. After
+registration, Game Creator's regular Attach and Remove Prop instructions use
+the replicated prop identity.
 
-<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption></figcaption></figure>
-
-Once attachmets are registered you can use regular GC2 instructions to attach or remove objects
-
-<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption></figcaption></figure>
-
-***
+The same registry and ordering must exist on every peer. Do not replicate an
+arbitrary local prefab reference.
 
 ## Models
 
-Models work the same way attachment does using **Local List Variables Network** or **Gloal List Variables Network** and select the **Models** sync mode
+Register allowed Character models with **Local List Variables Network** or
+**Global List Variables Network** using Sync Mode **Models**, or use
+**Register Character Models**. Game Creator's Change Model instruction then
+replicates the selected model key.
 
-<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
+Model Config properties include:
 
-Once models are registered you can use regular Change Model instructio from GC2.
+* **Model Prefab**
+* **Model Name**
+* **Model Prefab Name**
+* **Selected Model**
+* **Model Sprite**
+* **Selected Model Prefab**
+* **Selected Model Sprite**
 
-<figure><img src="../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
-
-### Model Config
-
-Models comes with a special variable type to use.
-
-{% hint style="success" %}
-Values like **Name, Prefab** and **Sprite** can be used to display a list of characters&#x20;
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption></figcaption></figure>
-
-### Properties
-
-The fusion module includes properties for this new Model Config variable type like:
-
-* **Model Prefab** (Game Object)
-* **Model Name** (String)
-* **Model Prefab Name** (String)
-* **Selected Model** (String)
-* **Model Sprite** (Sprite)
-* **Selected Model Sprite** (Sprite)
+Keep stable list order and entries between versions to preserve saved and
+networked selections.

@@ -1,48 +1,47 @@
 # Remote Procedure Calls
 
-## Overview
+Fusion Module exposes three visual-scripting RPC instructions:
 
-Remote Procedure Calls, simply referred to as RPCs, are ideal for sharing punctual game events.&#x20;
+* **RPC Actions**
+* **RPC Conditions**
+* **RPC Trigger**
 
-The Fusion module has 3 types of RPCs:
+The referenced Actions, Conditions, or Trigger GameObject must have a Fusion
+`NetworkObject`.
 
-#### Action RPC
+## RPC targets
 
-<div align="left">
+| Target | Receiver |
+| --- | --- |
+| **All** | Every eligible peer, including the sender where Fusion permits it. |
+| **Proxies** | Peers that have neither Input Authority nor State Authority. |
+| **InputAuthority** | The peer with Input Authority for the object. |
+| **StateAuthority** | The peer with State Authority for the object. |
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+Authority is evaluated for the target NetworkObject, not for an unrelated
+Character or scene object.
 
-</div>
+## Cached state
 
-#### Condition RPC
+Enable **Cache State** only for a replayable state transition that a late
+joiner needs. Remove it with:
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+* **Remove Cached Actions RPC**
+* **Remove Cached Conditions RPC**
+* **Remove Cached Trigger RPC**
 
-#### Trigger RPC
+Cached RPCs are not a replacement for Networked properties. Store durable
+state in Networked state or networked variables, then use the RPC for the
+presentation that follows.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+## Prediction rule
 
-All of them work the same as the original Run instructions from Game Creator 2 except that they run through the Fusion network, and the target object requires a NetworkObject.
+RPC is a reliable request/control fallback. Do not use RPC-only transport for
+player movement, fire, attacks, blocking, charged abilities, or other input
+that must survive Fusion prediction, rollback, and resimulation. Those
+commands belong in Core's versioned
+[network-input extension](references/compatibility.md#network-input-extension).
 
-## Parameters
-
-### **RPC Target**
-
-**`RpcTarget`** define on which it is executed.
-
-* `All`: can be sent / is executed by all peers in the session (including the server).
-* `Proxies`: can be sent / is executed by a peer who does not have either Input Authority or State Authority over the object.
-* `InputAuthority`: can be sent / is executed by the peer with Input Authority over the object.
-* `StateAuthority`: can be sent / is executed by the peer with State Authority over the object.
-
-### **Cache State**
-
-If enabled, the state of the trigger will be cached and sent to newly connected peers.
-
-
-
-### Remove Cached State
-
-If you need to remove the cached state of any of the RPCs you can use the appropriate instructio for each type of RPC.
-
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+Invoke irreversible effects such as audio, analytics, or one-shot UI only on a
+forward simulation tick. Keep authoritative gameplay changes deterministic
+and idempotent.

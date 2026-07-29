@@ -13,6 +13,8 @@
   * [Settings](game-creator-2/fusion-module/settings.md)
   * [User Interface](game-creator-2/fusion-module/user-interface.md)
   * [References](game-creator-2/fusion-module/references/README.md)
+    * [Compatibility and input contract](game-creator-2/fusion-module/references/compatibility.md)
+    * [Visual scripting reference](game-creator-2/fusion-module/references/visual-scripting.md)
     * [Shutdown Reasons](game-creator-2/fusion-module/references/shutdown-reasons.md)
   * [Guides](game-creator-2/fusion-module/guides/README.md)
     * [How to test my game](game-creator-2/fusion-module/guides/how-to-test-my-game.md)
