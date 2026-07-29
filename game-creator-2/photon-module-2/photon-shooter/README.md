@@ -1,48 +1,63 @@
+---
+description: Synchronize Game Creator 2 Shooter combat with Photon PUN 2
+---
+
 # 🔫 Photon Shooter
 
-This is a module made for **Game Creator 2** that seamlessly integrates **Photon Unity Networking** and **Shooter 2**, this allows you to have networking in your game with just few clicks and without writing a single line of code.
-
-{% embed url="https://youtu.be/kq_XCjtXeiA" %}
-
-{% hint style="info" %}
-To learn more about [Photon Unity Networking](https://doc.photonengine.com/en-us/pun/current/demos-and-tutorials/pun-basics-tutorial/intro) head out to their [website](https://doc.photonengine.com/en-us/pun/current/demos-and-tutorials/pun-basics-tutorial/intro).
-{% endhint %}
+Photon Shooter synchronizes the Shooter 2 combat state of a network character. The
+PhotonView owner publishes its equipped weapon, target, sight, magazine, trigger, reload,
+jam, and lean values; remote players apply that state to their local representation.
 
 {% hint style="success" %}
-Try the [**Demo**](https://hjupter.itch.io/photon-shooter-2) now!
+Photon Shooter 1.2 supports Unity 6.3 LTS, Unity 6.4, and Unity 6.5 with Photon Core 1.5,
+Photon PUN 2.55, Game Creator Core 2.18.60, and Shooter 2.2.7.
 {% endhint %}
+
+## What is synchronized
+
+* Equipped Shooter weapon, identified by its stable Shooter weapon ID
+* Weapon swaps and explicit unequip operations
+* Current combat target, including clearing a target
+* Active sight
+* Magazine count
+* Pull, release, reload, and jam state
+* Human Shooter lean amount and decay
+* Full owner snapshots for players who join after a weapon was equipped
+
+Photon Shooter accepts state only from the PhotonView owner. If the player prefab or its
+equipment arrives after a state message, the component waits for the matching weapon and
+then applies the snapshot.
+
+## Requirements
+
+| Package | Required version |
+| --- | --- |
+| Unity | 6.3 LTS, 6.4, or 6.5 |
+| Game Creator 2 Core | 2.18.60 or newer |
+| Game Creator 2 Shooter | 2.2.7 or newer compatible release |
+| Photon Unity Networking 2 | 2.55 |
+| Photon Core | 1.5 or newer |
+| Photon Shooter | 1.2 |
+
+Install each package through the **Game Creator Install** window. Do not manually merge
+versioned package folders under `Assets/Plugins/GameCreator/Installs`.
+
+## Start here
+
+1. Follow [Getting Started](getting-started.md) to configure the player prefab.
+2. Read [Synchronization and Authority](synchronization-and-authority.md) before adding
+   equip, swap, fire, reload, projectile, hit, or reconnect logic.
+3. Use the [Visual Scripting Reference](visual-scripting-reference.md) to match the titles
+   in Shooter 2.2.7 and understand which values Photon Shooter observes.
+4. Check [Troubleshooting](troubleshooting.md) when remote equipment or combat state differs.
 
 {% hint style="success" %}
-[**Get Photon Shooter 2 on the Unity Asset Store →**](https://www.ninjutsugames.com/go/photon-shooter?src=docs_photon_shooter_overview)
+Try the [Photon Shooter browser demo](https://hjupter.itch.io/photon-shooter-2).
 {% endhint %}
 
-## Key features <a href="#key-features" id="key-features"></a>
+## Get Photon Shooter
 
-* Complete Character **Shooter Combat** synchronization
-* **Equipment** synchronization
-* Complete **Weapon States** synchronization includes reloading, jamming, pulling trigger and more
-* Compatible with all GC modules.
+[Get Photon Shooter 2 on the Unity Asset Store](https://www.ninjutsugames.com/go/photon-shooter?src=docs_photon_shooter_overview).
 
-{% hint style="success" %}
-All actions and conditions are compatible with other Game Creator modules.
-{% endhint %}
-
-## Setup <a href="#setup" id="setup"></a>
-
-You'll first need to have Game Creator 2, Photon Module 2, Shooter 2 and Photon Unity Networking 2 installed.
-
-The process is simple:
-
-1. Install [**Photon Unity Networking 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_shooter_setup_pun).
-2. Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_shooter_setup_gc2).
-3. Install [**Shooter 2**](https://www.ninjutsugames.com/go/shooter-2?src=docs_photon_shooter_setup_shooter).
-4. Install [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_shooter_setup_core).
-5. Install [**Photon Shooter 2**](https://www.ninjutsugames.com/go/photon-shooter?src=docs_photon_shooter_setup_module).
-
-Finally bring up the _**Game Creator Install Window**_ select the **Photon Shooter 2** package and install it.
-
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="danger" %}
-This module requires [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_photon_shooter_warning_gc2), [**Photon Unity Network 2**](https://www.ninjutsugames.com/go/photon-pun-2?src=docs_photon_shooter_warning_pun), [**Photon Module 2**](https://www.ninjutsugames.com/go/photon-module-2?src=docs_photon_shooter_warning_core), and [**Shooter 2**](https://www.ninjutsugames.com/go/shooter-2?src=docs_photon_shooter_warning_shooter). Don't attempt to extract the package inside the Plugins/ folder as it will throw some errors.
-{% endhint %}
+For support, join the Photon Module channel in the
+[Game Creator Discord server](https://discord.com/invite/99bbWBzKDX).
