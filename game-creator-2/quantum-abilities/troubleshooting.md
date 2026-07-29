@@ -30,3 +30,8 @@ Do not copy Photon SDK assemblies from another project.
 Treat the verified Quantum frame as authoritative and rebuild the view mirror.
 Do not restore cooldowns, charges, resources, or effects from Game Creator save
 data or wall-clock timestamps.
+
+If the first loadout command or cast after reconnect is rejected as stale,
+verify that the installed Core adapter—not the player-view GameObject—owns
+command request IDs and cast-sequence continuation. A locally reset counter is
+an integration error.

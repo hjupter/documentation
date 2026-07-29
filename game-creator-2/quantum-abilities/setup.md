@@ -28,6 +28,29 @@ The bridge inspector reports whether the transport and catalog are ready. A
 missing dependency is an installation error; the module does not silently fall
 back to local gameplay.
 
+## Install, upgrade, and uninstall
+
+The release artifact will install only this owned root:
+
+`Assets/Plugins/NinjutsuGames/Packages/Quantum/SubModules/QuantumAbilities`
+
+Do not copy the package over an older development snapshot. Back up the project,
+remove that exact owned root, confirm that no duplicate Quantum Abilities
+descriptor remains, and then import the new artifact. Quantum Core and licensed
+Photon Quantum, Game Creator, and Daimahou Abilities packages remain
+customer-managed dependencies and must not be removed with this module.
+
+To uninstall, remove the exact owned root and any project-authored catalogs,
+view components, or visual-scripting references that depend on it. Run Quantum
+code generation afterward so the customer project's Core-owned consolidated
+output no longer contains Abilities types.
+
+The canonical package descriptor is:
+
+`Assets/Plugins/NinjutsuGames/Packages/Quantum/SubModules/QuantumAbilities/Compatibility/quantum-abilities.compatibility.json`
+
+An alternate path or a second copy is invalid.
+
 ## Online configuration
 
 Use a Photon Quantum AppId and a real Quantum Cloud session. A local debug runner

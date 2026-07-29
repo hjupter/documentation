@@ -15,6 +15,11 @@ second root `Input`. Cast start, held, release, and cancel share one 16-bit cast
 sequence. Edge dedupe uses the caster, sequence, and edge kind; wrap comparisons
 use the half-range rule.
 
+The Core transport owns the non-zero 64-bit request IDs used by learn, assign,
+and unassign commands. It also allocates non-zero cast sequences from verified
+state. Neither counter belongs to the GameObject bridge, so recreating a view or
+reconnecting cannot restart a dedupe stream.
+
 ## Optional integrations
 
 Quantum Stats can accept resource spending and effect/status handoff through an
