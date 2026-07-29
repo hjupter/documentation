@@ -1,51 +1,57 @@
----
-description: >-
-  Welcome to getting started with the Factions module. In this section, you’ll
-  learn how to install this module and get started with the examples it comes
-  with.
----
-
 # Setup
 
-## Prepare your Project
+## Requirements
 
-Before installing the **Factions** module, you’ll need to either create a new Unity project or open an existing one.
+The Factions 1.2.0 release candidate requires:
 
-{% hint style="warning" %}
-It is important to note that [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_factions_setup_game_creator) should be present before attempting to install any module.
-{% endhint %}
+* Game Creator 2 Core 2.18.60
+* Candidate editors: Unity 6000.3.14f1, 6000.4.12f1, and 6000.5.5f1
 
-## Install the Factions module
+The final supported editor matrix will list only editors that pass the
+Factions-specific compile, runtime, persistence, sample, build, package, and
+clean-install checks.
 
-If you haven't purchased the module, [**get Factions on the Unity Asset Store →**](https://www.ninjutsugames.com/go/factions?src=docs_factions_setup_module), then follow the steps below to install it.
+The optional examples are validated with Dialogue 2.5.19 and Quests 2.3.11.
 
-{% hint style="info" %}
-{% endhint %}
+## Install
 
-Once you have bought it, click on **Window → Package Manager** to reveal a window with all your available assets.
+1. Install Game Creator 2 Core.
+2. Download Factions from **Window → Package Manager → My Assets**.
+3. Import the Factions package and wait for Unity to finish compiling.
+4. Open **Game Creator → Settings**, select **Factions**, and review the
+   faction list, directional relationships, and reputation stances.
 
-Type in the little search field the name of this package and it will prompt you to download and install the latest stable version. Follow the steps and wait till Unity finishes compiling your project.
+The Factions panel is created automatically with Hostile, Neutral, Friendly,
+and Honored defaults in a clean project. Existing project settings are
+preserved when upgrading or reloading the editor.
 
+## Optional installers
 
+Open **Game Creator → Install** to add only the content your project needs:
 
-## Examples
+* **Factions** — reusable example faction assets.
+* **Examples** — eight standalone scenes covering membership, reputation, UI,
+  relationships, targeting, variables, save/load, and scoreboards.
+* **UI** — faction menu, selected-faction, HUD, and scoreboard prefabs.
+* **Dialogue Examples** — Dialogue conditions using faction state.
+* **Quests Examples** — quest navigation using faction state.
 
-We highly recommend checking the examples that come with the **Factions** module. To install them, click on the _Game Creator_ dropdown from the top toolbar and then the _Install_ option.
+The separately maintained Factions-Abilities bridge is installed from its own
+package. It is not part of the standalone Factions payload.
 
-The **Installer** window will appear and you'll be able to manage all examples and template assets you have in your project.
+## Upgrade from 1.1.x
 
-* **Examples**: A collection of scenes with different use-case scenarios
-* **UI**: A bundle of common user interface elements
-* **Factions:** A collection of common RPG factions
-* **Dialogue Examples:** A small demo showcasing Factions integrated with Dialogue
-* **Quests Examples:** A small demo showcasing Factions integrated with Quests
+Back up the project, import 1.2.0 over the existing module, and allow Unity to
+recompile. Existing Faction assets and Member components keep their serialized
+fields. New saves use stable faction IDs; 1.1.x relationship saves and Remember
+tokens are still read through their legacy keys.
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+After upgrading, open representative scenes, enter Play Mode, and save/load
+once before shipping.
 
-{% hint style="success" %}
-Clicking on the **Examples** install button will install all dependencies automatically.
-{% endhint %}
+## Remove
 
-Once you have the examples installed, click on the _Select_ button or navigate to `Plugins/GameCreator/Installs/Factions.Examples/`.
-
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+Use **Tools → Ninjutsu Games → Factions → Uninstall**. It removes the
+standalone module, its generated Factions project settings, and its optional
+`Factions.*` installer folders. It does not remove Game Creator Core, unrelated
+modules, or the separately maintained Factions-Abilities bridge.

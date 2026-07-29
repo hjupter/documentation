@@ -55,3 +55,15 @@ If the selected member is not the player, the component will display the status 
 This helps in understanding the relationship dynamics from the member’s perspective.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-06-16 at 1.58.12 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Runtime API
+
+Use `JoinFaction`, `LeaveFaction`, `SetReputationPoints`, and `IsInFaction` for
+individual changes. Reputation changes expose both the original change events
+and typed events containing the Faction plus previous and current values.
+
+Use `RestoreFactions(IEnumerable<FactionMembershipState>, bool notify = true)`
+for a complete save, reconnect, or late-join snapshot. It replaces all
+memberships and reputation values without transient Leave/Join or empty
+registry notifications. Registry observers see the completed snapshot, then
+the Member optionally emits one restore/change notification.
