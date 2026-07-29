@@ -35,7 +35,9 @@ state. The external Factions repository remains dependency-owned configuration,
 not a Fusion Factions project setting. Standalone Factions exclusively owns
 `factions.general`; Fusion Factions only consults its Faction catalog for stable
 runtime resolution and never duplicates, mutates, migrates, or uninstalls that
-asset.
+asset. The package records this N/A decision without creating `factions.asset`;
+the proposed order 1500 is unused and not reserved. The package descriptor is
+validated against the exact published Core extension contract.
 
 ## Install
 
