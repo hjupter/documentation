@@ -32,7 +32,12 @@ Install and compile these dependencies before importing Fusion Factions.
 2. Download and import the latest Fusion Factions package.
 3. Wait for Unity and the Fusion Weaver to finish.
 4. Open **Tools → Fusion → Rebuild Prefab Table**.
-5. Install **Fusion Factions Examples** from the Game Creator Hub if you want the sample scenes.
+5. To install the samples, use **Tools → Ninjutsu Games → Fusion Factions → Safe Install →
+   Examples**.
+
+The sample command uses Fusion Core's guarded dependency preflight. It verifies Factions 1.2.0
+from `Assets/Plugins/NinjutsuGames/Packages/Factions/Editor/Version.txt` before changing the
+project.
 
 ## Choose authority
 

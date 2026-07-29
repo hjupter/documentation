@@ -13,7 +13,8 @@ the serialized Faction field. Existing prefabs and scenes should retain their co
 4. Import Fusion Factions 1.1.0.
 5. Open **Tools → Fusion → Rebuild Prefab Table**.
 6. Open and save every scene and prefab containing `MemberNetwork` or `FactionNetwork`.
-7. Remove the old Fusion Factions example from the Game Creator Hub and install the 1.1.0 example.
+7. Remove the old Fusion Factions example, then use **Tools → Ninjutsu Games → Fusion
+   Factions → Safe Install → Examples** to install the 1.1.0 example.
 
 ## Review authority
 
