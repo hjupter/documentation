@@ -20,7 +20,8 @@ Install your licensed copies first.
    select the baked Quantum ability catalog.
 5. Add `QuantumAbilitiesBridge`, `QuantumAbilitiesReadModel`, and
    `QuantumAbilitiesInputDriver` to the matching player view.
-6. Assign the Core-provided Abilities transport adapter to the bridge.
+6. Assign the Abilities Core transport adapter to the bridge and register it as
+   Core's single Abilities input contributor for that runner.
 7. Assign a valid Game Creator authoring catalog.
 
 The bridge inspector reports whether the transport and catalog are ready. A

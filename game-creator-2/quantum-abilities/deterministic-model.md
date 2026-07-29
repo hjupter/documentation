@@ -31,7 +31,8 @@ internal bounded resource/effect state active.
 4. Abilities validates slot, target, cooldown, charges, and resources.
 5. Stats may commit an external resource cost.
 6. Abilities applies deterministic effects and statuses.
-7. Predicted and verified view events are emitted.
+7. Predicted view events are confirmed or canceled; verified events are
+   independently deduplicated.
 8. Recharge, expiry, and cleanup run in deterministic order.
 
 No Unity API, `Time.time`, mutable GameObject, or view callback decides gameplay.

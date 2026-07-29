@@ -4,6 +4,11 @@ Create a **Game Creator → Quantum → Abilities → Catalog** asset. Every ent
 one Game Creator Ability asset to an immutable canonical key and deterministic
 timing.
 
+Define up to eight catalog resources with immutable keys, initial amounts, and
+maximum amounts. Every ability cost must reference one of those definitions;
+an unknown resource blocks the catalog bake and cannot silently become a free
+cast. Amounts are authored in thousandths and bake to Quantum fixed point.
+
 ## Stable identity
 
 Use lowercase path-like keys, for example:
