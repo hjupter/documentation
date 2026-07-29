@@ -43,6 +43,17 @@ be resolved from its network ID. Photon Stats logs a warning and ignores that
 effect instead of applying the wrong asset.
 {% endhint %}
 
+## Project Settings
+
+Photon Stats intentionally does not add a separate **Photon Stats** settings
+panel. The module has no project-wide user options: `Traits Network` sends owner
+changes as they occur and uses full snapshots for initial synchronization and
+late joiners.
+
+Keep Status Effect registration in **Game Creator → Stats → Status Effects**.
+Configure Photon App IDs, regions, and authentication in Photon Core and PUN;
+Photon Stats does not copy or serialize credentials.
+
 ## Connect and test
 
 1. Configure the same Photon Realtime App ID in both clients.

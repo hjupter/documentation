@@ -26,6 +26,8 @@ description: Photon Stats releases
 
 * Traits state is owner-authoritative and rejects updates from non-owners.
 * Documentation now lives in this maintained guide instead of the retired bundled PDF.
+* Clarified that Status Effect registration remains in Game Creator Stats settings
+  and Photon credentials remain in Photon Core and PUN settings.
 
 ## 1.1.4 (18 December 2024)
 
