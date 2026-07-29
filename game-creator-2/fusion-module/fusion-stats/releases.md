@@ -24,6 +24,8 @@
   package validation, and separate-process Cloud proof coverage.
 * Added a guarded Fusion Stats sample installer that verifies Stats 2 and all
   shared Fusion dependencies before importing the sample.
+* Clarified that authority, warning logging, and instruction operands remain
+  contextual settings and do not create an empty project-wide subsection.
 
 ## 1.0.0 (15th December 2024)
 

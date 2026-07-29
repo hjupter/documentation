@@ -27,6 +27,12 @@ The same prefab and Stats Class must be available on every peer. Fusion Stats
 compares the Class layout before applying a snapshot and reports a warning when
 the Stat or Attribute IDs differ.
 
+Fusion Stats does not add a project-wide subsection to Game Creator's Fusion
+Settings panel. Configure **Mutation Authority** and **Log Warnings** on each
+**Traits Network** component. Visual-scripting operands remain configured on
+each instruction, allowing prefabs and scene objects to use different authority
+policies intentionally.
+
 <figure><img src="../../../.gitbook/assets/image.png" alt="Traits Network component beside Traits and Network Object in the Unity Inspector"><figcaption>Add Traits Network to the same prefab root as Traits and Network Object.</figcaption></figure>
 
 ## Install the sample
