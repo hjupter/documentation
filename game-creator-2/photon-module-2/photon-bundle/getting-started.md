@@ -25,10 +25,6 @@ The Game Creator Install window can resolve versioned install packages, but it c
 {% endhint %}
 
 {% hint style="danger" %}
-Do not bypass a Photon dependency preflight. It rejects a missing dependency or a version below the required minimum, while accepting an equal or newer version. A rejection identifies the exact installed and required versions.
-{% endhint %}
-
-{% hint style="danger" %}
 Do not manually extract an installer's `Package.unitypackage` into `Plugins`. Use the **Game Creator Install** window.
 {% endhint %}
 
