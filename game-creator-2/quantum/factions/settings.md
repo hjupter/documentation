@@ -29,8 +29,9 @@ those values remain in Quantum's deterministic frame state.
 ## Planned Quantum subsection
 
 A project-wide catalog selector is applicable and will use the subsection title
-**Factions** inside the one Quantum settings panel owned by Quantum Core.
-Quantum Factions will not:
+**Factions** inside the one Quantum settings panel owned by Quantum Core. The
+option is an asset reference with a null default; a missing or invalid catalog
+fails closed. Quantum Factions will not:
 
 - create a second Quantum Game Creator settings panel;
 - redefine Core's settings repository or asset;
