@@ -12,6 +12,10 @@
   Status Effect stacking, elapsed duration, and removals.
 * Fixed valid Game Creator actions between Fusion ticks being rejected as
   non-forward work.
+* Fixed same-snapshot Stat-backed Attribute maximum increases being clamped
+  against stale proxy state.
+* Stopped elapsed-time snapshots after the final active Status Effect stack is
+  removed.
 * Fixed a Stats 2 settings import that could leak an editor-only namespace into
   player compilation.
 * Increased replicated capacities to 64 Stats, 64 Attributes, and 64 active

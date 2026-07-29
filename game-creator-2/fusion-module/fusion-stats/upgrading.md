@@ -19,8 +19,8 @@ back up the Fusion Stats module before uninstalling Core.
 ## Import Fusion Stats 1.1.0
 
 Import 1.1.0 over the existing Fusion Stats module. The package overwrites the
-old runtime initializer with a player-safe migration marker and installs editor
-initialization in the Editor assembly.
+old runtime initializer with a player-safe, source-compatible shim and installs
+editor initialization in the Editor assembly.
 
 Existing **Traits Network** components default to **State Authority Only**. This
 preserves a secure behavior for serialized 1.0.0 prefabs.

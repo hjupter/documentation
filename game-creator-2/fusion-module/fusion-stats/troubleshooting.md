@@ -9,9 +9,10 @@ receive initial data.
 
 ## Traits Class mismatch warning
 
-The peer prefab has a different Class name or Stat/Attribute ID layout. Use the
-same network prefab and Class asset on every peer. Do not rename or reorder IDs
-on only one build.
+The peer prefab has a different Class name or Stat/Attribute layout. Use the same
+network prefab and Class asset on every peer. The signature covers ordered Stat
+IDs and Formula asset names plus ordered Attribute IDs, minimums, and maximum
+Stat IDs. Do not change only one peer build.
 
 ## A network mutation is rejected
 
