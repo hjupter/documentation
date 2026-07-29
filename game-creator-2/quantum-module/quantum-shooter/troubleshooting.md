@@ -26,6 +26,13 @@ Drive authoritative UI from the verified Controller properties. Predicted shot
 and reload events are suitable for reversible effects, not permanent ammo
 accounting.
 
+## Swapping refills ammunition
+
+This is not expected. Version 1 stores up to eight per-weapon magazine/reserve
+records inside deterministic Shooter State. Confirm both players use the exact
+same generated Shooter schema and catalog hash. Do not reinitialize GC2 weapon
+assets in response to a presentation equip event.
+
 ## VFX plays more than once
 
 Consume the Shooter event bridge once. Do not invoke the same effect from both a

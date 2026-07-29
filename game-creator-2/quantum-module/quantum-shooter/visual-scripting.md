@@ -23,8 +23,10 @@ instructions update values sampled by Quantum Core's input poll.
 
 - Quantum Shooter Is Ready
 - Quantum Shooter Has Weapon
+- Quantum Shooter Has Sight
 - Quantum Shooter Is Reloading
 - Quantum Shooter Has Ammo
+- Quantum Shooter Has Reserve Ammo
 - Quantum Shooter Is Aiming
 
 `Is Ready` becomes true only after the current entity has a verified frame,
@@ -34,9 +36,15 @@ the other gameplay conditions read the verified mirror.
 ## Properties
 
 - Quantum Shooter Weapon ID
+- Quantum Shooter Ammo ID
 - Quantum Shooter Sight ID
 - Quantum Shooter Magazine
 - Quantum Shooter Reserve Ammo
+- Quantum Shooter Last Event Kind
+- Quantum Shooter Last Projectile ID
+- Quantum Shooter Last Surface Effect ID
+- Quantum Shooter Last Damage
+- Quantum Shooter Last Reject Reason
 
 ## Events
 
@@ -44,14 +52,18 @@ the other gameplay conditions read the verified mirror.
 - On Quantum Shooter Shot
 - On Quantum Shooter Reload Changed
 - On Quantum Shooter Dry Fire
+- On Quantum Shooter Projectile Spawned
+- On Quantum Shooter Command Rejected
 - On Quantum Shooter Verified Hit
+- On Quantum Shooter Projectile Impact
 - On Quantum Shooter Damage Applied
 
-Use shot and reload events for reversible predicted animation, audio, camera, and
-VFX. Use verified hit and damage events for persistent effects and authoritative
-UI. The bridge suppresses duplicate response keys during rollback and
-resimulation.
+Use weapon, shot, reload, dry-fire, and projectile-spawn events for reversible
+predicted animation, audio, camera, and VFX. Use command rejection, verified
+hit, projectile impact, and damage events for persistent effects and
+authoritative UI. The bridge suppresses duplicate response keys during rollback
+and resimulation and can revoke a predicted response before replay.
 
-The exact release surface, including projectile and rejected-command
-presentation, remains subject to the final Core event allocation and delivered
-compatibility descriptor.
+These nine names are module-relative presentation semantics, not absolute Core
+event IDs. Their final transport allocation remains subject to the exact pushed
+Core contract and delivered compatibility descriptor.

@@ -33,6 +33,17 @@ deduplicated events.
 Late join and reconnect restore the verified simulation snapshot. They do not
 replay cached view callbacks to reconstruct gameplay.
 
+## Version 1 limits
+
+- Loadouts contain at most eight weapons. Magazine and reserve state are
+  preserved per weapon when swapping.
+- Each accepted shot emits at most 32 pellets.
+- Hitscan pellets and projectiles stop at their first deterministic impact;
+  penetration is not supported.
+- The latest 16 deterministic hit results are retained per shooter for bounded
+  view reconstruction.
+- Version 1 uses Quantum Physics 3D.
+
 ## Intentionally unsupported
 
 - Quantum 3.1 preview
