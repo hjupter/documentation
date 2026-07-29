@@ -18,6 +18,11 @@ The network component is available from:
 `Pawn Network` has no serialized configuration fields. Its inspector explains the
 owner-authoritative synchronization contract.
 
+Photon Abilities also has no module panel under **Game Creator/Settings**. Input
+and targeting choices are serialized on each Ability, the Ability catalogue stays
+in the official Abilities repository, and Photon connection/App ID settings remain
+owned by Photon Core/PUN.
+
 ## Instructions, Conditions, Events, and Properties
 
 Photon Abilities does not add module-specific Game Creator Instructions,

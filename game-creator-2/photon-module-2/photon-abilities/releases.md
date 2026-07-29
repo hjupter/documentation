@@ -37,6 +37,8 @@ description: Photon Abilities releases
 * Supports the module-tested Unity 6.3 and 6.4 range.
 * Requires Abilities 2.0.1 to be imported before Photon Abilities.
 * Uses owner-authoritative cast, target, slot, cooldown, and late-join state.
+* Clarified that per-Ability input and targeting options do not create a global
+  Photon Abilities settings panel.
 
 ## 1.0.3 (18 May 2024)
 

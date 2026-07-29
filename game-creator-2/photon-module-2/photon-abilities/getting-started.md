@@ -68,6 +68,22 @@ from the same menu so project Ability assets no longer reference the add-on type
 See [Visual Scripting Reference](visual-scripting-reference.md) for the exact
 title and category exposed by Photon Abilities.
 
+## Game Creator settings
+
+Photon Abilities intentionally adds no **Photon Abilities** panel under
+**Game Creator/Settings**. Its real options belong to the Ability configuration
+that uses them:
+
+* Set ground layers and maximum-range clamping on each
+  **Photon Abilities Input**.
+* Set the nested owner strategy on each **Photon Synchronized Target**.
+* Manage the Ability catalogue in the official Abilities settings panel.
+
+The 32-slot snapshot and 32-target payload bounds are fixed network validation
+limits, not preferences. All clients must use the same wire contract. Photon
+connection settings and Realtime App IDs remain in Photon Core/PUN and are never
+stored by Photon Abilities.
+
 ## Connect and test
 
 1. Configure the same Photon Realtime App ID in both clients.
