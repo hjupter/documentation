@@ -41,6 +41,42 @@ Its network descriptor and schema are in the same folder. Add-on build tooling
 should validate these files rather than inferring compatibility from a README
 or embedded SDK copy.
 
+## Safe-install dependency contract
+
+Fusion Core also ships:
+
+`Assets/Plugins/NinjutsuGames/Packages/Fusion/Compatibility/fusion-dependency-preflight.contract.json`
+
+This independent Fusion contract owns dependency decisions for Core package
+installs/upgrades, Fusion UI, Fusion Examples, and generic Fusion add-ons. Its
+public API is:
+
+`NinjutsuGames.FusionNetwork.Editor.Compatibility.FusionDependencyPreflight`
+
+The rule is numeric `installedVersion >= minimumVersion`: missing and
+below-minimum versions fail, while equal and newer versions pass. Duplicate,
+malformed, or conflicting evidence fails closed. The exact nested installer
+minimums are:
+
+| Installer | Dependency | Minimum |
+| --- | --- | ---: |
+| Fusion UI 1.2.0 | Game Creator Blockout | `1.4.10` |
+| Fusion Examples 1.4.0 | Fusion UI | `1.2.0` |
+| Fusion Examples 1.4.0 | Game Creator Characters | `1.3.15` |
+| Fusion Examples 1.4.0 | Game Creator Blockout | `1.4.10` |
+| Fusion Examples 1.4.0 | Game Creator Examples | `1.9.26` |
+
+Add-ons contribute gameplay requirements with
+`FusionDependencyPreflight.RequireVersionFile(...)`, pointing to the gameplay
+package's `Editor/Version.txt`. They must not implement another dependency
+engine, import a package directly, or call `InstallManager.Install`.
+
+The stock **Game Creator → Install** window is unsupported for Fusion with
+Game Creator 2.18.60 because its minimum-version comparison can accept a
+dependency below the declared minimum. Fusion does not patch Game Creator
+vendor code; use **Tools → Ninjutsu Games → Fusion → Safe Install** until a
+vendor fix has shipped and been validated.
+
 ## Network-input extension
 
 Core owns the only root input type:

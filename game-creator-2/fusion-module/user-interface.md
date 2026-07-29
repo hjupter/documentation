@@ -1,6 +1,7 @@
 # User Interface
 
-Install **Fusion UI 1.2.0** from **Game Creator → Install** for ready-to-use
+Install **Fusion UI 1.2.0** from **Tools → Ninjutsu Games → Fusion → Safe
+Install → UI** for ready-to-use
 prefabs. The runtime components also work with custom Unity UI.
 
 ## Session List UI

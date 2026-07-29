@@ -11,6 +11,11 @@
   joining, time synchronization, NetworkTransform, and object providers to
   current Fusion 2.1 APIs.
 * Updated Examples to 1.4.0 and Fusion UI to 1.2.0.
+* Added **Tools → Ninjutsu Games → Fusion → Safe Install** for Core package
+  upgrades, UI, Examples, and add-ons. The shared preflight rejects missing,
+  below-minimum, duplicate, malformed, or conflicting dependency evidence.
+* Add-ons now contribute gameplay module `Editor/Version.txt` requirements
+  through the Fusion Core API instead of duplicating installer logic.
 * Regenerates both embedded installers before Core export and validates every
   package pathname against its exact source root.
 
