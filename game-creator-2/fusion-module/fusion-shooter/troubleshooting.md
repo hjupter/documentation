@@ -11,7 +11,7 @@ Check the dependency order and exact candidate matrix:
 1. Game Creator 2 `2.18.60`
 2. Shooter `2.2.7`
 3. Fusion `2.1.1` Stable Build `2177`
-4. Fusion Core `b2aa676972b0ce7f747a83bb9815f7057524e909`
+4. Fusion Core `85f22b51a6f9e13d921f747c64c18c71c9421be6`
 5. Fusion Shooter `1.0.0` candidate
 
 Confirm Fusion's version from `build_info.txt`. Unity versions other than `6000.0.60f1` and `6000.3.14f1` are outside this candidate matrix.

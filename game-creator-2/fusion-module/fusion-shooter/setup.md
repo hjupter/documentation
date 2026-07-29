@@ -22,7 +22,7 @@ Install these package baselines:
 | Game Creator 2 | `2.18.60` |
 | Shooter | `2.2.7` |
 | Photon Fusion | `2.1.1` Stable Build `2177` |
-| Fusion for Game Creator 2 | `b2aa676972b0ce7f747a83bb9815f7057524e909` |
+| Fusion for Game Creator 2 | `85f22b51a6f9e13d921f747c64c18c71c9421be6` |
 | Fusion Shooter | `1.0.0` candidate |
 
 ## Install order
@@ -49,6 +49,10 @@ Fusion Shooter contributes this requirement to Core's shared preflight:
 | --- | --- | --- |
 | `GameCreator.Shooter` | `2.2.7` | `Assets/Plugins/GameCreator/Packages/Shooter/Editor/Version.txt` |
 
+Fusion Core's dependency-preflight contract is version 2. Its exact-manifest
+path is for versionless packages; Shooter continues to use
+`RequireVersionFile` because this publisher-owned marker is authentic.
+
 Core compares numeric major, minor and patch values and requires `installedVersion >= minimumVersion`. Missing, below-minimum, malformed, duplicate or conflicting evidence blocks installation before mutation. Equal and newer compatible versions satisfy the version comparison, although this release candidate is validated only against Shooter `2.2.7`.
 
 ## Verify the installed versions
@@ -59,7 +63,7 @@ Before configuring a scene:
 2. Confirm Game Creator 2 Core from `Assets/Plugins/GameCreator/Packages/Core/Editor/Version.txt`.
 3. Confirm Shooter from `Assets/Plugins/GameCreator/Packages/Shooter/Editor/Version.txt`; the value must be at least `2.2.7`.
 4. Confirm Fusion's signed package `build_info.txt` reports version `2.1.1`, Stable Build `2177`.
-5. Confirm the Fusion Core source is from commit `b2aa676972b0ce7f747a83bb9815f7057524e909`.
+5. Confirm the Fusion Core source is from commit `85f22b51a6f9e13d921f747c64c18c71c9421be6`.
 6. Confirm Fusion Shooter's `Editor/Version.txt` reports `1.0.0`.
 
 Do not use only Fusion's `package.json` to identify the SDK build if it conflicts with `build_info.txt`.

@@ -7,7 +7,7 @@ description: Candidate documentation for networked Game Creator 2 Shooter weapon
 Fusion Shooter connects Game Creator 2 Shooter weapons to Photon Fusion's tick-based simulation. It synchronizes weapon equipment, aiming, firing, ammunition, reloads, hitscan and projectile results while keeping irreversible gameplay decisions at Fusion state authority.
 
 {% hint style="warning" %}
-**Unreleased candidate:** These pages describe the Fusion Shooter 1.0.0 implementation candidate against Fusion Core commit `b2aa676972b0ce7f747a83bb9815f7057524e909`. Unity compilation, package, player-build and Photon Cloud runtime proof are still pending. Do not treat this documentation as a release or compatibility guarantee.
+**Unreleased candidate:** These pages describe the Fusion Shooter 1.0.0 implementation candidate against Fusion Core commit `85f22b51a6f9e13d921f747c64c18c71c9421be6`. Unity compilation, package, player-build and Photon Cloud runtime proof are still pending. Do not treat this documentation as a release or compatibility guarantee.
 {% endhint %}
 
 ## Product boundary
@@ -35,7 +35,7 @@ Fusion Shooter does not create Fusion sessions, spawn player characters, author 
 | Game Creator 2 | `2.18.60` |
 | Game Creator 2 Shooter | `2.2.7` |
 | Photon Fusion | `2.1.1` Stable Build `2177` |
-| Fusion for Game Creator 2 | Commit `b2aa676972b0ce7f747a83bb9815f7057524e909` |
+| Fusion for Game Creator 2 | Commit `85f22b51a6f9e13d921f747c64c18c71c9421be6` |
 | Fusion Shooter | `1.0.0` candidate |
 
 Unity 6000.4 and 6000.5 are outside this candidate matrix. Every dependency is installed separately under its own license.

@@ -18,7 +18,7 @@ Fusion Shooter's first release candidate brings Game Creator 2 Shooter weapons i
 * Game Creator 2 `2.18.60`
 * Game Creator 2 Shooter `2.2.7`
 * Photon Fusion `2.1.1` Stable Build `2177`
-* Fusion for Game Creator 2 candidate commit `b2aa676972b0ce7f747a83bb9815f7057524e909`
+* Fusion for Game Creator 2 candidate commit `85f22b51a6f9e13d921f747c64c18c71c9421be6`
 
 ### Candidate features
 
@@ -34,7 +34,7 @@ Fusion Shooter's first release candidate brings Game Creator 2 Shooter weapons i
 * Late-join and reconnect restoration hooks
 * Instructions, conditions, events and properties for Game Creator visual scripting
 * Deterministic weapon catalog validation and release-preflight tooling
-* Fusion Core-owned safe dependency preflight with a Shooter `2.2.7` minimum-version contribution
+* Fusion Core-owned dependency-preflight contract v2 with a Shooter `2.2.7` authentic `Editor/Version.txt` contribution
 * An example installer definition and four-process Photon Cloud proof harness prepared for release validation
 
 ### Release gates still open

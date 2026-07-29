@@ -7,7 +7,7 @@ description: Authority, prediction and state concepts in Fusion Shooter
 Fusion Shooter separates player intent, deterministic network state, irreversible gameplay and visual presentation. Understanding those boundaries is essential before wiring weapon effects or damage.
 
 {% hint style="warning" %}
-This page describes the 1.0.0 implementation candidate against Fusion Core `b2aa676972b0ce7f747a83bb9815f7057524e909`. The behavior still requires real player-build and Photon Cloud validation.
+This page describes the 1.0.0 implementation candidate against Fusion Core `85f22b51a6f9e13d921f747c64c18c71c9421be6`. The behavior still requires real player-build and Photon Cloud validation.
 {% endhint %}
 
 ## Ownership boundaries
