@@ -77,8 +77,19 @@ Shared Mode uses the current physics scene rather than historical rewind.
 
 Verify the exact candidate dependencies and installation order from
 [Setup](setup.md). Unity 6.4 and 6.5 are outside this candidate matrix. Reinstall
-through the Game Creator Install window instead of manually moving module
-folders.
+through **Tools → Ninjutsu Games → Fusion → Safe Install → Melee** instead of
+the stock Game Creator Install window or manually moving module folders.
+
+## Dependency preflight blocks installation
+
+Read the failed requirement in the preflight result. For Game Creator Melee,
+the candidate requires a numeric version of at least `2.2.14` at:
+
+`Assets/Plugins/GameCreator/Packages/Melee/Editor/Version.txt`
+
+Missing, malformed, duplicate, or older evidence is rejected before the package
+changes the project. Correct the installed dependency; do not bypass the check
+with raw package APIs.
 
 ## One local Play Mode window works
 

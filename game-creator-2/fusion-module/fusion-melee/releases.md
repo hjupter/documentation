@@ -15,6 +15,8 @@ description: Fusion Melee releases
 * Fusion Sphere and Fusion Capsule striker shapes.
 * Visual scripting tools and an event relay example.
 * Late-join snapshots and reconnect input continuity.
+* Fusion Core dependency preflight for the Game Creator Melee `2.2.14`
+  `Editor/Version.txt` minimum.
 
 ### Important
 

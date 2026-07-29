@@ -17,8 +17,8 @@ order:
 6. Fusion Melee `1.0.0` candidate
 
 {% hint style="danger" %}
-Do not manually extract Fusion Melee into a generic `Plugins` folder. Import the
-installer package and use the Game Creator Install window. Paid Game Creator,
+Do not manually extract Fusion Melee into a generic `Plugins` folder, and do not
+use Game Creator's stock Install window for this candidate. Paid Game Creator,
 Melee, and Photon files must be installed separately.
 {% endhint %}
 
@@ -27,10 +27,20 @@ Melee, and Photon files must be installed separately.
 When a candidate package is supplied:
 
 1. Import `Fusion.Melee-1.0.0.unitypackage`.
-2. Open **Game Creator → Install**.
-3. Select **Fusion → Melee**.
-4. Choose **Install** and wait for Unity to finish compiling.
-5. Confirm the installed version is `1.0.0`.
+2. Choose **Tools → Ninjutsu Games → Fusion → Safe Install → Melee**.
+3. Review the dependency result.
+4. Continue only when the shared Fusion Core preflight accepts every minimum.
+5. Wait for Unity to finish compiling.
+6. Confirm the installed version is `1.0.0`.
+
+The Melee adapter contributes `GameCreator.Melee >= 2.2.14` to Fusion Core's
+shared preflight. Core reads:
+
+`Assets/Plugins/GameCreator/Packages/Melee/Editor/Version.txt`
+
+Missing, malformed, duplicate, or below-minimum evidence blocks installation
+before package mutation. Fusion Melee does not call Game Creator's raw install
+manager or Unity's raw package-import API.
 
 The module installs under:
 
