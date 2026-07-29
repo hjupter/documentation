@@ -53,6 +53,10 @@ for (const required of [
   "no secret, Photon App ID, `EditorPrefs`, or `PlayerPrefs`",
   "exact pushed Quantum Core settings-extension contract",
   "must not mutate or redefine Core's settings asset",
+  "78feba0ff454828aeb425fc28a3c208f20ae7b25",
+  "`QuantumSettingsContribution.None`",
+  "`pending`",
+  "does not consume the candidate's transport allocations",
 ]) {
   if (!combined.includes(required)) {
     errors.push(`required release boundary missing: ${required}`);

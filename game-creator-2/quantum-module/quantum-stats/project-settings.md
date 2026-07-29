@@ -45,6 +45,27 @@ migrate, or module settings artifact to remove during uninstall. User-created
 catalogs, profiles, mappings, and scene components remain explicit project
 content and are not hidden inside a Core-owned settings asset.
 
+## Core source reconciliation
+
+This N/A result is reconciled to the immutable Quantum Core source candidate
+`78feba0ff454828aeb425fc28a3c208f20ae7b25`.
+
+Core's editor-only `QuantumSettingsContract` assigns Stats
+`QuantumSettingsContribution.None`. Its `QuantumSettingsRegistry` rejects any
+section asset declared for an N/A module. Although Core defines
+`IQuantumSettingsContributor` and `QuantumSettingsSection` for applicable
+add-ons, Quantum Stats implements neither type and consumes no Core settings
+asset.
+
+Stats consequently owns no subsection, section ID, module order, option,
+default, settings path, settings GUID, or repository access. Core exclusively
+owns `quantum.general`.
+
+This reconciliation is source evidence, not release compatibility. Core records
+its overall contract as `source-candidate` and its settings-window contract as
+`pending`; its Unity matrix and release proof remain incomplete. Quantum Stats
+does not consume the candidate's transport allocations or runtime compatibility.
+
 If a genuine project-wide authoring option is implemented in the future, the
 module must consume the exact pushed Quantum Core settings-extension contract.
 It must not mutate or redefine Core's settings asset, create another Quantum
