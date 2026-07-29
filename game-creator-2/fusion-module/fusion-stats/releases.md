@@ -10,6 +10,8 @@
 * Added secure State Authority mutations and optional Input Authority requests.
 * Fixed initial state, late join, reconnect, negative and net-zero Modifiers,
   Status Effect stacking, elapsed duration, and removals.
+* Fixed valid Game Creator actions between Fusion ticks being rejected as
+  non-forward work.
 * Fixed a Stats 2 settings import that could leak an editor-only namespace into
   player compilation.
 * Increased replicated capacities to 64 Stats, 64 Attributes, and 64 active
