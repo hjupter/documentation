@@ -1,34 +1,53 @@
 ---
-description: Photon Stats Releases
+description: Photon Stats releases
 ---
 
 # Releases
 
-## 1.1.4 (18th December 2024)
+## 1.2.0 (29 July 2026)
 
-* Unity 6 support
-* Game Creator v2.17.51 support
-* Stats v2.6.18 support
+### New
 
-## 1.0.3 (8th May 2024)
+* Added complete state synchronization for runtime-spawned characters and late joiners.
+* Added installed version markers for the module and examples.
 
-* Update examples
-* Support for latest GC 2.15.49&#x20;
-* Support for latest Stats 2.6.16
+### Improved
 
-## 1.0.2 (9th Sept 2023)
+* Updated Photon Core, PUN, Game Creator, Stats, and Unity 6 compatibility.
+* Improved precision, setup guidance, package descriptions, and examples.
 
-* Support for latest GC 2 update
+### Fixed
 
-## 1.0.1 (3rd July 2023)
+* Fixed removed, expired, and restacked Status Effects remaining stale or duplicated remotely.
+* Fixed non-saveable Status Effects being omitted for late joiners.
+* Fixed active Stat modifier contributions not appearing on remote characters.
 
-* Compatible with latest Game Creator 2 version
-* Fixed an issue where it wouldn't set attribute value on level up
-* Updated demos
-* Requires Unity 2022 LTS
+### Changed
 
-## 1.0.0 (10th March 2023)
+* Traits state is owner-authoritative and rejects updates from non-owners.
+* Documentation now lives in this maintained guide instead of the retired bundled PDF.
+
+## 1.1.4 (18 December 2024)
+
+* Added Unity 6 support.
+* Updated Game Creator to 2.17.51 and Stats to 2.6.18.
+
+## 1.0.3 (8 May 2024)
+
+* Updated examples.
+* Updated Game Creator to 2.15.49 and Stats to 2.6.16.
+
+## 1.0.2 (9 September 2023)
+
+* Updated compatibility for the latest Game Creator 2 release.
+
+## 1.0.1 (3 July 2023)
+
+* Added compatibility with the latest Game Creator 2 release.
+* Fixed Attribute values after level-up.
+* Updated examples.
+* Required Unity 2022 LTS.
+
+## 1.0.0 (10 March 2023)
 
 * First release.
-* Keep in mind this is a beta version, if there is any issues or missing feature please don't hesitate to contact me through my email or discord server.
-
