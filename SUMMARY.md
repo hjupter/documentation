@@ -127,6 +127,9 @@
   * [🧙 Photon Abilities](game-creator-2/photon-module-2/photon-abilities/README.md)
     * [Releases](game-creator-2/photon-module-2/photon-abilities/releases.md)
   * [⚔️ Photon Melee 2](game-creator-2/photon-module-2/photon-melee-2/README.md)
+    * [Getting Started](game-creator-2/photon-module-2/photon-melee-2/getting-started.md)
+    * [Multiplayer Guide](game-creator-2/photon-module-2/photon-melee-2/multiplayer-guide.md)
+    * [Visual Scripting Reference](game-creator-2/photon-module-2/photon-melee-2/visual-scripting.md)
     * [Troubleshooting](game-creator-2/photon-module-2/photon-melee-2/troubleshooting.md)
     * [Releases](game-creator-2/photon-module-2/photon-melee-2/releases.md)
 
