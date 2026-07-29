@@ -71,9 +71,23 @@ fix.
 {% endhint %}
 
 Fusion add-ons use the same Core preflight. Their installer wrapper contributes
-the required gameplay module's
-`Assets/Plugins/GameCreator/Packages/<Module>/Editor/Version.txt`; add-ons must
-not copy the preflight engine or call the Game Creator installer directly.
+an authentic gameplay module
+`Assets/Plugins/GameCreator/Packages/<Module>/Editor/Version.txt` through
+`RequireVersionFile`.
+
+If an approved publisher archive has no version marker, the add-on instead
+uses `RequireExactManifest`. Its module-owned manifest stays outside the
+licensed dependency root and pins every regular file recursively, including
+`.meta` files, plus the owned root's sibling `.meta`. Core verifies the raw
+canonical manifest digest before parsing, rejects missing, changed, extra, or
+non-portable paths, and rechecks the evidence immediately before and after the
+guarded install. The manifest records the approved source archive digest, but
+the publisher version is not treated as self-authenticating.
+
+Add-ons must not invent a vendor version marker or installer ID, copy the
+preflight engine, or call the Game Creator installer directly. Fusion
+Abilities examples remain blocked until its package-owned Abilities 2.0.1
+manifest and authoritative archive evidence match the pushed Core contract.
 
 ## Upgrade from 1.3.9
 

@@ -14,8 +14,13 @@
 * Added **Tools → Ninjutsu Games → Fusion → Safe Install** for Core package
   upgrades, UI, Examples, and add-ons. The shared preflight rejects missing,
   below-minimum, duplicate, malformed, or conflicting dependency evidence.
-* Add-ons now contribute gameplay module `Editor/Version.txt` requirements
-  through the Fusion Core API instead of duplicating installer logic.
+* Add-ons now contribute authentic gameplay module `Editor/Version.txt`
+  requirements through the Fusion Core API instead of duplicating installer
+  logic.
+* Versionless publisher assets can use the new bounded exact-manifest API.
+  It pins canonical evidence bytes, the complete owned file set and root
+  `.meta`, archive provenance fields, portable paths, and pre/post-mutation
+  revalidation without fabricating a vendor marker or installer ID.
 * Regenerates both embedded installers before Core export and validates every
   package pathname against its exact source root.
 

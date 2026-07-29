@@ -67,9 +67,28 @@ minimums are:
 | Fusion Examples 1.4.0 | Game Creator Examples | `1.9.26` |
 
 Add-ons contribute gameplay requirements with
-`FusionDependencyPreflight.RequireVersionFile(...)`, pointing to the gameplay
-package's `Editor/Version.txt`. They must not implement another dependency
-engine, import a package directly, or call `InstallManager.Install`.
+`FusionDependencyPreflight.RequireVersionFile(...)`, pointing to an authentic
+gameplay package `Editor/Version.txt`.
+
+Versionless publisher assets use:
+
+`FusionDependencyPreflight.RequireExactManifest(componentId, minimumVersion, ownedRoot, manifestPath, manifestSha256, stage)`
+
+The exact-manifest evidence is package-owned and outside the licensed root.
+Its UTF-8/LF canonical bytes are externally SHA-256 pinned and checked before
+parsing. The schema records the publisher version, approved source archive
+SHA-256, owned root and root-meta SHA-256, then every recursively owned regular
+file—including `.meta` files—as a strictly ordinal-sorted relative path and
+SHA-256. Core rejects unknown or duplicate JSON properties, missing/tampered/
+extra files, traversal, case-fold or Unicode-normalization collisions,
+symlinks/reparse points, and evidence changes around the guarded mutation.
+Parsing is bounded to 4 MiB, 4,096 files, and 512 characters per path.
+
+The manifest's publisher version is not self-authenticating. A module remains
+blocked until its authoritative publisher/archive provenance and exact Core/
+module metadata equality are independently validated. Add-ons must not invent
+a version marker or installer ID, implement another dependency engine, import
+a package directly, or call `InstallManager.Install`.
 
 The stock **Game Creator → Install** window is unsupported for Fusion with
 Game Creator 2.18.60 because its minimum-version comparison can accept a
