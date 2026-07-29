@@ -11,9 +11,16 @@
 | Game Creator Core | `2.18.60` |
 | Core package root | `Assets/Plugins/NinjutsuGames/Packages/Fusion` |
 | Runtime assembly | `NinjutsuGames.FusionNetwork.Runtime` |
+| Embedded Examples installer | `Fusion.Examples@1.4.0` |
+| Embedded UI installer | `Fusion.UI@1.2.0` |
 
 Fusion and Game Creator are external dependencies. The exported Core package
 must not contain `Assets/Photon` or `Assets/Plugins/GameCreator`.
+
+The Core export contains the Examples and UI installers as nested
+`.unitypackage` files. Release export regenerates both from their exact
+versioned source roots before exporting Core. CI then compares every pathname
+in all three release packages with the corresponding source root.
 
 The package-resident source of truth is:
 

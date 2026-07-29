@@ -11,6 +11,8 @@
   joining, time synchronization, NetworkTransform, and object providers to
   current Fusion 2.1 APIs.
 * Updated Examples to 1.4.0 and Fusion UI to 1.2.0.
+* Regenerates both embedded installers before Core export and validates every
+  package pathname against its exact source root.
 
 **New**
 
