@@ -15,6 +15,8 @@ another.
   while Faction B is Hostile toward Faction A.
 * Reputation points map to configurable statuses such as Hostile, Neutral,
   Friendly, and Honored.
+* Project faction assets, directional relationships, and reputation stances
+  are managed from a dedicated Game Creator Settings panel.
 * Variables and runtime relationship changes integrate with Game Creator
   Save & Load.
 * Member memberships and reputation integrate with Remember.

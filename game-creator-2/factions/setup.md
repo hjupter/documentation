@@ -18,8 +18,12 @@ The optional examples are validated with Dialogue 2.5.19 and Quests 2.3.11.
 1. Install Game Creator 2 Core.
 2. Download Factions from **Window → Package Manager → My Assets**.
 3. Import the Factions package and wait for Unity to finish compiling.
-4. Open **Game Creator → Preferences → Factions** to configure statuses and
-   relationships.
+4. Open **Game Creator → Settings**, select **Factions**, and review the
+   faction list, directional relationships, and reputation stances.
+
+The Factions panel is created automatically with Hostile, Neutral, Friendly,
+and Honored defaults in a clean project. Existing project settings are
+preserved when upgrading or reloading the editor.
 
 ## Optional installers
 
@@ -47,6 +51,7 @@ once before shipping.
 
 ## Remove
 
-Use the Factions uninstall command, then remove optional `Factions.*` installer
-folders that your project no longer uses. The uninstaller does not remove Game
-Creator Core or unrelated modules.
+Use **Tools → Ninjutsu Games → Factions → Uninstall**. It removes the
+standalone module, its generated Factions project settings, and its optional
+`Factions.*` installer folders. It does not remove Game Creator Core, unrelated
+modules, or the separately maintained Factions-Abilities bridge.
