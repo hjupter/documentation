@@ -24,4 +24,5 @@ Planned gameplay support includes:
 Photon Quantum and Game Creator packages are installed separately. They are not
 included with Quantum Stats.
 
-Continue with [Deterministic Architecture](deterministic-architecture.md).
+Continue with [Deterministic Architecture](deterministic-architecture.md) or
+review why [Project Settings](project-settings.md) are currently not applicable.

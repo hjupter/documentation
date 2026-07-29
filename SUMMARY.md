@@ -132,6 +132,7 @@
 * [⚛️ Quantum Module (In development)](game-creator-2/quantum-module/README.md)
   * [💫 Quantum Stats (In development)](game-creator-2/quantum-module/quantum-stats/README.md)
     * [Deterministic Architecture](game-creator-2/quantum-module/quantum-stats/deterministic-architecture.md)
+    * [Project Settings](game-creator-2/quantum-module/quantum-stats/project-settings.md)
     * [Visual Scripting](game-creator-2/quantum-module/quantum-stats/visual-scripting.md)
     * [Testing](game-creator-2/quantum-module/quantum-stats/testing.md)
     * [Releases](game-creator-2/quantum-module/quantum-stats/releases.md)

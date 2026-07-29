@@ -49,9 +49,23 @@ for (const required of [
   "versioned 64-bit digest",
   "explicitly unproven",
   "separate-process two-client Quantum Cloud run",
+  "Current result: not applicable",
+  "no secret, Photon App ID, `EditorPrefs`, or `PlayerPrefs`",
+  "exact pushed Quantum Core settings-extension contract",
+  "must not mutate or redefine Core's settings asset",
 ]) {
   if (!combined.includes(required)) {
     errors.push(`required release boundary missing: ${required}`);
+  }
+}
+const settingsPage = docs.find((doc) => doc.name === "project-settings.md")?.content ?? "";
+for (const forbidden of [
+  "QuantumStatsSettings",
+  "default catalog setting",
+  "global capacity setting",
+]) {
+  if (settingsPage.includes(forbidden)) {
+    errors.push(`invented Stats project option: ${forbidden}`);
   }
 }
 
