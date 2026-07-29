@@ -32,6 +32,11 @@
   duplicate protection, reconnect overlap support, and resimulation helpers.
 * Added package-resident machine-readable compatibility, allocation,
   descriptor schema, and validation files.
+* Added a Core-owned settings extension contract and runtime registry.
+  Add-ons with real project defaults can render module-owned, deterministically
+  ordered Fusion subsections without mutating `fusion.general.asset`. Add-ons
+  with no project settings create no empty subsection, asset, ID, or order
+  reservation.
 * Added exact visual-scripting and add-on compatibility references.
 
 **Fixed**

@@ -41,6 +41,34 @@ Its network descriptor and schema are in the same folder. Add-on build tooling
 should validate these files rather than inferring compatibility from a README
 or embedded SDK copy.
 
+## Settings extension contract
+
+Fusion Core also owns the independent settings contract:
+
+`Assets/Plugins/NinjutsuGames/Packages/Fusion/Compatibility/fusion-settings-extension.contract.json`
+
+Core remains the only owner of the Game Creator repository ID
+`fusion.general` and its project data asset. Every add-on ships a
+package-resident `Compatibility/settings-extension.descriptor.json`:
+
+* `applicability: none` requires `projectLevelSettings: []` and evidence. It
+  forbids an asset, module ID, display order, GUID, empty subsection, and
+  `fusion.general.asset` mutation.
+* `applicability: project` requires at least one real project setting plus the
+  exact module ID, type, order, schema, canonical Resources path, stable GUID,
+  defaults, persistence, migration, and uninstall ownership.
+
+Project settings derive from
+`NinjutsuGames.FusionNetwork.Runtime.FusionModuleSettings` and are discovered
+through `FusionModuleSettingsRegistry`. Duplicate IDs, settings types, and
+orders are rejected together rather than selected by import order. Module
+assets render through their module-owned custom editors beneath the existing
+Core sections and disappear cleanly when the add-on is removed.
+
+The contract forbids Fusion module settings from serializing Photon App IDs,
+secrets, passwords, tokens, credentials, or `PhotonAppSettings` references.
+Those remain owned by Photon configuration.
+
 ## Safe-install dependency contract
 
 Fusion Core also ships:
