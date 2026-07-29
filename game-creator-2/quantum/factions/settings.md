@@ -1,9 +1,9 @@
 # Settings
 
 {% hint style="warning" %}
-The Quantum Core settings-extension contract is not finalized. Quantum
-Factions does not currently add a project-settings subsection, and this page
-does not describe a supported release workflow.
+Quantum Factions now binds the pushed Quantum Core Settings source API, but
+Unity persistence, upgrade, and uninstall lifecycle proof is still pending.
+This page does not describe a supported release workflow.
 {% endhint %}
 
 ## Current authoring surface
@@ -26,22 +26,38 @@ asset serialization persists these authoring values. The catalog does not own
 runtime membership, reputation, relation overrides, or friendly-fire outcomes;
 those values remain in Quantum's deterministic frame state.
 
-## Planned Quantum subsection
+## Quantum subsection source binding
 
-A project-wide catalog selector is applicable and will use the subsection title
-**Factions** inside the one Quantum settings panel owned by Quantum Core. The
-option is an asset reference with a null default; a missing or invalid catalog
-fails closed. Quantum Factions will not:
+The package ships one editor-only section asset at:
+
+`Assets/Plugins/NinjutsuGames/Packages/QuantumFactions/Editor/Settings/QuantumFactionsSettingsSection.asset`
+
+Quantum Core discovers it inside the one **Quantum** settings panel with:
+
+- module `factions`;
+- section ID `quantum.factions.authoring`;
+- title **Factions**;
+- order `200`;
+- schema version `QuantumSettingsContract.SchemaVersion` (`1`).
+
+The section exposes only the selected `QuantumFactionCatalogAuthoring` asset.
+Its default is null and a missing selection fails closed. It is independently
+serialized by Unity and contains no runtime membership, reputation, relation,
+or friendly-fire state.
+
+Core's `quantum.general` repository asset is customer-project-local at
+`Assets/Plugins/GameCreator/Data/Resources/Settings/quantum.general.asset`.
+Quantum Factions does not ship that asset or a fixed GUID for it. It also does
+not:
 
 - create a second Quantum Game Creator settings panel;
 - redefine Core's settings repository or asset;
 - mutate the Core settings asset through an independent editor script;
 - store a Photon App ID, endpoint, credential, token, or other secret.
 
-The exact Core repository ID, asset path, extension type, order, persistence
-hook, migration hook, and add-on removal behavior remain unresolved. No
-subsection implementation will be shipped until Core publishes and statically
-validates that contract.
+This binding targets Core source commit
+`78feba0ff454828aeb425fc28a3c208f20ae7b25`. It does not pin Core as the final
+module dependency and does not adopt Core's deterministic allocations.
 
 ## Standalone Factions settings
 
@@ -52,26 +68,26 @@ the generated asset at:
 
 That separate panel owns **Reputation Stances** and **Factions**, including its
 default reputation thresholds `0`, `20`, `40`, and `80`. Quantum Factions does
-not duplicate, modify, or uninstall those settings. Its future Quantum
+not duplicate, modify, or uninstall those settings. Its Quantum
 subsection will only select and validate Quantum-specific catalog authoring.
 
 ## Migration and uninstall
 
-No automatic migration is implemented. The candidate source is standalone
-Factions' unique faction identifier, but the exact one-to-one mapping remains
-blocked on the supported standalone Factions commit. A future migration must
-be versioned and idempotent, and must stop without writing if an identifier is
+Core's source contract starts at clean settings schema `1`. No automatic
+Factions migration is implemented. The candidate standalone-ID mapping remains
+blocked on the supported Factions commit. Any future migration must be
+versioned and idempotent, and must stop without writing if an identifier is
 missing, duplicated, or ambiguous.
 
-Uninstalling Quantum Factions may remove only
-`Assets/Plugins/NinjutsuGames/Packages/QuantumFactions` and its own subsection
-data through Core's future removal contract. It must preserve:
+Uninstalling Quantum Factions removes its package-owned section asset, so Core
+no longer discovers the **Factions** subsection. It must preserve:
 
 - standalone Factions assets and its `factions.general` settings;
 - the Quantum Core settings asset and every other add-on subsection;
 - Core-owned consolidated Quantum generated output except through Core's
   explicit regeneration workflow.
 
-Domain-reload persistence and add-on present/absent/removal behavior still
-require Unity validation after the contract is exact and the heavy-work queue
-opens.
+The Core source contract defines independent ScriptableObject serialization
+and deterministic rediscovery after domain reload. Clean creation, catalog
+selection persistence, upgrade, domain reload, and add-on removal behavior
+still require Unity validation when the heavy-work queue opens.

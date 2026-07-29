@@ -14,16 +14,16 @@ remains provisional until the supported Factions commit is pinned.
 
 ## Settings boundary
 
-The package-owned Quantum Faction Catalog is the only implemented
-configuration surface. It stores deterministic bake inputs and defaults, not
-authoritative frame state.
+The package-owned Quantum Faction Catalog stores deterministic bake inputs and
+defaults, not authoritative frame state. An editor-only package-owned section
+asset now exposes that catalog as the sole option in the titled **Factions**
+subsection of Core's single Quantum settings panel.
 
-A project-wide catalog selector belongs in a titled **Factions** subsection of
-the single Quantum settings panel owned by Core. The add-on does not own a
-separate settings repository and must not modify Core's settings asset through
-an incompatible editor path. Exact subsection types, ordering, persistence,
-migration, and removal behavior remain blocked on Core's published contract.
-See [Settings](settings.md).
+The binding uses module `factions`, section `quantum.factions.authoring`, order
+`200`, and Core schema `1`. Null fails closed. The add-on owns neither a
+separate repository nor Core's customer-project-local `quantum.general` asset.
+Static source binding is complete; Unity persistence and removal lifecycle
+proof remains pending. See [Settings](settings.md).
 
 ## Frame state
 

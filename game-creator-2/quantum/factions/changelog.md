@@ -10,6 +10,9 @@
   validation scaffolding.
 - Added verified runtime relation-change events and a rollback cancellation
   hook for predicted friendly-fire feedback.
+- Added the editor-only `quantum.factions.authoring` section bound to Quantum
+  Core's pushed Settings source API. It contains only a null-by-default catalog
+  reference and does not ship or mutate Core's project-local repository asset.
 
 ### Improved
 
