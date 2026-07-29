@@ -26,6 +26,17 @@ It synchronizes:
 
 Install and compile these dependencies before importing Fusion Factions.
 
+Fusion Factions has no project-wide settings or secret-bearing configuration.
+It does not own or modify `fusion.general.asset`. Assign the Faction per
+`Faction Network` component; replication capacities and snapshot behavior are
+fixed compatibility contracts. It therefore registers no settings module, owns
+no settings asset or GUID, and has no settings defaults, migration, or uninstall
+state. The external Factions repository remains dependency-owned configuration,
+not a Fusion Factions project setting. Standalone Factions exclusively owns
+`factions.general`; Fusion Factions only consults its Faction catalog for stable
+runtime resolution and never duplicates, mutates, migrates, or uninstalls that
+asset.
+
 ## Install
 
 1. Open **Window → Package Manager → My Assets**.
