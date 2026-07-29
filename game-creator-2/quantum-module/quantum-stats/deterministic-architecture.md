@@ -17,7 +17,7 @@ Game Creator objects are intentionally outside that authority boundary:
 
 ## Fixed-point conversion
 
-Authored decimal values convert to signed Q16.16 using round-to-nearest with
+Authored decimal values convert to Quantum's signed Q48.16 using round-to-nearest with
 ties away from zero. Non-finite and overflowing values are rejected.
 
 Durations are stored as simulation ticks. Seconds convert to ticks with the
@@ -51,13 +51,34 @@ validating their own input, cooldown, catalog, and ownership state. Owning an
 entity alone does not authorize a client to set, damage, heal, reset, or add an
 effect.
 
+Every direct command carries a nonzero 64-bit request sequence supplied through
+the final Quantum Core runtime contract. Stats does not generate that sequence
+from a Unity or Game Creator object because recreating the view during reconnect
+must not reuse an identity already retained by deterministic state.
+
+The fixed 32-entry per-target dedupe ring remembers accepted and rejected
+results. Direct commands key by command domain, player, and request ID. Trusted
+damage, healing, and Status Effect signals key by signal-kind domain, source
+entity, and request ID. A trusted signal may use zero only when it explicitly
+opts out of dedupe.
+
+The one package-resident compatibility descriptor will be
+`Assets/Plugins/NinjutsuGames/Packages/Quantum/SubModules/QuantumStats/Compatibility/quantum-stats.compatibility.json`.
+It remains absent until the exact pushed Core contract is available; alternate
+or duplicate Stats descriptors are rejected.
+
 ## Predicted and verified presentation
 
-Predicted events can provide immediate local feedback. Synced events wait for a
-verified frame. Both deliveries carry the same deterministic event key so view
-effects remain idempotent through rollback. The view deduplicates predicted and
-verified delivery independently: one predicted effect cannot suppress the later
-verified notification.
+Predicted events can provide immediate local feedback. Core then emits a
+confirmation or cancellation so the view can commit or reverse that feedback.
+Synced events wait for a verified frame. All deliveries carry deterministic
+identity so view effects remain idempotent through rollback. The view
+deduplicates each delivery independently: one predicted effect cannot suppress
+its confirmation, cancellation, or the later verified notification.
 
 Late join and reconnect rebuild the presentation mirror from the verified
 Quantum frame. Game Creator save tokens are not used as multiplayer authority.
+Each entity bridge references one explicit runner-scoped Quantum Core session,
+and its event router references the matching Core event bridge. There is no
+process-global runner lookup, and the router filters the shared event stream to
+its bound deterministic entity.
