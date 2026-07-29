@@ -4,6 +4,12 @@
 
 ## Game Creator 2
 
+* [⚛️ Quantum Module](game-creator-2/quantum-module/README.md)
+  * [📦 Quantum Inventory](game-creator-2/quantum-module/quantum-inventory/README.md)
+    * [Setup](game-creator-2/quantum-module/quantum-inventory/setup.md)
+    * [Deterministic Architecture](game-creator-2/quantum-module/quantum-inventory/architecture.md)
+    * [Visual Scripting](game-creator-2/quantum-module/quantum-inventory/visual-scripting.md)
+    * [Releases](game-creator-2/quantum-module/quantum-inventory/releases.md)
 * [☢️ Fusion Module](game-creator-2/fusion-module/README.md)
   * [Setup](game-creator-2/fusion-module/setup.md)
   * [Sessions](game-creator-2/fusion-module/sessions.md)
