@@ -129,6 +129,13 @@
   * [⚔️ Photon Melee 2](game-creator-2/photon-module-2/photon-melee-2/README.md)
     * [Troubleshooting](game-creator-2/photon-module-2/photon-melee-2/troubleshooting.md)
     * [Releases](game-creator-2/photon-module-2/photon-melee-2/releases.md)
+* [⚛️ Quantum Abilities](game-creator-2/quantum-abilities/README.md)
+  * [Setup](game-creator-2/quantum-abilities/setup.md)
+  * [Authoring](game-creator-2/quantum-abilities/authoring.md)
+  * [Visual Scripting](game-creator-2/quantum-abilities/visual-scripting.md)
+  * [Deterministic Model](game-creator-2/quantum-abilities/deterministic-model.md)
+  * [Troubleshooting](game-creator-2/quantum-abilities/troubleshooting.md)
+  * [Releases](game-creator-2/quantum-abilities/releases.md)
 
 ## Game Creator 1
 
