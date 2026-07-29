@@ -7,7 +7,13 @@ timing.
 Define up to eight catalog resources with immutable keys, initial amounts, and
 maximum amounts. Every ability cost must reference one of those definitions;
 an unknown resource blocks the catalog bake and cannot silently become a free
-cast. Amounts are authored in thousandths and bake to Quantum fixed point.
+cast. Each ability may reference a resource once, with at most eight costs; add
+amounts together instead of creating duplicate cost rows. Amounts are authored
+in thousandths and bake to Quantum fixed point.
+
+An ability may contain at most 32 uniquely identified effects or statuses.
+Duplicate effect IDs are rejected because effect order, stack state, and view
+event ordinals are deterministic contract data.
 
 ## Stable identity
 
