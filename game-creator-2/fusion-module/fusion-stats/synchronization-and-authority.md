@@ -23,6 +23,10 @@ authoritative aggregate contribution as one constant Modifier. The resulting
 value and `Has Modifiers` state remain correct, including negative and net-zero
 results, but remote code should not inspect an assumed original Modifier list.
 
+Formulas that use synchronized Stats and Attributes recalculate from the local
+replica. A formula that also reads variables or other game state requires those
+inputs to be synchronized by their owning Fusion system.
+
 ## State Authority Only
 
 **State Authority Only** is the default and recommended policy. Only State
