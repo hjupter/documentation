@@ -1,39 +1,50 @@
 # 💫 Fusion Stats
 
-Overview
+Fusion Stats synchronizes Game Creator 2 Stats data over Photon Fusion. Add
+**Traits Network** beside **Traits** on a spawned Fusion Network Object to
+replicate:
 
-The **Fusion Stats** submodule integrates Fusion 2 with the Stats 2 module, ensuring that all character traits data is synchronized across the network.
-
-\
-This includes:
-
-* Stats
-* Attributes
-* Status Effects
-* Modifiers
+* Stat base values and aggregate Modifiers
+* Attribute current values
+* Status Effect stacks, removals, and elapsed duration state
+* Initial class state for late join and reconnect
 
 {% hint style="success" %}
 [**Get Fusion Stats on the Unity Asset Store →**](https://www.ninjutsugames.com/go/fusion-stats?src=docs_fusion_stats_overview)
 {% endhint %}
 
-## Requirements
+## Compatibility
 
-Install [**Game Creator 2**](https://www.ninjutsugames.com/go/game-creator-2?src=docs_fusion_stats_requirement_gc2), [**Photon Fusion**](https://www.ninjutsugames.com/go/photon-fusion?src=docs_fusion_stats_requirement_sdk), [**Fusion**](https://www.ninjutsugames.com/go/fusion?src=docs_fusion_stats_requirement_core), and [**Stats 2**](https://www.ninjutsugames.com/go/stats-2?src=docs_fusion_stats_requirement_stats) before installing Fusion Stats.
+The Fusion Stats 1.1.0 candidate targets this exact compatibility set:
 
-## Setup
+| Dependency | Supported version |
+| --- | --- |
+| Fusion Stats | 1.1.0 |
+| [Fusion for Game Creator 2](https://www.ninjutsugames.com/go/fusion?src=docs_fusion_stats_requirement_core) | 1.4.0 candidate |
+| [Photon Fusion](https://www.ninjutsugames.com/go/photon-fusion?src=docs_fusion_stats_requirement_sdk) | 2.1.1 Stable, build 2177, Realtime 5 |
+| [Game Creator 2](https://www.ninjutsugames.com/go/game-creator-2?src=docs_fusion_stats_requirement_gc2) | 2.18.60 |
+| [Stats 2](https://www.ninjutsugames.com/go/stats-2?src=docs_fusion_stats_requirement_stats) | 2.6.23 |
+| Unity | 6000.0.60f1 or 6000.3.14f1 |
 
-If you haven't get the **Fusion Stats** sub-module, head to the Asset Store product page and follow the steps to get a copy of this module.
+Fusion Stats does not embed these dependencies. Install the compatible external
+packages first.
 
-Once you have bought it, click on **Window → Package Manager** to reveal a window with all your available assets.
-
-Type in the little search field the name of this package and it will prompt you to download and install the latest stable version. Follow the steps and wait till Unity finishes compiling your project.
-
-{% hint style="success" %}
-This package will add one new network component called **TraitsNetwork**
+{% hint style="warning" %}
+Version 1.1.0 is upcoming. Its compatibility set remains a release candidate
+until the supported-editor, build, package, upgrade, and two-client Cloud checks
+finish.
 {% endhint %}
 
-## Traits Network
+## Where to go next
 
-Synchronizes traits stats, attributes, status effects, modifiers across the network.
+* [Install and configure Fusion Stats](getting-started.md)
+* [Understand synchronization and authority](synchronization-and-authority.md)
+* [Use the Fusion Stats visual scripting actions](visual-scripting.md)
+* [Upgrade from 1.0.0](upgrading.md)
+* [Troubleshoot common setup and runtime issues](troubleshooting.md)
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+Normal Stats conditions, events, properties, formulas, and UI read the replicated
+local Traits state. Gameplay mutations should use the actions under
+**Fusion → Stats**.
+{% endhint %}
