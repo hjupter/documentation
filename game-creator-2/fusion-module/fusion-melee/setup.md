@@ -46,6 +46,23 @@ The module installs under:
 
 `Assets/Plugins/NinjutsuGames/Packages/Fusion/SubModules/FusionMelee`
 
+## Configure Melee options
+
+Fusion Melee currently has no project-global subsection in Fusion settings.
+Configure options at the scope where they are used:
+
+* **Weapons**, **Synchronize Equipment**, **Synchronize Combo Selection**, and
+  **Log Validation Warnings** belong to each Fusion Melee Network component.
+* **Include PhysX**, **Subtick Accuracy**, and shape dimensions belong to each
+  Fusion Sphere or Fusion Capsule striker.
+* Character, target, registry key, outcome, and Unity Event values belong to
+  their visual-script node or event-relay prefab.
+
+These values may legitimately differ between Characters, weapons, and attack
+shapes. Fusion Melee does not modify `fusion.general.asset` or create a separate
+top-level settings repository. No App ID, API key, password, credential, or
+connection token is serialized by the module.
+
 ## Prepare the network Character
 
 Start with a Game Creator `Character` that is spawned as a Fusion
