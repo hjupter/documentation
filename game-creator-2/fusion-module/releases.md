@@ -31,8 +31,8 @@
 * Updated pooling, scene object acquisition, and nested prefab handling for
   Fusion 2.1.
 * Corrected visual-scripting titles, categories, descriptions, and RPC labels.
-* Uninstall now removes the complete Core package, including compatibility and
-  test overlays.
+* Uninstall now removes every Core-owned file, including compatibility and
+  test overlays, while preserving installed add-ons under `Fusion/SubModules`.
 
 {% hint style="warning" %}
 This entry remains a release candidate until the linked Core pull request has

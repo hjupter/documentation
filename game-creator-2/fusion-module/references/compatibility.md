@@ -9,6 +9,7 @@
 | Photon Fusion | `2.1.1` Stable build `2177` |
 | Photon Realtime | major `5` |
 | Game Creator Core | `2.18.60` |
+| Release build gates | WebGL and macOS from `6000.3.14f1` |
 | Core package root | `Assets/Plugins/NinjutsuGames/Packages/Fusion` |
 | Runtime assembly | `NinjutsuGames.FusionNetwork.Runtime` |
 | Embedded Examples installer | `Fusion.Examples@1.4.0` |
@@ -17,10 +18,20 @@
 Fusion and Game Creator are external dependencies. The exported Core package
 must not contain `Assets/Photon` or `Assets/Plugins/GameCreator`.
 
+Other Fusion/Unity build targets may be compatible, but are not claimed by
+this Core release without project-specific build and runtime proof. Shared and
+Host/Client are the required Core topology proofs; a Dedicated Server project
+must validate its selected add-ons and server build separately.
+
 The Core export contains the Examples and UI installers as nested
 `.unitypackage` files. Release export regenerates both from their exact
 versioned source roots before exporting Core. CI then compares every pathname
 in all three release packages with the corresponding source root.
+
+Core owns `Runtime`, `Editor`, `Examples`, `Tests`, `Compatibility`, and the
+Core changelog beneath its package root. Uninstall preserves
+`Fusion/SubModules` and all installed add-ons. The package root is removed
+only after no `SubModules` root or other direct entry remains.
 
 The package-resident source of truth is:
 

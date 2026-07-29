@@ -1,6 +1,6 @@
 # How to update Fusion SDK
 
-Fusion Core 1.4.0 is validated against Fusion `2.1.1` Stable build `2177`.
+Fusion Core 1.4.0 targets Fusion `2.1.1` Stable build `2177`.
 Download SDK updates only from the official
 [Photon Fusion SDK page](https://doc.photonengine.com/fusion/v2/getting-started/sdk-download).
 

@@ -69,3 +69,10 @@ appears under `Assets/Plugins/GameCreator/Installs/` with its version suffix.
 Existing movement, facing, and jump input fields remain serialized. Add-ons
 must migrate to Core's input extension instead of declaring another
 `NetworkInputData`.
+
+## Uninstall
+
+Use **Game Creator → Uninstall → Fusion**. One confirmation removes every
+Core-owned file. Installed Fusion add-ons under `Fusion/SubModules` are
+preserved so their packages are not silently deleted; they will remain
+inactive until a compatible Fusion Core is installed again.
