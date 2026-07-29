@@ -8,6 +8,8 @@
   and friendly-fire rules.
 - Added catalog authoring, verified state mirroring, visual scripting, and
   validation scaffolding.
+- Added verified runtime relation-change events and a rollback cancellation
+  hook for predicted friendly-fire feedback.
 
 ### Improved
 

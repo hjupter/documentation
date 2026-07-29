@@ -10,6 +10,7 @@ Unity validation passes.
 - **Quantum Leave Faction** — requests membership removal.
 - **Quantum Set Primary Faction** — changes the primary existing membership.
 - **Quantum Change Faction Reputation** — requests a signed reputation change.
+- **Quantum Set Faction Reputation** — requests an absolute reputation value.
 - **Quantum Set Faction Relation** — changes one directional relation and its
   friendly-fire policy.
 
@@ -27,10 +28,13 @@ Conditions read the latest verified mirror. They do not mutate simulation.
 - **On Quantum Membership Verified**
 - **On Quantum Primary Faction Verified**
 - **On Quantum Reputation Verified**
+- **On Quantum Faction Relation Verified**
 - **On Quantum Friendly Fire Denied**
+- **On Quantum Friendly Fire Denial Canceled**
 
-The first three consume verified state. Friendly-fire denial is predicted,
-deduplicated, and cancelable during rollback.
+The first four consume verified state. Friendly-fire denial is predicted and
+deduplicated; its cancellation event lets presentation undo the effect during
+rollback.
 
 ## Properties
 

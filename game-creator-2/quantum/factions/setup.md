@@ -26,3 +26,7 @@ and real online validation.
    by the customer or CI; it must not contain paid SDK payloads.
 4. Clean install, same-version reinstall, upgrade, add-on uninstall, and full
    uninstall must restore every owned root exactly.
+
+The blocked development package owns only
+`Assets/Plugins/NinjutsuGames/Packages/QuantumFactions`. It must not install or
+remove the Core-owned `Assets/QuantumUser` generated output directly.
