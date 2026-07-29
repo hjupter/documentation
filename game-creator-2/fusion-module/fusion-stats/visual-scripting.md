@@ -34,6 +34,18 @@ Keep using the standard Stats 2 read surfaces:
 These read the local Traits replica after Fusion Stats applies the authoritative
 snapshot.
 
+## Custom conditions and actions
+
+Fusion does not transmit a custom condition or action just because it appears in
+a Game Creator graph.
+
+Custom read-only conditions may evaluate normal Stats APIs on each peer because
+Fusion Stats keeps the local Traits replica synchronized. A custom action that
+changes Stats must either run only on State Authority or call the matching public
+method on **Traits Network**. Do not mutate `RuntimeStats`,
+`RuntimeAttributes`, or `RuntimeStatusEffects` directly on a proxy and expect
+that local change to replicate.
+
 ## Migrating an existing graph
 
 Replace mutating Stats 2 actions with their network counterpart. Conditions,
