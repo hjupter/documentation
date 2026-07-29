@@ -90,9 +90,12 @@ intentional:
 * Photon App IDs and authentication secrets remain in Photon/Fusion configuration or the release-proof process environment; Fusion Shooter does not store them.
 
 These asset and prefab values persist across editor restarts and domain reloads.
-Do not edit Fusion Core's `fusion.general.asset` directly. If Shooter gains a
-genuine project-wide policy in a future release, it will appear only through
-Fusion Core's supported settings-extension contract.
+Fusion Shooter ships a machine-readable N/A descriptor for Fusion Core's
+settings-extension contract. It creates no module settings asset or empty
+subsection and reserves no order or module ID. Do not edit Fusion Core's
+`fusion.general.asset` directly. If Shooter gains a genuine project-wide policy
+in a future release, it will appear only through Fusion Core's supported
+settings-extension contract.
 
 ## Create a Shooter catalog
 

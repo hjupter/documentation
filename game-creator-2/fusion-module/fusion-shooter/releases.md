@@ -35,7 +35,7 @@ Fusion Shooter's first release candidate brings Game Creator 2 Shooter weapons i
 * Instructions, conditions, events and properties for Game Creator visual scripting
 * Deterministic weapon catalog validation and release-preflight tooling
 * Fusion Core-owned dependency-preflight contract v2 with a Shooter `2.2.7` authentic `Editor/Version.txt` contribution
-* An evidence-backed settings audit: deterministic options remain on catalogs, presentation options remain on components, and no empty global settings UI or stored Photon credentials are added
+* An evidence-backed terminal-N/A settings descriptor: deterministic options remain on catalogs, presentation options remain on components, and no empty global settings UI, order, module ID, asset or stored Photon credentials are added
 * An example installer definition and four-process Photon Cloud proof harness prepared for release validation
 
 ### Release gates still open
