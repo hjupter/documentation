@@ -120,6 +120,8 @@
     * [Getting Started](game-creator-2/photon-module-2/photon-shooter/getting-started.md)
     * [Releases](game-creator-2/photon-module-2/photon-shooter/releases.md)
   * [💫 Photon Stats](game-creator-2/photon-module-2/photon-stats/README.md)
+    * [Getting Started](game-creator-2/photon-module-2/photon-stats/getting-started.md)
+    * [Synchronization](game-creator-2/photon-module-2/photon-stats/synchronization.md)
     * [Releases](game-creator-2/photon-module-2/photon-stats/changelog.md)
   * [📦 Photon Inventory](game-creator-2/photon-module-2/photon-inventory/README.md)
     * [Overview](game-creator-2/photon-module-2/photon-inventory/overview.md)

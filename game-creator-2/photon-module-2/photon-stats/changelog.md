@@ -1,34 +1,50 @@
 ---
-description: Photon Stats Releases
+description: Photon Stats releases
 ---
 
 # Releases
 
-## 1.1.4 (18th December 2024)
+## 1.2.0 (29 July 2026)
 
-* Unity 6 support
-* Game Creator v2.17.51 support
-* Stats v2.6.18 support
+### New
 
-## 1.0.3 (8th May 2024)
+* Added complete Traits synchronization for runtime-spawned characters and late joiners.
 
-* Update examples
-* Support for latest GC 2.15.49&#x20;
-* Support for latest Stats 2.6.16
+### Improved
 
-## 1.0.2 (9th Sept 2023)
+* Updated compatibility with Photon Core 1.5, PUN 2.55, Game Creator 2 Core 2.18.60, Stats 2.6.23, and Unity 6.3–6.5.
+* Preserved full precision for synchronized Stat and Attribute values.
 
-* Support for latest GC 2 update
+### Fixed
 
-## 1.0.1 (3rd July 2023)
+* Fixed removed, expired, restacked, and non-saveable Status Effects on remote characters.
+* Fixed active Stat modifier contributions and synchronization after disabling and re-enabling Traits Network.
 
-* Compatible with latest Game Creator 2 version
-* Fixed an issue where it wouldn't set attribute value on level up
-* Updated demos
-* Requires Unity 2022 LTS
+### Changed
 
-## 1.0.0 (10th March 2023)
+* Traits synchronization is owner-authoritative and ignores updates from non-owners.
+
+## 1.1.4 (18 December 2024)
+
+* Added Unity 6 support.
+* Updated Game Creator to 2.17.51 and Stats to 2.6.18.
+
+## 1.0.3 (8 May 2024)
+
+* Updated examples.
+* Updated Game Creator to 2.15.49 and Stats to 2.6.16.
+
+## 1.0.2 (9 September 2023)
+
+* Updated compatibility for the latest Game Creator 2 release.
+
+## 1.0.1 (3 July 2023)
+
+* Added compatibility with the latest Game Creator 2 release.
+* Fixed Attribute values after level-up.
+* Updated examples.
+* Required Unity 2022 LTS.
+
+## 1.0.0 (10 March 2023)
 
 * First release.
-* Keep in mind this is a beta version, if there is any issues or missing feature please don't hesitate to contact me through my email or discord server.
-
