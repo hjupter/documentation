@@ -8,26 +8,21 @@ description: Photon Stats releases
 
 ### New
 
-* Added complete state synchronization for runtime-spawned characters and late joiners.
-* Added installed version markers for the module and examples.
+* Added complete Traits synchronization for runtime-spawned characters and late joiners.
 
 ### Improved
 
-* Updated Photon Core, PUN, Game Creator, Stats, and Unity 6 compatibility.
-* Improved precision, setup guidance, package descriptions, and examples.
+* Updated compatibility with Photon Core 1.5, PUN 2.55, Game Creator 2 Core 2.18.60, Stats 2.6.23, and Unity 6.3–6.5.
+* Preserved full precision for synchronized Stat and Attribute values.
 
 ### Fixed
 
-* Fixed removed, expired, and restacked Status Effects remaining stale or duplicated remotely.
-* Fixed non-saveable Status Effects being omitted for late joiners.
-* Fixed active Stat modifier contributions not appearing on remote characters.
+* Fixed removed, expired, restacked, and non-saveable Status Effects on remote characters.
+* Fixed active Stat modifier contributions and synchronization after disabling and re-enabling Traits Network.
 
 ### Changed
 
-* Traits state is owner-authoritative and rejects updates from non-owners.
-* Documentation now lives in this maintained guide instead of the retired bundled PDF.
-* Clarified that Status Effect registration remains in Game Creator Stats settings
-  and Photon credentials remain in Photon Core and PUN settings.
+* Traits synchronization is owner-authoritative and ignores updates from non-owners.
 
 ## 1.1.4 (18 December 2024)
 

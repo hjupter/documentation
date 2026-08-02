@@ -45,14 +45,7 @@ effect instead of applying the wrong asset.
 
 ## Project Settings
 
-Photon Stats intentionally does not add a separate **Photon Stats** settings
-panel. The module has no project-wide user options: `Traits Network` sends owner
-changes as they occur and uses full snapshots for initial synchronization and
-late joiners.
-
-Keep Status Effect registration in **Game Creator → Stats → Status Effects**.
-Configure Photon App IDs, regions, and authentication in Photon Core and PUN;
-Photon Stats does not copy or serialize credentials.
+Photon Stats has no project settings and stores no App IDs or secrets; register Status Effects in Game Creator Stats and configure connectivity in Photon Core/PUN.
 
 ## Connect and test
 
