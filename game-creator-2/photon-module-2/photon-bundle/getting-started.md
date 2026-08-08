@@ -4,84 +4,63 @@ description: Install, upgrade, and remove Photon Bundle integrations safely
 
 # Install, Upgrade, and Uninstall
 
-Photon Bundle delivers entitlements, while each included integration is installed from its own Asset Store download.
+Photon Bundle delivers entitlements; each included integration is installed
+from its own Asset Store download.
 
 ## New installation
 
 Back up or commit the project first. Then:
 
-1. Install Game Creator 2 Core and the matching Game Creator gameplay modules you intend to use.
+1. Install Game Creator 2 Core 2.18.60 and the matching gameplay modules used
+   by the project.
 2. Install Photon Unity Networking 2 version 2.55.
-3. Download Photon Module 2 from **My Assets**.
-4. Open **Game Creator → Install**, then install **Photon → Core** version 1.5.0.
-5. Download the remaining included Photon integrations individually.
-6. Install one integration's main package, let Unity compile, then install its Examples package if needed.
-7. Repeat for the other integrations.
-8. Configure the same Photon App ID, App Version, and region behavior for both test clients.
-9. Join the same Photon Cloud room from two clients and exercise every installed integration.
+3. Download Photon Module 2 from **My Assets** and install Photon Core 1.5.0
+   through **Game Creator → Install**.
+4. Download each remaining included Photon integration individually.
+5. Install one integration's main package, let Unity compile, then install its
+   Examples package if needed. Repeat for the other integrations.
+6. Configure the same Photon App ID, App Version, and region behavior for both
+   test clients, then join the same Photon Cloud room.
 
 {% hint style="warning" %}
-The Game Creator Install window can resolve versioned install packages, but it cannot install or version-check a base Asset Store gameplay module such as Stats 2 or Inventory 2. Import those dependencies before their Photon add-ons.
+The Game Creator Install window can resolve versioned install packages, but it
+cannot install or version-check a base Asset Store gameplay module. Import those
+gameplay dependencies before their Photon add-ons.
 {% endhint %}
 
 {% hint style="danger" %}
-Do not manually extract an installer's `Package.unitypackage` into `Plugins`. Use the **Game Creator Install** window.
+Do not manually extract an installer's `Package.unitypackage` into `Plugins`.
+Use the **Game Creator Install** window.
 {% endhint %}
 
-## Game Creator Settings
+## Settings
 
-Photon Core exposes **Game Creator → Settings → Photon → Network Settings** for project-wide network behavior. Photon App IDs and authentication values remain in PUN's Photon Server Settings; they are not stored in the Game Creator repository.
-
-Core 1.5.0 creates the project-local `photon.general` asset when Game Creator needs the Settings repository. Existing serialized values are preserved across upgrades and removal of the Core install root. A clean auto-created asset uses the Core source defaults, while an existing project asset keeps its serialized customer values.
-
-The other integrations add a Settings page only when they own a genuine project-wide option. Per-component, per-prefab, or per-Ability choices remain on those objects. Photon Stats, Inventory, Abilities, and Factions have evidence-backed no-panel decisions; they do not add empty placeholder repositories. The family release gate rejects duplicate Settings paths, GUIDs, repository IDs, or serialized App ID/secret fields.
+Photon Bundle adds no Game Creator Settings page. Photon Core owns
+project-wide Photon settings, and each add-on owns only genuine options
+documented by its product. Configure the Photon App ID in PUN's Photon Server
+Settings.
 
 ## Upgrade
 
 1. Back up or commit the project.
 2. Update the matching Game Creator gameplay dependencies first.
-3. Update Photon PUN to 2.55.
-4. Update and install Photon Core 1.5.0.
-5. Update the remaining Photon integrations one at a time.
-6. Install each integration's Examples package last.
-7. Let Unity compile after each integration.
-8. Reopen representative prefabs and scenes.
-9. Repeat the two-client Photon Cloud test before shipping.
+3. Update Photon PUN to 2.55, then Photon Core.
+4. Update the remaining Photon integrations one at a time, installing each
+   Examples package last.
+5. Let Unity compile after each integration and repeat the two-client Photon
+   Cloud test before shipping.
 
-Do not import the old all-in-one Bundle 1.0.2 payload over a current project. It embedded old dependencies and integration copies that can replace newer files.
-
-If the Package Manager shows an older cached download, remove that integration's Asset Store cache entry and download the individual product again.
-
-## Avoid duplicate versions
-
-Keep only one installed root for each integration. For example, do not keep both `Photon.Core@1.4.0` and `Photon.Core@1.5.0`.
-
-{% hint style="warning" %}
-A higher Bundle version does not imply that every integration has the same version. Verify the `@version` suffix on each Game Creator install root and its `Version.txt` where supplied.
-{% endhint %}
+Keep one installed root for each Photon integration. A higher Bundle version
+does not imply that every integration has the same version; check each
+product's own install root and `Version.txt` where supplied. Do not import an
+older all-in-one Bundle payload over a project that already has newer products.
 
 ## Uninstall
 
 1. Remove an integration's Examples package.
-2. Remove that integration's main package.
-3. Repeat for the other module integrations.
-4. Remove Photon Core examples.
-5. Remove Photon Core last.
+2. Remove its main package and repeat for the other integrations.
+3. Remove Photon Core last.
 
-Do not remove Photon PUN or shared Game Creator dependencies while another installed integration still uses them.
-
-After removal, search `Assets/Plugins/GameCreator/Installs` for stale `Photon.*@*` roots, let Unity recompile, and reopen the project before deciding the uninstall is clean.
-
-## Validation checklist
-
-For each intended release target, confirm:
-
-* no duplicate Photon integration roots exist
-* every integration root and supplied `Version.txt` report the expected version
-* representative prefabs and scenes open without missing scripts
-* local input controls only the locally owned character
-* both clients observe shared state for every installed integration
-* leave, reconnect, and late-join paths preserve the expected state
-* a WebGL or macOS build compiles if that platform is part of the release
-
-Offline Mode or one Play-mode window is not a Photon Cloud integration test.
+Keep Photon PUN and shared Game Creator dependencies while another installed
+integration still uses them. After removal, reopen the project and representative
+scenes before continuing work.
